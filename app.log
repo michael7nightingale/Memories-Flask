@@ -1,0 +1,343 @@
+User PyDantic model is cretaed: username='sting290' password='sting290' email='sting290@gmail.com'.
+Password is hashed.
+User data is created by Model Users: self.id=None, self.username='sting290'.
+User data is committed to db.
+User is taken from db query: self.id=3, self.username='sting290'
+Password is checked with thw hashed one.
+Exception while logging user: 'Users' object has no attribute 'is_active'
+User is taken from db query: self.id=3, self.username='sting290'
+Password is checked with thw hashed one.
+Exception while logging user: 'Users' object has no attribute 'get_id'
+User is taken from db query: self.id=3, self.username='sting290'
+Password is checked with thw hashed one.
+Successfully logged in user.
+Loaded user with id: 3
+Loaded user with id: 3
+Loaded user with id: 3
+Loaded user with id: 3
+Loaded user with id: 3
+Loaded user with id: 3
+2023-04-23 10:35:55,892 DEBUG Loaded user with id: 3
+2023-04-23 10:41:25,986 DEBUG Loaded user with id: 3
+2023-04-23 10:41:26,985 DEBUG Loaded user with id: 3
+2023-04-23 10:41:47,958 DEBUG User PyDantic model is cretaed: username='JasonBorn' password='JasonBorn' email='JasonBorn@gmail.com'.
+2023-04-23 10:41:48,078 DEBUG Password is hashed.
+2023-04-23 10:41:48,078 ERROR Exception while registering user: Unexpected type of exclude value <class 'tuple'>
+2023-04-23 10:42:09,035 DEBUG User PyDantic model is cretaed: username='JasonBorn' password='JasonBorn' email='JasonBorn@gmail.com'.
+2023-04-23 10:42:09,154 DEBUG Password is hashed.
+2023-04-23 10:42:09,154 ERROR Exception while registering user: Unexpected type of exclude value <class 'str'>
+2023-04-23 10:42:13,244 DEBUG User PyDantic model is cretaed: username='JasonBorn' password='JasonBorn' email='JasonBorn@gmail.com'.
+2023-04-23 10:42:13,365 DEBUG Password is hashed.
+2023-04-23 10:42:13,365 ERROR Exception while registering user: Unexpected type of exclude value <class 'str'>
+2023-04-23 10:43:01,239 DEBUG User PyDantic model is cretaed: username='JasonBorn' password='JasonBorn' email='JasonBorn@gmail.com'.
+2023-04-23 10:43:01,361 DEBUG Password is hashed.
+2023-04-23 10:43:01,381 DEBUG User data is created by Model Users: self.id=None, self.username='JasonBorn'.
+2023-04-23 10:43:01,494 DEBUG User data is committed to db.
+2023-04-23 10:43:05,943 DEBUG User is taken from db query: self.id=4, self.username='JasonBorn'
+2023-04-23 10:43:06,061 DEBUG Password is checked with thw hashed one.
+2023-04-23 10:43:06,061 DEBUG Successfully logged in user.
+2023-04-23 10:43:06,067 DEBUG Loaded user with id: 4
+2023-04-23 11:04:20,382 DEBUG Loaded user with id: 4
+2023-04-23 11:05:12,988 DEBUG Loaded user with id: 4
+2023-04-23 11:05:18,204 DEBUG Loaded user with id: 4
+2023-04-23 11:05:20,856 DEBUG Loaded user with id: 4
+2023-04-23 11:05:25,719 DEBUG User is taken from db query: self.id=2, self.username='isaac_newton'
+2023-04-23 11:05:25,837 DEBUG Password is checked with thw hashed one.
+2023-04-23 11:05:25,837 DEBUG Successfully logged in user.
+2023-04-23 11:05:25,842 DEBUG Loaded user with id: 2
+2023-04-23 11:05:50,976 DEBUG Loaded user with id: 2
+2023-04-23 11:06:36,054 DEBUG User is taken from db query: self.id=2, self.username='isaac_newton'
+2023-04-23 11:06:36,176 DEBUG Password is checked with thw hashed one.
+2023-04-23 11:06:36,176 DEBUG Successfully logged in user.
+2023-04-23 11:06:36,180 DEBUG Loaded user with id: 2
+2023-04-23 11:09:06,445 DEBUG Loaded user with id: 2
+2023-04-23 11:09:23,963 DEBUG Loaded user with id: 2
+2023-04-23 11:09:24,993 DEBUG Loaded user with id: 2
+2023-04-23 11:09:25,457 DEBUG Loaded user with id: 2
+2023-04-23 11:09:25,650 DEBUG Loaded user with id: 2
+2023-04-23 11:09:25,817 DEBUG Loaded user with id: 2
+2023-04-23 11:10:02,614 DEBUG Loaded user with id: 2
+2023-04-23 11:10:03,929 DEBUG Loaded user with id: 2
+2023-04-23 11:10:07,435 DEBUG Loaded user with id: 2
+2023-04-23 11:11:50,291 DEBUG Loaded user with id: 2
+2023-04-23 11:11:59,331 DEBUG User is taken from db query: self.id=3, self.username='sting290'
+2023-04-23 11:12:05,189 DEBUG User is taken from db query: self.id=3, self.username='sting290'
+2023-04-23 11:12:05,307 DEBUG Password is checked with thw hashed one.
+2023-04-23 11:12:05,307 DEBUG Successfully logged in user.
+2023-04-23 11:12:05,312 DEBUG Loaded user with id: 3
+2023-04-23 11:12:07,231 DEBUG Loaded user with id: 3
+2023-04-23 11:12:11,340 DEBUG Loaded user with id: 3
+2023-04-23 11:12:24,303 DEBUG Loaded user with id: 3
+2023-04-23 11:15:34,974 DEBUG Loaded user with id: 3
+2023-04-23 11:15:40,778 DEBUG Loaded user with id: 3
+2023-04-23 11:15:42,871 DEBUG Loaded user with id: 3
+2023-04-23 11:22:12,460 DEBUG Loaded user with id: 3
+2023-04-23 11:22:21,634 DEBUG Loaded user with id: 3
+2023-04-23 11:22:23,657 DEBUG Loaded user with id: 3
+2023-04-23 11:22:24,132 DEBUG Loaded user with id: 3
+2023-04-23 11:22:25,206 DEBUG Loaded user with id: 3
+2023-04-23 11:22:26,228 DEBUG Loaded user with id: 3
+2023-04-23 11:22:51,406 DEBUG Loaded user with id: 3
+2023-04-23 11:22:52,148 DEBUG Loaded user with id: 3
+2023-04-23 11:22:52,602 DEBUG Loaded user with id: 3
+2023-04-23 11:22:52,778 DEBUG Loaded user with id: 3
+2023-04-23 11:22:54,829 DEBUG Loaded user with id: 3
+2023-04-23 11:22:56,630 DEBUG Loaded user with id: 3
+2023-04-23 11:22:58,412 DEBUG Loaded user with id: 3
+2023-04-23 11:22:59,607 DEBUG Loaded user with id: 3
+2023-04-23 11:23:20,506 DEBUG Loaded user with id: 3
+2023-04-23 11:23:21,100 DEBUG Loaded user with id: 3
+2023-04-23 11:23:21,300 DEBUG Loaded user with id: 3
+2023-04-23 11:23:30,012 DEBUG Loaded user with id: 3
+2023-04-23 11:26:23,342 DEBUG Loaded user with id: 3
+2023-04-23 11:29:21,647 DEBUG Loaded user with id: 3
+2023-04-23 11:31:11,893 DEBUG Loaded user with id: 3
+2023-04-23 11:31:26,776 DEBUG Loaded user with id: 3
+2023-04-23 11:34:09,669 DEBUG Loaded user with id: 3
+2023-04-23 11:34:09,675 DEBUG Loaded user with id: 3
+2023-04-23 11:34:13,415 DEBUG Loaded user with id: 3
+2023-04-23 11:34:13,416 DEBUG Loaded user with id: 3
+2023-04-23 11:34:16,853 DEBUG Loaded user with id: 3
+2023-04-23 11:34:16,854 DEBUG Loaded user with id: 3
+2023-04-23 11:34:18,442 DEBUG Loaded user with id: 3
+2023-04-23 11:34:18,443 DEBUG Loaded user with id: 3
+2023-04-23 11:44:21,633 DEBUG Loaded user with id: 3
+2023-04-23 11:44:21,639 DEBUG Loaded user with id: 3
+2023-04-23 11:44:23,426 DEBUG Loaded user with id: 3
+2023-04-23 11:44:23,427 DEBUG Loaded user with id: 3
+2023-04-23 11:44:24,065 DEBUG Loaded user with id: 3
+2023-04-23 11:44:24,066 DEBUG Loaded user with id: 3
+2023-04-23 11:44:25,694 DEBUG Loaded user with id: 3
+2023-04-23 11:44:25,695 DEBUG Loaded user with id: 3
+2023-04-23 11:45:57,752 DEBUG User PyDantic model is created: username='michel7nightingale' password='michel7nightingale' email='michel7nightingale@gmail.com'.
+2023-04-23 11:45:57,869 DEBUG Password is hashed.
+2023-04-23 11:45:57,871 DEBUG User data is created by Model Users: self.id=None, self.username='michel7nightingale'.
+2023-04-23 11:45:57,986 DEBUG User data is committed to db.
+2023-04-23 11:45:57,994 DEBUG Loaded user with id: 3
+2023-04-23 11:45:57,998 DEBUG Loaded user with id: 3
+2023-04-23 11:46:00,861 DEBUG User is taken from db query: self.id=1, self.username='michel7nightingale'
+2023-04-23 11:46:00,988 DEBUG Password is checked with thw hashed one.
+2023-04-23 11:46:00,988 DEBUG Successfully logged in user.
+2023-04-23 11:46:00,993 DEBUG Loaded user with id: 1
+2023-04-23 11:46:03,779 DEBUG Loaded user with id: 1
+2023-04-23 11:46:05,134 DEBUG Loaded user with id: 1
+2023-04-23 11:46:06,246 DEBUG Loaded user with id: 1
+2023-04-23 11:46:06,631 DEBUG Loaded user with id: 1
+2023-04-23 11:46:06,789 DEBUG Loaded user with id: 1
+2023-04-23 11:48:29,383 DEBUG Loaded user with id: 1
+2023-04-23 11:48:36,560 DEBUG Loaded user with id: 1
+2023-04-23 11:48:37,328 DEBUG Loaded user with id: 1
+2023-04-23 11:51:55,947 DEBUG Loaded user with id: 1
+2023-04-23 11:52:26,080 DEBUG Loaded user with id: 1
+2023-04-23 11:52:27,501 DEBUG Loaded user with id: 1
+2023-04-23 11:53:24,276 DEBUG Loaded user with id: 1
+2023-04-23 11:53:49,633 DEBUG Loaded user with id: 1
+2023-04-23 11:54:13,517 DEBUG Loaded user with id: 1
+2023-04-23 11:54:19,380 DEBUG Loaded user with id: 1
+2023-04-23 11:54:38,802 DEBUG Loaded user with id: 1
+2023-04-23 11:55:29,077 DEBUG Loaded user with id: 1
+2023-04-23 11:56:13,145 DEBUG Loaded user with id: 1
+2023-04-23 11:56:21,964 DEBUG Loaded user with id: 1
+2023-04-23 11:56:28,562 DEBUG Loaded user with id: 1
+2023-04-23 11:56:30,827 DEBUG Loaded user with id: 1
+2023-04-23 11:56:50,988 DEBUG Loaded user with id: 1
+2023-04-23 11:56:54,337 DEBUG Loaded user with id: 1
+2023-04-23 11:57:07,924 DEBUG Loaded user with id: 1
+2023-04-23 11:57:10,993 DEBUG Loaded user with id: 1
+2023-04-23 12:03:21,974 DEBUG Loaded user with id: 1
+2023-04-23 12:03:21,980 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-23 12:03:29,233 DEBUG Loaded user with id: 1
+2023-04-23 12:03:34,736 DEBUG Loaded user with id: 1
+2023-04-23 12:03:34,737 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-23 12:16:59,679 DEBUG Loaded user with id: 1
+2023-04-23 12:16:59,686 ERROR Exception while creating theme-model: app.Themes() got multiple values for keyword argument 'key'
+2023-04-23 12:17:03,219 DEBUG Loaded user with id: 1
+2023-04-23 12:17:11,998 DEBUG Loaded user with id: 1
+2023-04-23 12:17:11,999 ERROR Exception while creating theme-model: app.Themes() got multiple values for keyword argument 'key'
+2023-04-23 12:19:30,729 DEBUG Loaded user with id: 1
+2023-04-23 12:19:30,736 ERROR Exception while creating theme-model: 'title' is an invalid keyword argument for print()
+2023-04-23 12:20:32,042 DEBUG Loaded user with id: 1
+2023-04-23 12:20:32,049 ERROR Exception while creating theme-model: app.Themes() got multiple values for keyword argument 'key'
+2023-04-23 12:20:52,929 DEBUG Loaded user with id: 1
+2023-04-23 12:28:35,509 DEBUG Loaded user with id: 1
+2023-04-23 12:28:36,805 DEBUG Loaded user with id: 1
+2023-04-23 12:28:55,775 DEBUG Loaded user with id: 1
+2023-04-23 12:28:56,523 DEBUG Loaded user with id: 1
+2023-04-23 12:29:15,171 DEBUG Loaded user with id: 1
+2023-04-23 12:29:15,172 DEBUG Theme PyDantic model is created: title='Инкапсуляция в Python' isPublic=True key=None user_id=1.
+2023-04-23 12:29:15,173 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:29:15,177 DEBUG Loaded user with id: 1
+2023-04-23 12:29:16,962 DEBUG Loaded user with id: 1
+2023-04-23 12:29:18,920 DEBUG Loaded user with id: 1
+2023-04-23 12:31:16,421 DEBUG Loaded user with id: 1
+2023-04-23 12:31:16,428 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:31:16,428 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:31:16,432 DEBUG Loaded user with id: 1
+2023-04-23 12:31:47,030 DEBUG Loaded user with id: 1
+2023-04-23 12:31:47,037 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:31:47,037 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:31:47,041 DEBUG Loaded user with id: 1
+2023-04-23 12:31:55,117 DEBUG Loaded user with id: 1
+2023-04-23 12:31:55,124 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:31:55,124 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:31:55,128 DEBUG Loaded user with id: 1
+2023-04-23 12:32:35,377 DEBUG Loaded user with id: 1
+2023-04-23 12:32:35,384 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:32:35,384 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:32:35,388 DEBUG Loaded user with id: 1
+2023-04-23 12:33:15,932 DEBUG Loaded user with id: 1
+2023-04-23 12:33:18,675 DEBUG Loaded user with id: 1
+2023-04-23 12:33:18,677 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:33:18,677 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:33:18,681 DEBUG Loaded user with id: 1
+2023-04-23 12:33:32,993 DEBUG Loaded user with id: 1
+2023-04-23 12:33:32,994 ERROR Exception while creating theme-model: 1 validation error for Theme
+isPublic
+  none is not an allowed value (type=type_error.none.not_allowed)
+2023-04-23 12:33:32,998 DEBUG Loaded user with id: 1
+2023-04-23 12:33:59,585 DEBUG Loaded user with id: 1
+2023-04-23 12:34:02,671 DEBUG Loaded user with id: 1
+2023-04-23 12:34:02,673 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=False key=None user_id=1.
+2023-04-23 12:34:02,673 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:34:02,677 DEBUG Loaded user with id: 1
+2023-04-23 12:35:05,496 DEBUG Loaded user with id: 1
+2023-04-23 12:35:05,502 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:35:05,502 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:35:05,506 DEBUG Loaded user with id: 1
+2023-04-23 12:36:02,900 DEBUG Loaded user with id: 1
+2023-04-23 12:36:02,907 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:36:02,907 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:36:02,911 DEBUG Loaded user with id: 1
+2023-04-23 12:36:48,064 DEBUG Loaded user with id: 1
+2023-04-23 12:36:48,070 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:36:48,071 ERROR Exception while creating theme-model: 'title' is an invalid keyword argument for print()
+2023-04-23 12:36:48,074 DEBUG Loaded user with id: 1
+2023-04-23 12:37:05,216 DEBUG Loaded user with id: 1
+2023-04-23 12:37:05,223 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:37:05,223 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:37:05,227 DEBUG Loaded user with id: 1
+2023-04-23 12:38:03,201 DEBUG Loaded user with id: 1
+2023-04-23 12:38:03,208 DEBUG Theme PyDantic model is created: title='Инкапсуляция' isPublic=True key=None user_id=1.
+2023-04-23 12:38:03,208 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:38:03,212 DEBUG Loaded user with id: 1
+2023-04-23 12:38:15,315 DEBUG Loaded user with id: 1
+2023-04-23 12:38:15,316 DEBUG Theme PyDantic model is created: title='Инкапсуляцияadsaf' isPublic=False key=None user_id=1.
+2023-04-23 12:38:15,316 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:38:15,320 DEBUG Loaded user with id: 1
+2023-04-23 12:38:24,679 DEBUG Loaded user with id: 1
+2023-04-23 12:38:24,686 DEBUG Theme PyDantic model is created: title='Инкапсуляцияadsaffasg' isPublic=True key=None user_id=1.
+2023-04-23 12:38:24,686 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:38:24,690 DEBUG Loaded user with id: 1
+2023-04-23 12:38:56,585 DEBUG Loaded user with id: 1
+2023-04-23 12:38:56,592 DEBUG Theme PyDantic model is created: title='Инкапсуляцияasgadsaffasg' isPublic=True key=None user_id=1.
+2023-04-23 12:38:56,592 ERROR Exception while creating theme-model: 'Themes' object has no attribute 'theme'
+2023-04-23 12:38:56,596 DEBUG Loaded user with id: 1
+2023-04-23 12:39:31,206 DEBUG Loaded user with id: 1
+2023-04-23 12:39:31,213 DEBUG Theme PyDantic model is created: title='Инкапсуляцияasgadsaffasg' isPublic=True key=None user_id=1.
+2023-04-23 12:39:45,757 DEBUG Loaded user with id: 1
+2023-04-23 12:39:45,764 DEBUG Theme PyDantic model is created: title='Инкапсуляцияasgadsaffasg' isPublic=True key=None user_id=1.
+2023-04-23 12:40:17,578 DEBUG Loaded user with id: 1
+2023-04-23 12:40:17,585 DEBUG Theme PyDantic model is created: title='Инкапсуляцияasgadsaffasg' isPublic=True key=None user_id=1.
+2023-04-23 12:40:17,585 DEBUG Theme data is created by Model Users: self.id=None, self.title='Инкапсуляцияasgadsaffasg'.
+2023-04-23 12:40:17,659 DEBUG Theme data is committed to db.
+2023-04-23 12:40:17,664 DEBUG Loaded user with id: 1
+2023-04-23 12:43:17,641 DEBUG Loaded user with id: 1
+2023-04-23 12:43:18,951 DEBUG Loaded user with id: 1
+2023-04-23 12:52:35,616 DEBUG Loaded user with id: 1
+2023-04-23 12:52:41,160 DEBUG Loaded user with id: 1
+2023-04-23 12:52:41,167 DEBUG Theme PyDantic model is created: title='' isPublic=False key=None user_id=1.
+2023-04-23 12:52:41,167 DEBUG Theme data is created by Model Theme: self.id=None, self.title=''.
+2023-04-23 12:52:41,246 DEBUG Theme data is committed to db.
+2023-04-23 12:52:41,248 DEBUG Card PyDantic model is created: Card(theme_id=3, type=2, ask_side='', answer_side='').
+2023-04-23 12:52:41,248 ERROR Exception while creating theme-model: 'Card' object has no attribute 'dict'
+2023-04-23 12:52:41,253 DEBUG Loaded user with id: 1
+2023-04-23 12:53:18,845 DEBUG Loaded user with id: 1
+2023-04-23 12:54:05,620 DEBUG Loaded user with id: 1
+2023-04-23 12:54:05,626 DEBUG Theme PyDantic model is created: title='asf' isPublic=False key=None user_id=1.
+2023-04-23 12:54:05,626 DEBUG Theme data is created by Model Theme: self.id=None, self.title='asf'.
+2023-04-23 12:54:05,714 DEBUG Theme data is committed to db.
+2023-04-23 12:54:05,716 DEBUG Card PyDantic model is created: theme_id=4 type=2 ask_side='' answer_side=''.
+2023-04-23 12:54:05,716 ERROR Exception while creating theme-model: 'Card' object has no attribute 'question'
+2023-04-23 12:54:05,721 DEBUG Loaded user with id: 1
+2023-04-23 12:55:17,897 DEBUG Loaded user with id: 1
+2023-04-23 12:56:20,234 DEBUG Loaded user with id: 1
+2023-04-23 12:56:20,235 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:56:20,235 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:56:20,328 DEBUG Theme data is committed to db.
+2023-04-23 12:56:20,329 DEBUG Card PyDantic model is created: theme_id=5 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:56:20,329 ERROR Exception while creating theme-model: 'Card' object has no attribute 'question'
+2023-04-23 12:56:20,333 DEBUG Loaded user with id: 1
+2023-04-23 12:56:50,413 DEBUG Loaded user with id: 1
+2023-04-23 12:56:53,343 DEBUG Loaded user with id: 1
+2023-04-23 12:56:53,344 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:56:53,345 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:56:53,427 DEBUG Theme data is committed to db.
+2023-04-23 12:56:53,428 DEBUG Card PyDantic model is created: theme_id=6 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:56:53,429 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-23 12:56:53,430 ERROR Exception while creating theme-model: (sqlite3.OperationalError) no such table: card
+[SQL: INSERT INTO card (type, ask_side, answer_side, theme_id) VALUES (?, ?, ?, ?)]
+[parameters: (2, 'Что это ', 'хз', 6)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-04-23 12:57:04,685 DEBUG Loaded user with id: 1
+2023-04-23 12:57:04,687 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:57:04,687 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:57:04,758 DEBUG Theme data is committed to db.
+2023-04-23 12:57:04,759 DEBUG Card PyDantic model is created: theme_id=7 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:57:04,759 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-23 12:57:04,760 ERROR Exception while creating theme-model: (sqlite3.OperationalError) no such table: card
+[SQL: INSERT INTO card (type, ask_side, answer_side, theme_id) VALUES (?, ?, ?, ?)]
+[parameters: (2, 'Что это ', 'хз', 7)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-04-23 12:57:07,405 DEBUG Loaded user with id: 1
+2023-04-23 12:57:07,406 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:57:07,406 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:57:07,484 DEBUG Theme data is committed to db.
+2023-04-23 12:57:07,485 DEBUG Card PyDantic model is created: theme_id=8 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:57:07,485 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-23 12:57:07,485 ERROR Exception while creating theme-model: (sqlite3.OperationalError) no such table: card
+[SQL: INSERT INTO card (type, ask_side, answer_side, theme_id) VALUES (?, ?, ?, ?)]
+[parameters: (2, 'Что это ', 'хз', 8)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-04-23 12:57:47,352 DEBUG Loaded user with id: 1
+2023-04-23 12:57:47,357 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:57:47,358 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:57:47,452 DEBUG Theme data is committed to db.
+2023-04-23 12:57:47,454 DEBUG Card PyDantic model is created: theme_id=9 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:57:47,454 ERROR Exception while creating theme-model: name 'Card' is not defined
+2023-04-23 12:57:47,459 DEBUG Loaded user with id: 1
+2023-04-23 12:58:31,164 DEBUG Loaded user with id: 1
+2023-04-23 12:58:31,170 DEBUG Theme PyDantic model is created: title='Инкапсуляция в C#' isPublic=True key=None user_id=1.
+2023-04-23 12:58:31,170 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Инкапсуляция в C#'.
+2023-04-23 12:58:31,249 DEBUG Theme data is committed to db.
+2023-04-23 12:58:31,251 DEBUG Card PyDantic model is created: theme_id=10 type=2 ask_side='Что это ' answer_side='хз'.
+2023-04-23 12:58:31,251 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-23 12:58:31,343 DEBUG Card data is committed to db.
+2023-04-23 12:58:31,344 DEBUG Card PyDantic model is created: theme_id=10 type=2 ask_side='Где это' answer_side='в языке'.
+2023-04-23 12:58:31,344 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Где это'.
+2023-04-23 12:58:31,432 DEBUG Card data is committed to db.
+2023-04-23 12:58:31,433 DEBUG Card PyDantic model is created: theme_id=10 type=2 ask_side='сы' answer_side='фыафып'.
+2023-04-23 12:58:31,433 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='сы'.
+2023-04-23 12:58:31,502 DEBUG Card data is committed to db.
+2023-04-23 12:58:31,503 DEBUG Card PyDantic model is created: theme_id=10 type=2 ask_side='куйго' answer_side='нргнр'.
+2023-04-23 12:58:31,503 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='куйго'.
+2023-04-23 12:58:31,567 DEBUG Card data is committed to db.
+2023-04-23 12:58:31,567 DEBUG All cards of theme are added
+2023-04-23 12:58:31,572 DEBUG Loaded user with id: 1
+2023-04-23 13:08:50,265 DEBUG Loaded user with id: 1
+2023-04-23 13:08:52,401 DEBUG Loaded user with id: 1
+2023-04-23 13:10:36,801 DEBUG Loaded user with id: 1
+2023-04-23 13:10:39,754 DEBUG Loaded user with id: 1
+2023-04-23 13:10:55,059 DEBUG User is taken from db query: None
+2023-04-23 13:10:55,059 ERROR Exception while logging user: 'NoneType' object has no attribute 'password'
+2023-04-23 13:11:00,927 DEBUG User is taken from db query: None
+2023-04-23 13:11:00,927 ERROR Exception while logging user: 'NoneType' object has no attribute 'password'
+2023-04-23 13:11:32,423 DEBUG User is taken from db query: self.id=1, self.username='michel7nightingale'
+2023-04-23 13:11:53,285 DEBUG User is taken from db query: self.id=1, self.username='michel7nightingale'
+2023-04-23 13:11:53,401 DEBUG Password is checked with thw hashed one.
+2023-04-23 13:11:53,401 DEBUG Successfully logged in user.
+2023-04-23 13:11:53,407 DEBUG Loaded user with id: 1
+2023-04-23 13:11:55,543 DEBUG Loaded user with id: 1
+2023-04-23 13:11:58,047 DEBUG Loaded user with id: 1
+2023-04-23 13:11:59,981 DEBUG Loaded user with id: 1
+2023-04-23 13:12:01,174 DEBUG Loaded user with id: 1
+2023-04-23 13:12:04,095 DEBUG Loaded user with id: 1

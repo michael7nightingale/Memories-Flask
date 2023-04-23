@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Создание карты</h1>
+</div>
+
+<div class="container">
+    <form action="{{ url_for('validateCard') }}" method="post">
+    <div class="theme">
+        <input type='text' name="theme" placeholder="Тема карточки">
+    </div>
+
+     <div class="questions">
+         {% for id in range(1, 5) %}
+             <div class="question" id="{{ id }}">
+                <form>
+                    <input type="text" placeholder="Вопрос" name="question{{ id }}">
+                    <input type="text" placeholder="Ответ" name="answer{{ id }}">
+                </form>
+            </div>
+         {% endfor %}
+
+     </div>
+        <button id="adder">Добавить вопрос</button>
+        <input type="submit">
+    </form>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+function addQuestion(){
+    let newQuestion;
+    let amount = $('.questions').children().length + 1;
+    newQuestion = document.createElement("div");
+    newQuestion.className = 'question';
+    newQuestion.id = amount
+    newQuestion.innerHTML =
+        "<form>" +
+            '<input type="text" placeholder="Вопрос" name="question' +
+                toString(amount)  + '">'
+            '<input type="text" placeholder="Ответ" name="answer'  +
+                    toString(amount) + '">' +
+        "</form>";
+    newQuestion.insertAfter(document.getElementById(amount - 1));
+    console.log("hello ");
+}
+
+const buttonAdd = document.getElementById("adder");
+buttonAdd.addEventListener('click', addQuestion)
+
+
+    </script>
+{% endblock %}

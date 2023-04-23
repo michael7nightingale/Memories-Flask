@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>{{ user.username }}</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Создать тему</h2>
+        <p>Создать тему из карточек</p>
+        <p><a class="btn btn-default" href="{{ url_for('createTheme') }}">перейти &raquo;</a></p>
+    </div>
+     <div class="col-md-4">
+        <h2>Мои темы</h2>
+        <p>Созданные мной темы</p>
+        <p><a class="btn btn-default" href="{{ url_for('profileThemes', username=username) }}">перейти &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
+
