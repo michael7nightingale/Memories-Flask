@@ -15,7 +15,7 @@
      <div class="col-md-4">
         <h2>Мои темы</h2>
         <p>Созданные мной темы</p>
-        <p><a class="btn btn-default" href="{{ url_for('profileThemes', username=username) }}">перейти &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ url_for('profileThemes', username=current_user.username) }}">перейти &raquo;</a></p>
     </div>
 </div>
 

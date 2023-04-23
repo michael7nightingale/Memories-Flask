@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>{{ user.username }}</h1>
+</div>
+
+<div class="container">
+   {% for theme in themes %}
+        <li>
+            <h6>{{ theme.title }}</h6>
+            <p>{{ theme.isPublic }}</p>
+            <p>{{ theme.key }}</p>
+            <a href="{{ url_for('theme', theme_id=theme.id, title=theme.title) }}">перейти</a>
+        </li>
+    {% endfor %}
+</div>
+
+{% endblock %}

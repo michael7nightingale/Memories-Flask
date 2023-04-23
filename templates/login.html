@@ -1,18 +1,21 @@
-{% extends "app/layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
 <h2>{{ title }}</h2>
 <div class="text-center">
     <form method="post" class="form-signin">
-        {% csrf_token %}
-        {{ form.as_p }}
+
+        <input type="text" class="form-control" placeholder="Email" name="email">
+        <input type="text" class="form-control" placeholder="Password" name="password">
+
+
             <div class="col-md-offset-2 col-md-10">
        
             <button class="btn btn-primary" type="submit">Log in</button>
     </div>
     </form>
-    <a href="{% url 'register' %}" class="link-primary">Not registered? Let's register</a>
+    <a href="{{ url_for('register') }}" class="link-primary">Not registered? Let's register</a>
 </div>
 
 
@@ -22,7 +25,5 @@
 
 {% block scripts %}
 
-    {% load static %}
-<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
 
 {% endblock %}

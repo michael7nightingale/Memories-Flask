@@ -9,20 +9,15 @@
 <div class="container">
     <form action="{{ url_for('validateCard') }}" method="post">
     <div class="theme">
-        <input type='text' name="theme" placeholder="Тема карточки">
+        <input type='text' name="title" placeholder="Тема карточки">
+        <label for="isPublic">Публичная тема</label>
+        <input type="checkbox" id='isPublic' name="isPublic" placeholder="Публичная тема">
+        {% for i in range(1, 5) %}
+            <input type="text" id="question{{ i }}" name="question{{ i }}" placeholder="Вопрос {{ i }}">
+            <input type="text" id="answer{{ i }}" name="answer{{ i }}" placeholder="Ответ {{ i }}">
+        {% endfor %}
     </div>
 
-     <div class="questions">
-         {% for id in range(1, 5) %}
-             <div class="question" id="{{ id }}">
-                <form>
-                    <input type="text" placeholder="Вопрос" name="question{{ id }}">
-                    <input type="text" placeholder="Ответ" name="answer{{ id }}">
-                </form>
-            </div>
-         {% endfor %}
-
-     </div>
         <button id="adder">Добавить вопрос</button>
         <input type="submit">
     </form>

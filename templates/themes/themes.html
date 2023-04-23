@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<div class="jumbotron">
+    <h1>{{ title }}</h1>
+</div>
+<script>function checkAnswer(event, question_id) {
+    let answer_input, answer, cookies;
+    answer_input = document.getElementById("answer" + toString(question_id + 1));
+    answer = answer_input.textContent;
+    cookies = document.cookie.split('; ')
+    correct_answer = cookies[question_id]
+    if (correct_answer === answer) {
+        document.getElementById("answer" + toString(question_id + 1)).style.color = 'green';
+    }
+    else{
+        document.getElementById("answer" + toString(question_id + 1)).style.color = 'red';
+    }
+
+}
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+
+<div class="tab">
+ {% for i in range(cards|length) %}
+  <button class="tablinks" onclick="openCity(event, {{ i + 1 }})">Карточка №{{ i + 1 }}</button>
+{% endfor %}
+</div>
+
+<div class="container">
+        {% for i in range(cards|length) %}
+            <div id="{{ i + 1 }}" class="tabcontent">
+              <h3>{{ cards[i].ask_side }}</h3>
+              <input class='input' type="text" name='answer{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:">
+              <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>
+            </div>
+
+        {% endfor %}
+
+</div>
+
+{% endblock %}

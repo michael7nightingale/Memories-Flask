@@ -1,4 +1,4 @@
-{% extends "app/layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
@@ -6,9 +6,25 @@
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
+
             <form method="post" class="form-signin">
-                {% csrf_token %}
-                {{ form.as_p }}
+
+                <input type="text" class="form-control" placeholder="Login" name="username">
+            {% if get_flashed_messages(True, ['login']) %}
+                <p>{{ get_flashed_messages(True, ['login'])[0][1] }}</p>
+            {% endif %}
+                <input type="text" class="form-control" placeholder="Email" name="email">
+             {% if get_flashed_messages(True, ['email']) %}
+                                <p>{{ get_flashed_messages(True, ['email'])[0][1]  }}</p>
+            {% endif %}
+                <input type="text" class="form-control" placeholder="Password" name="password">
+                {% if get_flashed_messages(True, ['password']) %}
+                <p>{{ get_flashed_messages(True, ['password'])[0][1]  }}</p>
+                {% endif %}
+                <input type="text" class="form-control" placeholder="Confirm password" name="password_confirm">
+                {% if get_flashed_messages(True, ['password_confirm']) %}
+                <p>{{ get_flashed_messages(True, ['password_confirm'])[0][1]  }}</p>
+                {% endif %}
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
 
@@ -32,7 +48,5 @@
 
 {% block scripts %}
 
-    {% load static %}
-<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
 
 {% endblock %}

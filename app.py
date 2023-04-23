@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template, g, current_app, request, flash, redirect
+from flask import Flask, url_for, render_template, g, current_app, request, flash, redirect, make_response
 import flask_login
 from flask_sqlalchemy import SQLAlchemy
 import logging
@@ -234,7 +234,11 @@ def validateCard():
 @app.route('/<theme_id>/<title>')
 def theme(theme_id, title):
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
-    return render_template('themes/themes.html', cards=cards, title=title)
+    response = make_response(render_template('themes/themes.html', cards=cards, title=title))
+    response.headers['Content-Type'] = "text/html"
+    for i, card in enumerate(cards, 1):
+        response.set_cookie(str(i), card.answer_side, 60*60)
+    return response
 
 
 if __name__ == '__main__':
