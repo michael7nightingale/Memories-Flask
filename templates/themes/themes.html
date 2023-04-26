@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 <div class="jumbotron">
-    <h1>{{ title }}</h1>
+    <h1>{{ theme.title }}</h1>
 </div>
 <script>function checkAnswer(event, question_id) {
     let answer_input, answer, cookies;
@@ -51,14 +51,33 @@ function openCity(evt, cityName) {
 </div>
 
 <div class="container">
+    <form method="post" action="{{ url_for('theme_view', theme_id=cards[0].theme_id, title=theme.title) }}">
+        {% if theme.type == 2 %}
         {% for i in range(cards|length) %}
             <div id="{{ i + 1 }}" class="tabcontent">
               <h3>{{ cards[i].ask_side }}</h3>
-              <input class='input' type="text" name='answer{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:">
+                {% if cards[i].extra_ask_side %}
+                <p>{{ cards[i].extra_ask_side }}</p>
+                {% endif %}
+              <input class='input' type="text" name='{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:">
               <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>
             </div>
-
         {% endfor %}
+        {% else %}
+    {% for i in range(cards|length) %}
+            <div id="{{ i + 1 }}" class="tabcontent">
+
+              <img src="{{ cards[i].ask_side }}" width=40% height=40% >
+                {% if cards[i].extra_ask_side %}
+                <p>{{ cards[i].extra_ask_side }}</p>
+                {% endif %}
+              <input class='input' type="text" name='{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:">
+              <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>
+            </div>
+        {% endfor %}
+        {% endif %}
+    <input type="submit" placeholder="Ответить на тему">
+    </form>
 
 </div>
 

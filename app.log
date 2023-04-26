@@ -365,3 +365,369 @@ isPublic
 2023-04-23 22:15:43,166 DEBUG Loaded user with id: 1
 2023-04-23 22:15:45,742 DEBUG Loaded user with id: 1
 2023-04-23 22:15:52,193 DEBUG Loaded user with id: 1
+2023-04-24 18:28:27,693 DEBUG User PyDantic model is created: username='genry_om' password='genry_om' email='genry_om@mail.ru'.
+2023-04-24 18:28:27,968 DEBUG Password is hashed.
+2023-04-24 18:28:27,974 DEBUG User data is created by Model Users: self.id=None, self.username='genry_om'.
+2023-04-24 18:28:28,006 DEBUG User data is committed to db.
+2023-04-24 18:28:34,128 DEBUG User is taken from db query: self.id=2, self.username='genry_om'
+2023-04-24 18:28:34,395 DEBUG Password is checked with thw hashed one.
+2023-04-24 18:28:34,396 DEBUG Successfully logged in user.
+2023-04-24 18:28:34,403 DEBUG Loaded user with id: 2
+2023-04-24 18:28:39,205 DEBUG Loaded user with id: 2
+2023-04-24 18:28:42,586 DEBUG Loaded user with id: 2
+2023-04-24 18:28:45,350 DEBUG Loaded user with id: 2
+2023-04-24 18:28:46,940 DEBUG Loaded user with id: 2
+2023-04-24 18:30:08,361 DEBUG Loaded user with id: 2
+2023-04-24 18:30:08,368 DEBUG Theme PyDantic model is created: title='Закон Ома для участка цепи' isPublic=False key=None user_id=2.
+2023-04-24 18:30:08,369 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Закон Ома для участка цепи'.
+2023-04-24 18:30:08,381 DEBUG Theme data is committed to db.
+2023-04-24 18:30:08,384 DEBUG Card PyDantic model is created: theme_id=11 type=2 ask_side='Закон ома' answer_side='I = U/R'.
+2023-04-24 18:30:08,386 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Закон ома'.
+2023-04-24 18:30:08,397 DEBUG Card data is committed to db.
+2023-04-24 18:30:08,399 DEBUG Card PyDantic model is created: theme_id=11 type=2 ask_side='Си Заряд' answer_side='Кулон'.
+2023-04-24 18:30:08,399 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Си Заряд'.
+2023-04-24 18:30:08,407 DEBUG Card data is committed to db.
+2023-04-24 18:30:08,409 DEBUG Card PyDantic model is created: theme_id=11 type=2 ask_side='Си Сила Тока' answer_side='Ампер'.
+2023-04-24 18:30:08,409 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Си Сила Тока'.
+2023-04-24 18:30:08,417 DEBUG Card data is committed to db.
+2023-04-24 18:30:08,419 DEBUG Card PyDantic model is created: theme_id=11 type=2 ask_side='Си Напряжение' answer_side='Вольт'.
+2023-04-24 18:30:08,420 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Си Напряжение'.
+2023-04-24 18:30:08,429 DEBUG Card data is committed to db.
+2023-04-24 18:30:08,429 DEBUG All cards of theme are added
+2023-04-24 18:30:08,438 DEBUG Loaded user with id: 2
+2023-04-24 18:30:10,428 DEBUG Loaded user with id: 2
+2023-04-24 18:33:06,355 DEBUG Loaded user with id: 2
+2023-04-24 18:33:08,814 DEBUG Loaded user with id: 2
+2023-04-24 18:47:20,426 DEBUG Loaded user with id: 2
+2023-04-24 18:48:16,029 DEBUG Loaded user with id: 2
+2023-04-24 18:49:35,488 DEBUG Loaded user with id: 2
+2023-04-24 20:48:12,172 DEBUG Loaded user with id: 2
+2023-04-24 20:48:18,170 DEBUG Loaded user with id: 2
+2023-04-24 20:48:48,036 DEBUG Loaded user with id: 2
+2023-04-24 20:49:13,435 DEBUG Loaded user with id: 2
+2023-04-24 20:49:54,776 DEBUG Loaded user with id: 2
+2023-04-24 20:49:58,404 DEBUG Loaded user with id: 2
+2023-04-24 20:50:00,868 DEBUG Loaded user with id: 2
+2023-04-24 20:50:12,349 DEBUG Loaded user with id: 2
+2023-04-24 20:50:30,125 DEBUG Loaded user with id: 2
+2023-04-24 20:50:40,714 DEBUG Loaded user with id: 2
+2023-04-24 20:50:42,173 DEBUG Loaded user with id: 2
+2023-04-24 20:50:44,764 DEBUG Loaded user with id: 2
+2023-04-24 20:50:45,804 DEBUG Loaded user with id: 2
+2023-04-24 20:50:48,117 DEBUG Loaded user with id: 2
+2023-04-24 20:50:55,415 DEBUG Loaded user with id: 2
+2023-04-24 20:50:58,592 DEBUG Loaded user with id: 2
+2023-04-24 20:51:00,690 DEBUG Loaded user with id: 2
+2023-04-24 20:51:02,584 DEBUG Loaded user with id: 2
+2023-04-24 20:51:46,148 DEBUG Loaded user with id: 2
+2023-04-24 20:51:53,442 DEBUG User is taken from db query: self.id=2, self.username='genry_om'
+2023-04-24 20:51:53,715 DEBUG Password is checked with thw hashed one.
+2023-04-24 20:51:53,716 DEBUG Successfully logged in user.
+2023-04-24 20:51:53,724 DEBUG Loaded user with id: 2
+2023-04-24 20:52:06,173 DEBUG Loaded user with id: 2
+2023-04-25 10:52:23,822 DEBUG User PyDantic model is created: username='bronnikovavarvara' password='bronnikovavarvara' email='bronnikovavarvara@mail.ru'.
+2023-04-25 10:52:24,110 DEBUG Password is hashed.
+2023-04-25 10:52:24,110 DEBUG User data is created by Model Users: self.id=None, self.username='bronnikovavarvara'.
+2023-04-25 10:52:24,134 DEBUG User data is committed to db.
+2023-04-25 10:52:28,604 DEBUG User is taken from db query: self.id=3, self.username='bronnikovavarvara'
+2023-04-25 10:52:28,875 DEBUG Password is checked with thw hashed one.
+2023-04-25 10:52:28,875 DEBUG Successfully logged in user.
+2023-04-25 10:52:28,883 DEBUG Loaded user with id: 3
+2023-04-25 10:52:37,629 DEBUG Loaded user with id: 3
+2023-04-25 10:52:42,250 DEBUG Loaded user with id: 3
+2023-04-25 10:52:46,948 DEBUG Loaded user with id: 3
+2023-04-25 10:52:48,743 DEBUG Loaded user with id: 3
+2023-04-25 10:52:56,238 DEBUG Loaded user with id: 3
+2023-04-25 10:52:59,190 DEBUG Loaded user with id: 3
+2023-04-25 11:03:40,470 DEBUG Loaded user with id: 3
+2023-04-25 11:03:40,519 DEBUG Loaded user with id: 3
+2023-04-25 11:04:30,152 DEBUG Loaded user with id: 3
+2023-04-25 11:05:06,156 DEBUG Loaded user with id: 3
+2023-04-25 11:05:47,207 DEBUG Loaded user with id: 3
+2023-04-25 11:06:06,125 DEBUG Loaded user with id: 3
+2023-04-25 11:06:06,869 DEBUG Loaded user with id: 3
+2023-04-25 11:07:18,152 DEBUG Loaded user with id: 3
+2023-04-25 11:14:44,326 DEBUG Loaded user with id: 3
+2023-04-25 11:15:50,376 DEBUG Loaded user with id: 3
+2023-04-25 11:15:50,392 DEBUG {'title': 'Програмная инженерия', 'type': '2'}
+2023-04-25 11:16:23,881 DEBUG Loaded user with id: 3
+2023-04-25 11:16:23,900 DEBUG {'title': 'Програмная инженерия', 'type': '2'}
+2023-04-25 11:20:49,002 DEBUG Loaded user with id: 3
+2023-04-25 11:20:49,018 DEBUG {'title': 'Програмная инженерия', 'type': '1'}
+2023-04-25 11:22:54,688 DEBUG Loaded user with id: 3
+2023-04-25 11:22:54,730 DEBUG {'title': 'Програмная инженерия', 'type': '1'}
+2023-04-25 11:23:27,867 DEBUG Loaded user with id: 3
+2023-04-25 11:23:29,762 DEBUG Loaded user with id: 3
+2023-04-25 11:23:30,911 DEBUG Loaded user with id: 3
+2023-04-25 11:23:38,323 DEBUG Loaded user with id: 3
+2023-04-25 11:23:38,323 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'isPublic': 'on', 'number': '6'}
+2023-04-25 11:24:20,146 DEBUG Loaded user with id: 3
+2023-04-25 11:24:20,162 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'isPublic': 'on', 'number': '6'}
+2023-04-25 11:25:28,748 DEBUG Loaded user with id: 3
+2023-04-25 11:25:28,768 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'isPublic': 'on', 'number': 6}
+2023-04-25 11:26:47,377 DEBUG Loaded user with id: 3
+2023-04-25 11:26:48,933 DEBUG Loaded user with id: 3
+2023-04-25 11:27:00,136 DEBUG Loaded user with id: 3
+2023-04-25 11:27:00,144 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'isPublic': 'on', 'number': 10}
+2023-04-25 11:27:10,968 DEBUG Loaded user with id: 3
+2023-04-25 11:27:10,976 DEBUG Theme PyDantic model is created: title='' isPublic=False key=None user_id=3.
+2023-04-25 11:27:10,976 DEBUG Theme data is created by Model Theme: self.id=None, self.title=''.
+2023-04-25 11:27:10,992 DEBUG Theme data is committed to db.
+2023-04-25 11:27:11,000 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 11:27:11,008 DEBUG Loaded user with id: 3
+2023-04-25 14:33:21,649 DEBUG Loaded user with id: 3
+2023-04-25 14:33:23,401 DEBUG Loaded user with id: 3
+2023-04-25 14:33:31,346 DEBUG Loaded user with id: 3
+2023-04-25 14:33:31,354 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'number': 4}
+2023-04-25 14:34:02,634 DEBUG Loaded user with id: 3
+2023-04-25 14:34:02,634 DEBUG {'title': 'Програмная инженерия', 'type': '2', 'number': 4}
+2023-04-25 14:55:00,074 DEBUG Loaded user with id: 3
+2023-04-25 14:55:00,082 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'number': 4}
+2023-04-25 14:55:18,502 DEBUG Loaded user with id: 3
+2023-04-25 14:55:18,521 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'number': 4}
+2023-04-25 14:55:37,483 DEBUG Loaded user with id: 3
+2023-04-25 14:55:37,499 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'number': 4}
+2023-04-25 14:55:52,171 DEBUG Loaded user with id: 3
+2023-04-25 14:55:52,192 DEBUG {'title': 'Програмная инженерия', 'type': '1', 'number': 4}
+2023-04-25 15:00:25,767 DEBUG Loaded user with id: 3
+2023-04-25 15:00:25,783 DEBUG {'title': 'Програмная инженерия', 'type': '2', 'number': 3}
+2023-04-25 15:00:32,027 DEBUG Loaded user with id: 3
+2023-04-25 15:00:32,027 DEBUG {'title': 'Програмная инженерия', 'type': '2', 'isPublic': 'on', 'number': 3}
+2023-04-25 15:02:18,082 DEBUG Loaded user with id: 3
+2023-04-25 15:02:18,097 DEBUG Theme PyDantic model is created: title='Програмная инженерия' isPublic=True key=None user_id=3.
+2023-04-25 15:02:18,097 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Програмная инженерия'.
+2023-04-25 15:02:18,113 DEBUG Theme data is committed to db.
+2023-04-25 15:02:18,113 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:02:18,141 DEBUG Loaded user with id: 3
+2023-04-25 15:24:15,289 DEBUG Loaded user with id: 3
+2023-04-25 15:24:15,311 DEBUG Loaded user with id: 3
+2023-04-25 15:24:22,094 DEBUG User is taken from db query: None
+2023-04-25 15:24:22,094 ERROR Exception while logging user: 'NoneType' object has no attribute 'password'
+2023-04-25 15:24:38,226 DEBUG User PyDantic model is created: username='bronnikovavarvara' password='bronnikovavarvara' email='bronnikovavarvara@mail.ru'.
+2023-04-25 15:24:38,496 DEBUG Password is hashed.
+2023-04-25 15:24:38,496 DEBUG User data is created by Model Users: self.id=None, self.username='bronnikovavarvara'.
+2023-04-25 15:24:38,511 DEBUG User data is committed to db.
+2023-04-25 15:24:48,369 DEBUG User is taken from db query: self.id=1, self.username='bronnikovavarvara'
+2023-04-25 15:24:48,661 DEBUG Password is checked with thw hashed one.
+2023-04-25 15:24:48,661 DEBUG Successfully logged in user.
+2023-04-25 15:24:48,669 DEBUG Loaded user with id: 1
+2023-04-25 15:24:51,152 DEBUG Loaded user with id: 1
+2023-04-25 15:24:53,085 DEBUG Loaded user with id: 1
+2023-04-25 15:25:02,844 DEBUG Loaded user with id: 1
+2023-04-25 15:25:02,846 DEBUG {'title': 'Програмная инженерия', 'type': '2', 'number': 3}
+2023-04-25 15:25:15,451 DEBUG Loaded user with id: 1
+2023-04-25 15:25:15,451 DEBUG Theme PyDantic model is created: title='Програмная инженерия' isPublic=False key='sVwanQSRqizDCtRKOBgIdRsqaGDUb,' user_id=1.
+2023-04-25 15:25:15,451 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Програмная инженерия'.
+2023-04-25 15:25:15,451 DEBUG Theme data is committed to db.
+2023-04-25 15:25:15,451 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:25:15,512 DEBUG Loaded user with id: 1
+2023-04-25 15:25:17,723 DEBUG Loaded user with id: 1
+2023-04-25 15:29:04,617 DEBUG Loaded user with id: 1
+2023-04-25 15:29:36,150 DEBUG Loaded user with id: 1
+2023-04-25 15:29:39,763 DEBUG Loaded user with id: 1
+2023-04-25 15:29:43,678 DEBUG Loaded user with id: 1
+2023-04-25 15:29:45,791 DEBUG Loaded user with id: 1
+2023-04-25 15:29:54,005 DEBUG Loaded user with id: 1
+2023-04-25 15:29:54,010 DEBUG {'title': 'Програмная инженерия', 'type': '2', 'isPublic': 'on', 'number': 3}
+2023-04-25 15:30:06,390 DEBUG Loaded user with id: 1
+2023-04-25 15:30:06,393 DEBUG Theme PyDantic model is created: title='Програмная инженери2я' isPublic=True key=None user_id=1.
+2023-04-25 15:30:06,393 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Програмная инженери2я'.
+2023-04-25 15:30:06,416 DEBUG Theme data is committed to db.
+2023-04-25 15:30:06,416 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:30:06,426 DEBUG Loaded user with id: 1
+2023-04-25 15:30:08,689 DEBUG Loaded user with id: 1
+2023-04-25 15:31:28,297 DEBUG Loaded user with id: 1
+2023-04-25 15:31:29,798 DEBUG Loaded user with id: 1
+2023-04-25 15:31:40,067 DEBUG Loaded user with id: 1
+2023-04-25 15:31:40,070 DEBUG {'title': 'Програмная инженeeeaери2я', 'type': '2', 'isPublic': 'on', 'number': 3}
+2023-04-25 15:31:49,049 DEBUG Loaded user with id: 1
+2023-04-25 15:31:49,053 DEBUG Theme PyDantic model is created: title='Програмная инженeeeaери2я' isPublic=True key=None user_id=1.
+2023-04-25 15:31:49,053 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Програмная инженeeeaери2я'.
+2023-04-25 15:31:49,063 DEBUG Theme data is committed to db.
+2023-04-25 15:31:49,063 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:31:49,113 DEBUG Loaded user with id: 1
+2023-04-25 15:31:54,094 DEBUG Loaded user with id: 1
+2023-04-25 15:32:35,606 DEBUG Loaded user with id: 1
+2023-04-25 15:32:35,628 DEBUG Theme PyDantic model is created: title='Програмная инженeq23eeaери2я' isPublic=True key=None user_id=1.
+2023-04-25 15:32:35,628 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Програмная инженeq23eeaери2я'.
+2023-04-25 15:32:35,643 DEBUG Theme data is committed to db.
+2023-04-25 15:32:35,644 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:32:35,655 DEBUG Loaded user with id: 1
+2023-04-25 15:32:38,593 DEBUG Loaded user with id: 1
+2023-04-25 15:32:52,194 DEBUG Loaded user with id: 1
+2023-04-25 15:32:57,763 DEBUG Loaded user with id: 1
+2023-04-25 15:32:57,765 DEBUG {'title': 'eawe', 'type': '2', 'number': 3}
+2023-04-25 15:33:06,413 DEBUG Loaded user with id: 1
+2023-04-25 15:33:06,413 DEBUG Theme PyDantic model is created: title='eawe' isPublic=False key='MouqMVijlW:lsolYNKCRHXDucDwZIR' user_id=1.
+2023-04-25 15:33:06,413 DEBUG Theme data is created by Model Theme: self.id=None, self.title='eawe'.
+2023-04-25 15:33:06,428 DEBUG Theme data is committed to db.
+2023-04-25 15:33:06,428 DEBUG Card PyDantic model is created: theme_id=5 type=2 ask_side='С#' answer_side='круто'.
+2023-04-25 15:33:06,428 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='С#'.
+2023-04-25 15:33:06,444 DEBUG Card data is committed to db.
+2023-04-25 15:33:06,444 DEBUG Card PyDantic model is created: theme_id=5 type=2 ask_side='Java' answer_side='фу'.
+2023-04-25 15:33:06,444 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Java'.
+2023-04-25 15:33:06,444 DEBUG Card data is committed to db.
+2023-04-25 15:33:06,444 DEBUG All cards of theme are added
+2023-04-25 15:33:06,487 DEBUG Loaded user with id: 1
+2023-04-25 15:33:09,101 DEBUG Loaded user with id: 1
+2023-04-25 15:38:18,516 DEBUG Loaded user with id: 1
+2023-04-25 15:38:20,655 DEBUG Loaded user with id: 1
+2023-04-25 15:38:30,155 DEBUG Loaded user with id: 1
+2023-04-25 15:38:30,158 DEBUG {'title': 'Python', 'type': '1', 'number': 3}
+2023-04-25 15:38:51,278 DEBUG Loaded user with id: 1
+2023-04-25 15:38:51,284 DEBUG Theme PyDantic model is created: title='Python' isPublic=False key='dyZeWByIwSUTXEgjJLLIELFbvuqEQ:' user_id=1.
+2023-04-25 15:38:51,284 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Python'.
+2023-04-25 15:38:51,297 DEBUG Theme data is committed to db.
+2023-04-25 15:38:51,310 ERROR Exception while creating theme-model: [Errno 2] No such file or directory: 'C:\\Users\\Варя\\PycharmProjects\\MemoryTrain/media/images/1/6_1.png'
+2023-04-25 15:38:51,318 DEBUG Loaded user with id: 1
+2023-04-25 15:38:55,981 DEBUG Loaded user with id: 1
+2023-04-25 15:40:48,728 DEBUG Loaded user with id: 1
+2023-04-25 15:41:12,244 DEBUG User PyDantic model is created: username='michael' password='michael' email='michael@gmail.com'.
+2023-04-25 15:41:12,509 DEBUG Password is hashed.
+2023-04-25 15:41:12,510 DEBUG User data is created by Model Users: self.id=None, self.username='michael'.
+2023-04-25 15:41:12,522 DEBUG User data is committed to db.
+2023-04-25 15:41:18,663 DEBUG User is taken from db query: self.id=2, self.username='michael'
+2023-04-25 15:41:18,941 DEBUG Password is checked with thw hashed one.
+2023-04-25 15:41:18,942 DEBUG Successfully logged in user.
+2023-04-25 15:41:18,951 DEBUG Loaded user with id: 2
+2023-04-25 15:46:25,636 DEBUG Loaded user with id: 2
+2023-04-25 15:46:27,425 DEBUG Loaded user with id: 2
+2023-04-25 15:46:41,627 DEBUG Loaded user with id: 2
+2023-04-25 15:46:41,629 DEBUG {'title': 'Python', 'type': '2', 'number': 3}
+2023-04-25 15:46:50,014 DEBUG Loaded user with id: 2
+2023-04-25 15:46:50,017 DEBUG Theme PyDantic model is created: title='Python' isPublic=False key='hxW_NmZ.mr,-KAAcnNWU_sOKtEe;vg' user_id=2.
+2023-04-25 15:46:50,018 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Python'.
+2023-04-25 15:46:50,032 DEBUG Theme data is committed to db.
+2023-04-25 15:46:50,036 DEBUG Card PyDantic model is created: theme_id=7 type=2 ask_side='С#' answer_side='круто'.
+2023-04-25 15:46:50,036 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='С#'.
+2023-04-25 15:46:50,048 DEBUG Card data is committed to db.
+2023-04-25 15:46:50,050 DEBUG Card PyDantic model is created: theme_id=7 type=2 ask_side='Java' answer_side='фу'.
+2023-04-25 15:46:50,050 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Java'.
+2023-04-25 15:46:50,061 DEBUG Card data is committed to db.
+2023-04-25 15:46:50,063 DEBUG Card PyDantic model is created: theme_id=7 type=2 ask_side='Python' answer_side='фу'.
+2023-04-25 15:46:50,063 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Python'.
+2023-04-25 15:46:50,070 DEBUG Card data is committed to db.
+2023-04-25 15:46:50,070 DEBUG All cards of theme are added
+2023-04-25 15:46:50,080 DEBUG Loaded user with id: 2
+2023-04-25 15:46:52,795 DEBUG Loaded user with id: 2
+2023-04-25 15:47:08,951 DEBUG Loaded user with id: 2
+2023-04-25 15:47:11,377 DEBUG Loaded user with id: 2
+2023-04-25 15:47:13,050 DEBUG Loaded user with id: 2
+2023-04-25 15:47:33,244 DEBUG Loaded user with id: 2
+2023-04-25 15:47:33,246 DEBUG {'title': 'Веб приложения', 'type': '1', 'isPublic': 'on', 'number': 3}
+2023-04-25 15:47:57,581 DEBUG Loaded user with id: 2
+2023-04-25 15:47:57,587 DEBUG Theme PyDantic model is created: title='Веб приложения' isPublic=True key=None user_id=2.
+2023-04-25 15:47:57,588 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Веб приложения'.
+2023-04-25 15:47:57,597 DEBUG Theme data is committed to db.
+2023-04-25 15:47:57,600 ERROR Exception while creating theme-model: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-04-25 15:47:57,609 DEBUG Loaded user with id: 2
+2023-04-25 15:47:59,421 DEBUG Loaded user with id: 2
+2023-04-25 22:57:17,456 DEBUG Loaded user with id: 2
+2023-04-25 22:58:00,340 DEBUG Loaded user with id: 2
+2023-04-25 22:58:06,708 DEBUG Loaded user with id: 2
+2023-04-25 22:58:09,315 DEBUG Loaded user with id: 2
+2023-04-25 22:58:24,005 DEBUG Loaded user with id: 2
+2023-04-25 22:58:24,005 DEBUG {'title': 'Россия родина моя', 'type': '1', 'number': 3}
+2023-04-25 22:58:44,182 DEBUG Loaded user with id: 2
+2023-04-25 22:58:44,190 DEBUG Theme PyDantic model is created: title='Россия родина моя' isPublic=False key='.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd' user_id=2.
+2023-04-25 22:58:44,190 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Россия родина моя'.
+2023-04-25 22:58:44,198 DEBUG Theme data is committed to db.
+2023-04-25 22:58:44,198 INFO ImmutableMultiDict([('number', '3'), ('title', 'Россия родина моя'), ('key', '.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd'), ('extra1', ''), ('answer1', 'фа'), ('extra2', ''), ('answer2', '23'), ('extra3', ''), ('answer3', 'аа')])
+2023-04-25 23:00:33,902 DEBUG Loaded user with id: 2
+2023-04-25 23:00:33,931 DEBUG Theme PyDantic model is created: title='Россия родина моя' isPublic=False key='.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd' user_id=2.
+2023-04-25 23:00:33,931 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Россия родина моя'.
+2023-04-25 23:00:34,001 DEBUG Theme data is committed to db.
+2023-04-25 23:00:34,001 INFO ImmutableMultiDict([('number', '3'), ('title', 'Россия родина моя'), ('key', '.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd'), ('extra1', ''), ('answer1', 'фа'), ('extra2', ''), ('answer2', '23'), ('extra3', ''), ('answer3', 'аа')])
+2023-04-25 23:29:48,013 DEBUG Loaded user with id: 2
+2023-04-25 23:29:48,038 DEBUG Theme PyDantic model is created: title='Россия родина моя' isPublic=False key='.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd' user_id=2.
+2023-04-25 23:29:48,039 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Россия родина моя'.
+2023-04-25 23:29:48,061 DEBUG Theme data is committed to db.
+2023-04-25 23:29:48,061 INFO ImmutableMultiDict([('number', '3'), ('title', 'Россия родина моя'), ('key', '.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd'), ('extra1', ''), ('answer1', 'фа'), ('extra2', ''), ('answer2', '23'), ('extra3', ''), ('answer3', 'аа')])
+2023-04-25 23:34:35,375 DEBUG Loaded user with id: 2
+2023-04-25 23:34:35,399 DEBUG Theme PyDantic model is created: title='Россия родина моя' isPublic=False key='.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd' user_id=2.
+2023-04-25 23:34:35,399 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Россия родина моя'.
+2023-04-25 23:34:35,424 DEBUG Theme data is committed to db.
+2023-04-25 23:34:35,424 INFO ImmutableMultiDict([('number', '3'), ('title', 'Россия родина моя'), ('key', '.V:_sybdBuuyVrP;XKJ-AjNKnI..Hd'), ('extra1', ''), ('answer1', 'фа'), ('extra2', ''), ('answer2', '23'), ('extra3', ''), ('answer3', 'аа')])
+2023-04-25 23:34:35,428 DEBUG Card PyDantic model is created: theme_id=12 type=2 ask_side='/media/images/2/12_1.png' answer_side='фа'.
+2023-04-25 23:34:35,430 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/media/images/2/12_1.png'.
+2023-04-25 23:34:35,444 DEBUG Card data is committed to db.
+2023-04-25 23:34:35,452 DEBUG Card PyDantic model is created: theme_id=12 type=2 ask_side='/media/images/2/12_2.png' answer_side='23'.
+2023-04-25 23:34:35,453 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/media/images/2/12_2.png'.
+2023-04-25 23:34:35,467 DEBUG Card data is committed to db.
+2023-04-25 23:34:35,472 DEBUG Card PyDantic model is created: theme_id=12 type=2 ask_side='/media/images/2/12_3.png' answer_side='аа'.
+2023-04-25 23:34:35,472 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/media/images/2/12_3.png'.
+2023-04-25 23:34:35,486 DEBUG Card data is committed to db.
+2023-04-25 23:34:35,486 DEBUG All cards of theme are added
+2023-04-25 23:34:35,496 DEBUG Loaded user with id: 2
+2023-04-25 23:34:42,323 DEBUG Loaded user with id: 2
+2023-04-25 23:36:11,203 DEBUG Loaded user with id: 2
+2023-04-25 23:46:52,765 DEBUG Loaded user with id: 2
+2023-04-25 23:48:04,720 DEBUG Loaded user with id: 2
+2023-04-25 23:48:37,603 DEBUG Loaded user with id: 2
+2023-04-25 23:52:10,294 DEBUG Loaded user with id: 2
+2023-04-25 23:52:16,480 DEBUG Loaded user with id: 2
+2023-04-25 23:52:39,164 DEBUG Loaded user with id: 2
+2023-04-25 23:52:41,307 DEBUG Loaded user with id: 2
+2023-04-25 23:52:54,691 DEBUG Loaded user with id: 2
+2023-04-25 23:53:03,392 DEBUG User is taken from db query: self.id=2, self.username='michael'
+2023-04-25 23:53:03,640 DEBUG Password is checked with thw hashed one.
+2023-04-25 23:53:03,640 DEBUG Successfully logged in user.
+2023-04-25 23:53:03,648 DEBUG Loaded user with id: 2
+2023-04-25 23:53:05,529 DEBUG Loaded user with id: 2
+2023-04-25 23:53:07,233 DEBUG Loaded user with id: 2
+2023-04-25 23:53:27,539 DEBUG Loaded user with id: 2
+2023-04-25 23:53:27,539 DEBUG {'title': 'Клавиатура', 'type': '1', 'isPublic': 'on', 'number': 3}
+2023-04-25 23:59:58,537 DEBUG Loaded user with id: 2
+2023-04-25 23:59:58,553 DEBUG Theme PyDantic model is created: title='Клавиатура' isPublic=True key=None user_id=2.
+2023-04-25 23:59:58,553 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Клавиатура'.
+2023-04-25 23:59:58,577 DEBUG Theme data is committed to db.
+2023-04-25 23:59:58,577 INFO ImmutableMultiDict([('number', '3'), ('title', 'Клавиатура'), ('extra1', ''), ('answer1', 'круто'), ('extra2', ''), ('answer2', 'фу'), ('extra3', ''), ('answer3', 'фу')])
+2023-04-25 23:59:58,577 DEBUG Card PyDantic model is created: theme_id=13 type=2 ask_side='/static/media/images/2/13_1.png' answer_side='круто'.
+2023-04-25 23:59:58,577 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/static/media/images/2/13_1.png'.
+2023-04-25 23:59:58,585 DEBUG Card data is committed to db.
+2023-04-25 23:59:58,593 DEBUG Card PyDantic model is created: theme_id=13 type=2 ask_side='/static/media/images/2/13_2.png' answer_side='фу'.
+2023-04-25 23:59:58,593 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/static/media/images/2/13_2.png'.
+2023-04-25 23:59:58,601 DEBUG Card data is committed to db.
+2023-04-25 23:59:58,609 DEBUG Card PyDantic model is created: theme_id=13 type=2 ask_side='/static/media/images/2/13_3.png' answer_side='фу'.
+2023-04-25 23:59:58,609 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='/static/media/images/2/13_3.png'.
+2023-04-25 23:59:58,617 DEBUG Card data is committed to db.
+2023-04-25 23:59:58,617 DEBUG All cards of theme are added
+2023-04-25 23:59:58,625 DEBUG Loaded user with id: 2
+2023-04-26 00:00:01,203 DEBUG Loaded user with id: 2
+2023-04-26 00:01:00,684 DEBUG Loaded user with id: 2
+2023-04-26 00:01:49,852 DEBUG Loaded user with id: 2
+2023-04-26 00:03:10,198 DEBUG Loaded user with id: 2
+2023-04-26 00:03:18,996 DEBUG Loaded user with id: 2
+2023-04-26 00:19:59,386 DEBUG Loaded user with id: 2
+2023-04-26 00:20:01,292 DEBUG Loaded user with id: 2
+2023-04-26 00:20:11,705 DEBUG Loaded user with id: 2
+2023-04-26 00:20:13,125 DEBUG Loaded user with id: 2
+2023-04-26 00:20:51,737 DEBUG Loaded user with id: 2
+2023-04-26 00:20:56,974 DEBUG Loaded user with id: 2
+2023-04-26 00:21:47,275 DEBUG Loaded user with id: 2
+2023-04-26 00:21:51,230 DEBUG Loaded user with id: 2
+2023-04-26 00:21:56,646 DEBUG Loaded user with id: 2
+2023-04-26 00:21:58,826 DEBUG Loaded user with id: 2
+2023-04-26 00:22:18,554 DEBUG Loaded user with id: 2
+2023-04-26 00:22:20,385 DEBUG Loaded user with id: 2
+2023-04-26 00:23:08,227 DEBUG Loaded user with id: 2
+2023-04-26 00:23:18,718 DEBUG Loaded user with id: 2
+2023-04-26 00:23:20,566 DEBUG Loaded user with id: 2
+2023-04-26 00:25:00,017 DEBUG Loaded user with id: 2
+2023-04-26 00:25:35,723 DEBUG Loaded user with id: 2
+2023-04-26 00:25:54,144 DEBUG Loaded user with id: 2
+2023-04-26 00:26:03,170 DEBUG Loaded user with id: 2
+2023-04-26 00:26:04,828 DEBUG Loaded user with id: 2
+2023-04-26 00:30:34,311 DEBUG Loaded user with id: 2
+2023-04-26 00:30:36,367 DEBUG Loaded user with id: 2
+2023-04-26 00:30:38,939 DEBUG Loaded user with id: 2
+2023-04-26 00:30:48,203 DEBUG Loaded user with id: 2
+2023-04-26 00:31:55,107 DEBUG Loaded user with id: 2
+2023-04-26 00:31:58,304 DEBUG Loaded user with id: 2
+2023-04-26 00:32:01,741 DEBUG Loaded user with id: 2
+2023-04-26 00:32:06,128 DEBUG Loaded user with id: 2
+2023-04-26 00:32:09,013 DEBUG Loaded user with id: 2
+2023-04-26 00:32:11,368 DEBUG Loaded user with id: 2
+2023-04-26 00:32:11,407 DEBUG Loaded user with id: 2
+2023-04-26 00:32:21,744 DEBUG Loaded user with id: 2
+2023-04-26 00:32:50,792 DEBUG Loaded user with id: 2
