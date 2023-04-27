@@ -1,5 +1,5 @@
 from flask import Flask, url_for, render_template, request, flash, redirect, make_response
-import flask_login
+from flask_login import current_user, login_manager, LoginManager, UserMixin, login_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
 import logging
 import pydantic
@@ -10,7 +10,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import validators
 import utils
 
-
 # ===============================CONFIGURATION================================= #
 DATABASE = 'site.db'
 DEBUG = True
@@ -20,7 +19,7 @@ app = Flask(__name__)
 # app.config.from_object(__name__)
 # app.config.update(dict(DATABASE=os.path.join(app.root_path, 'site.db')))
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///flask457.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///flask458.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'rammqueen'
 db: SQLAlchemy = SQLAlchemy()
@@ -37,7 +36,7 @@ logger.addHandler(file_handler)
 
 
 # -----------------------------------LOGIN-------------------------------------------#
-loginManager = flask_login.LoginManager(app)
+loginManager = LoginManager(app)
 loginManager.login_view = 'app.login'
 loginManager.init_app(app)
 
@@ -50,7 +49,7 @@ def loadUser(user_id):
 
 # -----------------------------------DATABASE------------------------------------------#
 
-class Users(db.Model, flask_login.UserMixin):
+class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True)
     email = db.Column(db.String(50), unique=True)
@@ -64,7 +63,7 @@ class Themes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80))
     isPublic = db.Column(db.Boolean)
-    key = db.Column(db.String(80), nullable=True)
+    key = db.Column(db.String(80), nullable=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
@@ -73,15 +72,23 @@ class Themes(db.Model):
 
 class TextCard(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.Integer)  # 1 - фото, 2 - текст
     ask_side = db.Column(db.Text)
-    extra_ask_side = db.Column(db.Text, nullable=True)
+    image = db.Column(db.LargeBinary, nullable=True)
     answer_side = db.Column(db.String(255))
     theme_id = db.Column(db.Integer, db.ForeignKey('themes.id'))
 
     def __repr__(self):
         return f"{self.id=}, {self.ask_side=}"
 
+
+def add_instance(model_instance):
+    try:
+        db.session.add(model_instance)
+        db.session.flush()
+        db.session.commit()
+        return model_instance.id
+    except Exception as e:
+        logger.error(str(e))
 
 # =====================================URLS==========================================#
 
@@ -102,7 +109,7 @@ def login():
             logger.debug(f"User is taken from db query: {user}")
             if check_password_hash(user.password, request.form['password']):
                 logger.debug("Password is checked with thw hashed one.")
-                flask_login.login_user(user, remember=True, force=True)
+                login_user(user, remember=True, force=True)
                 logger.debug("Successfully logged in user.")
                 return redirect(url_for('home'))
         except Exception as e:
@@ -115,7 +122,7 @@ def login():
 @app.route('/logout/', methods=['get', 'post'])
 def logout():
     """Logout user"""
-    flask_login.logout_user()
+    logout_user()
     return redirect(url_for("home"))
 
 
@@ -159,95 +166,77 @@ def register():
 # -----------------------------------PROFILE----------------------------------------#
 
 @app.route('/profile/<username>/')
-@flask_login.login_required
+@login_required
 def profile(username):
     """User profile view"""
-    user = flask_login.current_user
+    user = current_user
     return render_template("profile/profile.html",
                            user=user)
 
 
 @app.route('/profile/<username>/themes/')
-@flask_login.login_required
+@login_required
 def profileThemes(username):
     """User profile view"""
-    user = flask_login.current_user
+    user = current_user
     themes = Themes.query.filter_by(user_id=user.id).all()
     return render_template("profile/themes.html",
                            user=user,
                            themes=themes)
 
 
-@app.route("/create_theme/")
-@flask_login.login_required
-def createTheme():
-    return render_template("profile/create_theme.html")
+# ----------------------------------THEME-CREATION---------------------------------------- #
 
-
-@app.route("/create_theme/middleware/", methods=['get', 'post'])
-@flask_login.login_required
+@app.route("/create_theme/middleware/")
+@login_required
 def createThemeMiddleware():
+    return render_template("profile/create_theme_middleware.html")
+
+
+@app.route("/create_theme/", methods=['get', 'post'])
+@login_required
+def createTheme():
+    """Creating a new theme card"""
     form_data = request.form.to_dict()
-    theme_type = form_data['type']
     form_data['number'] = int(form_data['number'])
     logger.debug(str(form_data))
-
     isPublic = request.form.get('isPublic', False)
     if isPublic:
         key = None
     else:
         key = utils.generate_key()
         form_data['key'] = key
-
-    if theme_type == '1':     # images
-        return render_template("profile/create_theme_images.html", **form_data)
-    elif theme_type == '2':   # text
-        return render_template("profile/create_theme_text.html", **form_data)
+    return render_template("profile/create_theme.html", **form_data)
 
 
-@app.route('/create_theme/text/')
-@flask_login.login_required
-def createThemeText():
-    """Creating a new theme card"""
-    # if request.method == 'POST':
-    # print(request.form.keys())
-    return render_template("profile/create_theme_text.html")
-
-
-@app.route("/create_theme/images/")
-@flask_login.login_required
-def createThemeImages():
-    return render_template("profile/create_theme_images.html")
-
-
-class Access(enum.Enum):
-    PUBLIC = 'on'
-    PRIVATE = 'off'
-
-def add_instance(model_instance):
-    try:
-        db.session.add(model_instance)
-        db.session.flush()
-        db.session.commit()
-        return model_instance.id
-    except Exception as e:
-        logger.error(str(e))
-
-
-@app.post('/validate_theme_text/')
-@flask_login.login_required
-def validateCardsText():
+@app.post('/validate_theme/')
+@login_required
+def validateTheme():
     """Creating a new theme card"""
     try:
-        theme = create_theme_instance()
+        isPublic = False if 'key' in request.form else True
+        key = None if isPublic else request.form['key']
+        themeModel = validators.Theme(user_id=current_user.id,
+                                      title=request.form['title'],
+                                      isPublic=isPublic,
+                                      key=key)
+        logger.debug(f"Theme PyDantic model is created: {themeModel}.")
+        theme = Themes(**themeModel.dict())
+        logger.debug(f"Theme data is created by Model Theme: {theme}.")
+        add_instance(theme)
+        logger.debug("Theme data is committed to db.")
+        logger.info(request.form)
+
         for i in range(1, int(request.form['number']) + 1):
+            print(request.files.get(f"image{i}", None))
             cardModel = validators.Card(theme_id=theme.id,
-                                        type=2,
                                         ask_side=request.form[f'question{i}'],
-                                        extra_ask_side=request.form.get(f'extra{i}', None),
                                         answer_side=request.form[f'answer{i}'])
             logger.debug(f"Card PyDantic model is created: {cardModel}.")
-            card = TextCard(**cardModel.dict())
+            card = TextCard(**cardModel.dict(),
+                            image=request.files.get(f"image{i}", None).stream.read() if request.files.get(f"image{i}",
+                                                                                                   None) else None,
+                            )
             logger.debug(f"Card data is created by Model Card: {card}.")
             add_instance(card)
             logger.debug("Card data is committed to db.")
@@ -255,61 +244,13 @@ def validateCardsText():
     except Exception as e:
         logger.error(f"Exception while creating theme-model: {str(e)}")
     # redirecting to all user themes
-    return redirect(url_for('profileThemes', username=flask_login.current_user.username))
-
-
-def create_theme_instance() -> Themes:
-    isPublic = False if 'key' in request.form else True
-    key = None if isPublic else request.form['key']
-    themeModel = validators.Theme(user_id=flask_login.current_user.id,
-                                  title=request.form['title'],
-                                  isPublic=isPublic,
-                                  key=key)
-    logger.debug(f"Theme PyDantic model is created: {themeModel}.")
-    theme = Themes(**themeModel.dict())
-    logger.debug(f"Theme data is created by Model Theme: {theme}.")
-    add_instance(theme)
-    logger.debug("Theme data is committed to db.")
-    logger.info(request.form)
-    return theme
-
-
-
-@app.post('/validate_theme_images/')
-@flask_login.login_required
-def validateCardsImages():
-    """Creating a new theme card"""
-    try:
-        theme = create_theme_instance()
-        for i in range(1, int(request.form['number']) + 1):
-            file = request.files[f'question{i}']
-            save_path = f"/static/media/images/{flask_login.current_user.id}/{theme.id}_{i}.png"
-            file.save(app.root_path + save_path)
-            cardModel = validators.Card(theme_id=theme.id,
-                                        type=2,
-                                        ask_side=save_path,
-                                        extra_ask_side=request.form.get(f'extra{i}', None),
-                                        answer_side=request.form[f'answer{i}'])
-            logger.debug(f"Card PyDantic model is created: {cardModel}.")
-            card = TextCard(**cardModel.dict())
-            logger.debug(f"Card data is created by Model Card: {card}.")
-            db.session.add(card)
-            db.session.flush()
-            db.session.commit()
-            logger.debug("Card data is committed to db.")
-        logger.debug("All cards of theme are added")
-    except Exception as e:
-        raise
-
-        print(e['traceback'])
-        logger.error(f"Exception while creating theme-model: {str(e)}")
-    # redirecting to all user themes
-    return redirect(url_for('profileThemes', username=flask_login.current_user.username))
+    return redirect(url_for('profileThemes', username=current_user.username))
 
 
 @app.route('/<theme_id>/<title>',
            methods=['get', 'post'])
 def theme_view(theme_id, title):
+    """Separate theme view and testing logic."""
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
     theme = Themes.query.filter_by(id=theme_id).first()
     if request.method == 'GET':
@@ -331,9 +272,12 @@ def theme_view(theme_id, title):
                 right_answers += 1
         result = f"Правильных ответов: {right_answers} из {len(cards)}"
         if right_answers == len(cards):
-            advice = "<a href=\"{{ url_for('profileThemes', username=current_user.username }}\">Остальные темы</a>"
+            advice = "<a href=\"{}\">Остальные темы</a>".format(url_for("profileThemes",
+                                                                        username=current_user.username))
         else:
-            advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_view', theme_id=theme_id, title=title))
+            advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_view',
+                                                                           theme_id=theme_id,
+                                                                           title=title))
         response = make_response(
             render_template(
                 'themes/results.html',
@@ -345,6 +289,8 @@ def theme_view(theme_id, title):
         )
     return response
 
+
+# ==============================================RUNNING============================================== #
 
 if __name__ == '__main__':
 

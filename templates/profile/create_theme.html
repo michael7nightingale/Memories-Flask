@@ -3,26 +3,29 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Создание карты</h1>
+    <h1>{{ title }}</h1>
 </div>
 
 <div class="container">
-    <form class="form-control" action="{{ url_for('createThemeMiddleware') }}" method="post">
-    <div class="container">
-        <input type='text' name="title" placeholder="Тема карточки">
-
-        <label for="images">Фотокарточки</label>
-        <input type="radio" id="images" value=1 name="type" placeholder="Фотокарточки">
-
-        <label for="text">Текстовые карточки</label>
-        <input type="radio" id="text" value=2 name="type" placeholder="Текстовые карточки">
-
-        <label for="isPublic">Публичная тема</label>
-        <input type="checkbox" id='isPublic' name="isPublic" placeholder="Публичная тема">
-
-        <input type="number" max=20 min=3 name="number" placeholder="Кол-во вопросов">
+    <form action="{{ url_for('validateTheme') }}" method="post" enctype="multipart/form-data">
+    <div class="theme">
+        <input type='text' hidden="hidden" name="number" placeholder="Тема карточки" value="{{ number }}">
+     <input type='text' name="title" placeholder="Тема карточки" value="{{ title }}">
+    {% if key %}
+    <input type='text' name="key" placeholder="Ключ карточки" value="{{ key }}">
+    {% endif %}
+        <ul id="questions_list">
+        {% for i in range(1, number + 1) %}
+            <li id="questions_list_element{{ i }}">
+            <input type="text" id="question{{ i }}" name="question{{ i }}" placeholder="Вопрос {{ i }}">
+            <input type="file" id="image{{ i }}" name="image{{ i }}" placeholder="Изображение {{ i }}">
+            <input type="text" id="answer{{ i }}" name="answer{{ i }}" placeholder="Ответ {{ i }}">
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 
+        <button id="adder">Добавить вопрос</button>
         <input type="submit">
     </form>
 

@@ -1,3 +1,4 @@
+import flask_login
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 
@@ -8,7 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-class Users(db.Model):
+class Users(db.Model, flask_login.UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True)
     email = db.Column(db.String(50), unique=True)
@@ -22,21 +23,22 @@ class Themes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80))
     isPublic = db.Column(db.Boolean)
+    key = db.Column(db.String(80), nullable=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
-        return f"{self.id=}, {self.theme=}"
+        return f"{self.id=}, {self.title=}"
 
 
-class Card(db.Model):
+class TextCard(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.Integer)    # 1 - фото, 2 - текст
     ask_side = db.Column(db.Text)
+    image = db.Column(db.LargeBinary, nullable=True)
     answer_side = db.Column(db.String(255))
     theme_id = db.Column(db.Integer, db.ForeignKey('themes.id'))
 
     def __repr__(self):
-        return f"{self.id=}, {self.question=}"
+        return f"{self.id=}, {self.ask_side=}"
 
 
 

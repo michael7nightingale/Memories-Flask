@@ -731,3 +731,140 @@ isPublic
 2023-04-26 00:32:11,407 DEBUG Loaded user with id: 2
 2023-04-26 00:32:21,744 DEBUG Loaded user with id: 2
 2023-04-26 00:32:50,792 DEBUG Loaded user with id: 2
+2023-04-27 17:22:30,990 DEBUG Loaded user with id: 1
+2023-04-27 17:22:32,851 DEBUG Loaded user with id: 1
+2023-04-27 17:22:34,409 DEBUG Loaded user with id: 1
+2023-04-27 17:22:40,405 DEBUG Loaded user with id: 1
+2023-04-27 17:22:42,504 DEBUG Loaded user with id: 1
+2023-04-27 17:30:15,302 DEBUG Loaded user with id: 1
+2023-04-27 17:30:16,899 DEBUG Loaded user with id: 1
+2023-04-27 17:30:18,376 DEBUG Loaded user with id: 1
+2023-04-27 17:35:51,637 DEBUG Loaded user with id: 1
+2023-04-27 17:47:47,376 DEBUG Loaded user with id: 1
+2023-04-27 17:47:47,382 DEBUG Loaded user with id: 1
+2023-04-27 17:47:48,728 DEBUG Loaded user with id: 1
+2023-04-27 17:47:48,729 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,271 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,272 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,599 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,600 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,824 DEBUG Loaded user with id: 1
+2023-04-27 17:47:49,824 DEBUG Loaded user with id: 1
+2023-04-27 17:47:53,005 DEBUG Loaded user with id: 1
+2023-04-27 17:47:53,006 DEBUG Loaded user with id: 1
+2023-04-27 17:47:53,965 DEBUG Loaded user with id: 1
+2023-04-27 17:47:53,966 DEBUG Loaded user with id: 1
+2023-04-27 17:47:59,460 DEBUG User PyDantic model is created: username='isaac_newton' password='isaac_newton' email='isaac_newton@gmail.com'.
+2023-04-27 17:47:59,578 DEBUG Password is hashed.
+2023-04-27 17:47:59,579 DEBUG User data is created by Model Users: self.id=None, self.username='isaac_newton'.
+2023-04-27 17:47:59,690 DEBUG User data is committed to db.
+2023-04-27 17:47:59,695 DEBUG Loaded user with id: 1
+2023-04-27 17:48:02,646 DEBUG User is taken from db query: self.id=1, self.username='isaac_newton'
+2023-04-27 17:48:02,764 DEBUG Password is checked with thw hashed one.
+2023-04-27 17:48:02,764 DEBUG Successfully logged in user.
+2023-04-27 17:48:02,769 DEBUG Loaded user with id: 1
+2023-04-27 17:48:04,182 DEBUG Loaded user with id: 1
+2023-04-27 17:48:05,149 DEBUG Loaded user with id: 1
+2023-04-27 17:48:19,848 DEBUG Loaded user with id: 1
+2023-04-27 17:48:19,849 DEBUG {'title': 'Методы строк в Питоне', 'number': 5}
+2023-04-27 17:48:39,634 DEBUG Loaded user with id: 1
+2023-04-27 17:48:39,635 DEBUG {'title': 'Методы строк в Питоне', 'number': 5}
+2023-04-27 17:48:42,682 DEBUG Loaded user with id: 1
+2023-04-27 17:48:42,683 DEBUG {'title': 'Методы строк в Питоне', 'number': 5}
+2023-04-27 17:48:51,525 DEBUG Loaded user with id: 1
+2023-04-27 17:48:51,531 DEBUG {'title': 'Методы строк в Питоне', 'number': 5}
+2023-04-27 17:51:23,759 DEBUG Loaded user with id: 1
+2023-04-27 17:51:23,773 DEBUG Theme PyDantic model is created: title='Методы строк в Питоне' isPublic=False key='DMvUlEp.dTccpAuSoiKXtakEygpWab' user_id=1.
+2023-04-27 17:51:23,773 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Методы строк в Питоне'.
+2023-04-27 17:51:23,867 DEBUG Theme data is committed to db.
+2023-04-27 17:51:23,867 INFO ImmutableMultiDict([('number', '5'), ('title', 'Методы строк в Питоне'), ('key', 'DMvUlEp.dTccpAuSoiKXtakEygpWab'), ('question1', 'Срез какие скобки'), ('answer1', 'квадратные'), ('question2', 'Разбиение по символам'), ('answer2', 'split'), ('question3', 'замена подстроки'), ('answer3', 'replace'), ('question4', 'СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ'), ('answer4', 'upper'), ('question5', 'удалить пробельные символы слева'), ('answer5', 'lstrip')])
+2023-04-27 17:51:23,867 ERROR Exception while creating theme-model: 1 validation error for Card
+type
+  field required (type=value_error.missing)
+2023-04-27 17:51:23,871 DEBUG Loaded user with id: 1
+2023-04-27 17:51:27,735 DEBUG Loaded user with id: 1
+2023-04-27 17:55:14,260 DEBUG Loaded user with id: 1
+2023-04-27 17:55:14,269 DEBUG Theme PyDantic model is created: title='Методы строк в Питоне' isPublic=False key='DMvUlEp.dTccpAuSoiKXtakEygpWab' user_id=1.
+2023-04-27 17:55:14,269 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Методы строк в Питоне'.
+2023-04-27 17:55:14,384 DEBUG Theme data is committed to db.
+2023-04-27 17:55:14,384 INFO ImmutableMultiDict([('number', '5'), ('title', 'Методы строк в Питоне'), ('key', 'DMvUlEp.dTccpAuSoiKXtakEygpWab'), ('question1', 'Срез какие скобки'), ('answer1', 'квадратные'), ('question2', 'Разбиение по символам'), ('answer2', 'split'), ('question3', 'замена подстроки'), ('answer3', 'replace'), ('question4', 'СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ'), ('answer4', 'upper'), ('question5', 'удалить пробельные символы слева'), ('answer5', 'lstrip')])
+2023-04-27 17:55:14,384 ERROR Exception while creating theme-model: 1 validation error for Card
+type
+  field required (type=value_error.missing)
+2023-04-27 17:55:14,389 DEBUG Loaded user with id: 1
+2023-04-27 17:56:09,867 DEBUG Loaded user with id: 1
+2023-04-27 17:56:09,876 DEBUG Theme PyDantic model is created: title='Методы строк в Питоне' isPublic=False key='DMvUlEp.dTccpAuSoiKXtakEygpWab' user_id=1.
+2023-04-27 17:56:09,876 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Методы строк в Питоне'.
+2023-04-27 17:56:09,978 DEBUG Theme data is committed to db.
+2023-04-27 17:56:09,978 INFO ImmutableMultiDict([('number', '5'), ('title', 'Методы строк в Питоне'), ('key', 'DMvUlEp.dTccpAuSoiKXtakEygpWab'), ('question1', 'Срез какие скобки'), ('answer1', 'квадратные'), ('question2', 'Разбиение по символам'), ('answer2', 'split'), ('question3', 'замена подстроки'), ('answer3', 'replace'), ('question4', 'СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ'), ('answer4', 'upper'), ('question5', 'удалить пробельные символы слева'), ('answer5', 'lstrip')])
+2023-04-27 17:56:09,978 DEBUG Card PyDantic model is created: theme_id=3 ask_side='Срез какие скобки' answer_side='квадратные'.
+2023-04-27 17:56:09,978 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Срез какие скобки'.
+2023-04-27 17:56:09,979 ERROR (builtins.TypeError) memoryview: a bytes-like object is required, not 'SpooledTemporaryFile'
+[SQL: INSERT INTO text_card (ask_side, image, answer_side, theme_id) VALUES (?, ?, ?, ?)]
+[parameters: [{'ask_side': 'Срез какие скобки', 'image': <tempfile.SpooledTemporaryFile object at 0x0000024B58106920>, 'answer_side': 'квадратные', 'theme_id': 3}]]
+2023-04-27 17:56:09,980 DEBUG Card data is committed to db.
+2023-04-27 17:56:09,980 ERROR Exception while creating theme-model: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (builtins.TypeError) memoryview: a bytes-like object is required, not 'SpooledTemporaryFile'
+[SQL: INSERT INTO text_card (ask_side, image, answer_side, theme_id) VALUES (?, ?, ?, ?)]
+[parameters: [{'ask_side': 'Срез какие скобки', 'image': <tempfile.SpooledTemporaryFile object at 0x0000024B58106920>, 'answer_side': 'квадратные', 'theme_id': 3}]] (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2023-04-27 18:01:39,537 DEBUG Loaded user with id: 1
+2023-04-27 18:01:39,546 DEBUG Theme PyDantic model is created: title='Методы строк в Питоне' isPublic=False key='DMvUlEp.dTccpAuSoiKXtakEygpWab' user_id=1.
+2023-04-27 18:01:39,546 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Методы строк в Питоне'.
+2023-04-27 18:01:39,648 DEBUG Theme data is committed to db.
+2023-04-27 18:01:39,648 INFO ImmutableMultiDict([('number', '5'), ('title', 'Методы строк в Питоне'), ('key', 'DMvUlEp.dTccpAuSoiKXtakEygpWab'), ('question1', 'Срез какие скобки'), ('answer1', 'квадратные'), ('question2', 'Разбиение по символам'), ('answer2', 'split'), ('question3', 'замена подстроки'), ('answer3', 'replace'), ('question4', 'СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ'), ('answer4', 'upper'), ('question5', 'удалить пробельные символы слева'), ('answer5', 'lstrip')])
+2023-04-27 18:01:39,649 DEBUG Card PyDantic model is created: theme_id=4 ask_side='Срез какие скобки' answer_side='квадратные'.
+2023-04-27 18:01:39,649 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Срез какие скобки'.
+2023-04-27 18:01:39,773 DEBUG Card data is committed to db.
+2023-04-27 18:01:39,773 DEBUG Card PyDantic model is created: theme_id=4 ask_side='Разбиение по символам' answer_side='split'.
+2023-04-27 18:01:39,774 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Разбиение по символам'.
+2023-04-27 18:01:39,872 DEBUG Card data is committed to db.
+2023-04-27 18:01:39,872 DEBUG Card PyDantic model is created: theme_id=4 ask_side='замена подстроки' answer_side='replace'.
+2023-04-27 18:01:39,872 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='замена подстроки'.
+2023-04-27 18:01:39,988 DEBUG Card data is committed to db.
+2023-04-27 18:01:39,989 DEBUG Card PyDantic model is created: theme_id=4 ask_side='СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ' answer_side='upper'.
+2023-04-27 18:01:39,989 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='СДЕЛАТЬ ВСЕ БУКВЫ ЗАГЛАВНЫМИ'.
+2023-04-27 18:01:40,085 DEBUG Card data is committed to db.
+2023-04-27 18:01:40,085 DEBUG Card PyDantic model is created: theme_id=4 ask_side='удалить пробельные символы слева' answer_side='lstrip'.
+2023-04-27 18:01:40,085 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='удалить пробельные символы слева'.
+2023-04-27 18:01:40,176 DEBUG Card data is committed to db.
+2023-04-27 18:01:40,176 DEBUG All cards of theme are added
+2023-04-27 18:01:40,181 DEBUG Loaded user with id: 1
+2023-04-27 18:01:52,471 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,735 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,753 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,759 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,763 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,765 DEBUG Loaded user with id: 1
+2023-04-27 18:01:54,766 DEBUG Loaded user with id: 1
+2023-04-27 18:02:48,904 DEBUG Loaded user with id: 1
+2023-04-27 18:02:49,885 DEBUG Loaded user with id: 1
+2023-04-27 18:05:45,928 DEBUG Loaded user with id: 1
+2023-04-27 18:05:46,696 DEBUG Loaded user with id: 1
+2023-04-27 18:05:47,135 DEBUG Loaded user with id: 1
+2023-04-27 18:05:47,336 DEBUG Loaded user with id: 1
+2023-04-27 18:05:47,495 DEBUG Loaded user with id: 1
+2023-04-27 18:05:54,462 DEBUG Loaded user with id: 1
+2023-04-27 18:05:55,489 DEBUG Loaded user with id: 1
+2023-04-27 18:06:05,935 DEBUG Loaded user with id: 1
+2023-04-27 18:06:26,776 DEBUG Loaded user with id: 1
+2023-04-27 18:12:52,323 DEBUG Loaded user with id: 1
+2023-04-27 18:17:35,684 DEBUG Loaded user with id: 1
+2023-04-27 18:17:37,891 DEBUG Loaded user with id: 1
+2023-04-27 18:17:39,414 DEBUG Loaded user with id: 1
+2023-04-27 18:17:44,958 DEBUG Loaded user with id: 1
+2023-04-27 18:17:44,959 DEBUG {'title': 'h', 'number': 3}
+2023-04-27 18:17:51,242 DEBUG Loaded user with id: 1
+2023-04-27 18:17:52,497 DEBUG Loaded user with id: 1
+2023-04-27 18:17:53,856 DEBUG Loaded user with id: 1
+2023-04-27 18:17:54,784 DEBUG Loaded user with id: 1
+2023-04-27 18:17:56,082 DEBUG Loaded user with id: 1
+2023-04-27 18:18:23,534 DEBUG Loaded user with id: 1
+2023-04-27 18:18:25,353 DEBUG Loaded user with id: 1
+2023-04-27 18:18:54,894 DEBUG Loaded user with id: 1
+2023-04-27 18:18:56,211 DEBUG Loaded user with id: 1
+2023-04-27 18:20:09,271 DEBUG Loaded user with id: 1
+2023-04-27 18:20:14,155 DEBUG Loaded user with id: 1
+2023-04-27 18:20:15,421 DEBUG Loaded user with id: 1
+2023-04-27 18:20:17,010 DEBUG Loaded user with id: 1
+2023-04-27 18:20:18,048 DEBUG Loaded user with id: 1
+2023-04-27 18:20:19,346 DEBUG Loaded user with id: 1
+2023-04-27 18:20:21,813 DEBUG Loaded user with id: 1

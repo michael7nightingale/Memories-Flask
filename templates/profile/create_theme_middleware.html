@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Создание карты</h1>
+</div>
+
+<div class="container">
+    <form class="form-control" action="{{ url_for('createTheme') }}" method="post">
+    <div class="container">
+        <input type='text' name="title" placeholder="Тема карточки">
+
+        <label for="isPublic">Публичная тема</label>
+        <input type="checkbox" id='isPublic' name="isPublic" placeholder="Публичная тема">
+
+        <input type="number" max=20 min=3 name="number" placeholder="Кол-во вопросов">
+    </div>
+
+        <input type="submit">
+    </form>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+function addQuestion(){
+    let newQuestion;
+    let amount = $('.questions').children().length + 1;
+    newQuestion = document.createElement("div");
+    newQuestion.className = 'question';
+    newQuestion.id = amount
+    newQuestion.innerHTML =
+        "<form>" +
+            '<input type="text" placeholder="Вопрос" name="question' +
+                toString(amount)  + '">'
+            '<input type="text" placeholder="Ответ" name="answer'  +
+                    toString(amount) + '">' +
+        "</form>";
+    newQuestion.insertAfter(document.getElementById(amount - 1));
+    console.log("hello ");
+}
+
+const buttonAdd = document.getElementById("adder");
+buttonAdd.addEventListener('click', addQuestion)
+
+
+    </script>
+{% endblock %}

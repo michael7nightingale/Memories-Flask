@@ -1,3 +1,5 @@
+from typing import IO
+
 from pydantic import BaseModel, constr, ValidationError, validator
 from pydantic.dataclasses import dataclass
 import re
@@ -43,7 +45,6 @@ class Theme(BaseModel):
 
 class Card(BaseModel):
     theme_id: int
-    type: int
     ask_side: str
     answer_side: str
 
@@ -52,11 +53,6 @@ class Request:
     form: dict
 
 
-# request = Request()
-# request.form = {'username': 'suslanud', 'email': 'suslanchikmopl@gmail.com', 'password': 'The8.ofmarch'}
-#
-# # print(**request.form)
-# admin = User(**request.form)
 
 
 
