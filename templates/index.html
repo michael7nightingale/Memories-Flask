@@ -1,20 +1,10 @@
-{% extends "app/layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
 <div class="jumbotron">
 
     <h1>Администрирование</h1>
-
-    {% if request.user.is_seperuser or request.user.is_staff %}
-    <p class="lead">Управление блогом</p>
-    <p><a href="{% url 'blog_' %}" class="btn btn-primary btn-large">перейти &raquo;</a></p>
-
-    {% endif %}
-
-    <h1>Мой блог</h1>
-    <p class="lead">Читать блог</p>
-    <p><a href="{% url 'blog_articles' %}" class="btn btn-primary btn-large">перейти &raquo;</a></p>
 
 </div>
 
