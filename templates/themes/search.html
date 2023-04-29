@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Поиск</h1>
+</div>
+
+<div class="container">
+    <h4>Поиск по названию</h4>
+    <form action="{{ url_for('search') }}" method="get">
+
+        <input type='text' name="substring" placeholder="Текст: ">
+        <input type="submit">
+    </form>
+    <h4>Войти по ключу</h4>
+    <form action="{{ url_for('search_key') }}" method="post">
+        <input type='text' name="key" placeholder="Ключ: ">
+        <input type="submit">
+    </form>
+</div>
+
+<div class="bp3-tree-node-content-1">
+    {% if themes %}
+        <h5>Результаты поиска</h5>
+        <ul>
+        {% for theme in themes %}
+            <li>
+                <h6>{{ theme.title }}</h6>
+                <a href="{{ url_for('theme_view', theme_id=theme.id) }}">перейти</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h5>Здесь появятся результаты поиска</h5>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

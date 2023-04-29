@@ -180,9 +180,16 @@ def profileThemes(username):
     """User profile view"""
     user = current_user
     themes = Themes.query.filter_by(user_id=user.id).all()
-    return render_template("profile/themes.html",
-                           user=user,
-                           themes=themes)
+    response = make_response(
+        render_template(
+            "profile/themes.html",
+            user=user,
+            themes=themes
+        )
+    )
+    print(request.url)
+    response.set_cookie("url", request.url, 60 * 60)
+    return response
 
 
 # ----------------------------------THEME-CREATION---------------------------------------- #
@@ -196,16 +203,14 @@ def createThemeMiddleware():
 @app.route("/create_theme/", methods=['get', 'post'])
 @login_required
 def createTheme():
+    print()
     """Creating a new theme card"""
     form_data = request.form.to_dict()
     form_data['number'] = int(form_data['number'])
     logger.debug(str(form_data))
     isPublic = request.form.get('isPublic', False)
-    if isPublic:
-        key = None
-    else:
-        key = utils.generate_key()
-        form_data['key'] = key
+    key = utils.generate_key()
+    form_data['key'] = key
     return render_template("profile/create_theme.html", **form_data)
 
 
@@ -215,7 +220,7 @@ def validateTheme():
     """Creating a new theme card"""
     try:
         isPublic = False if 'key' in request.form else True
-        key = None if isPublic else request.form['key']
+        key = request.form['key']
         themeModel = validators.Theme(user_id=current_user.id,
                                       title=request.form['title'],
                                       isPublic=isPublic,
@@ -228,7 +233,6 @@ def validateTheme():
         logger.info(request.form)
 
         for i in range(1, int(request.form['number']) + 1):
-            print(request.files.get(f"image{i}", None))
             cardModel = validators.Card(theme_id=theme.id,
                                         ask_side=request.form[f'question{i}'],
                                         answer_side=request.form[f'answer{i}'])
@@ -247,47 +251,101 @@ def validateTheme():
     return redirect(url_for('profileThemes', username=current_user.username))
 
 
-@app.route('/<theme_id>/<title>',
-           methods=['get', 'post'])
-def theme_view(theme_id, title):
+@app.get('/<theme_id>/<title>/',)
+def theme_form_view_get(theme_id, title):
+    """Separate theme view and testing logic."""
+    # if there were no recent prepare for the theme
+    cooked_theme_id = request.cookies.get("theme_id", None)
+    if cooked_theme_id is None:
+        return redirect(url_for("theme_view", theme_id=theme_id))
+    # common logic of theme-view
+    cards = TextCard.query.filter_by(theme_id=theme_id).all()
+    theme = Themes.query.filter_by(id=theme_id).first()
+    response = make_response(
+        render_template(
+            'themes/themes.html',
+            cards=cards,
+            theme=theme
+            )
+    )
+    return response
+
+
+@app.post('/<theme_id>/<title>/')
+def theme_form_view_post(theme_id, title):
     """Separate theme view and testing logic."""
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
     theme = Themes.query.filter_by(id=theme_id).first()
-    if request.method == 'GET':
-        response = make_response(
-            render_template(
-                'themes/themes.html',
-                cards=cards,
-                theme=theme
-                )
-        )
-        response.headers['Content-Type'] = "text/html"
-        # for i, card in enumerate(cards, 1):
-        #     response.set_cookie(str(i), card.answer_side, 60*60)
-    # validation of answers on POST
+    # right answers amount
+    right_answers_amount = sum(map(lambda x: int(x), (cards[i].answer_side == request.form[f"{i + 1}"] for i in range(len(cards)))))
+    result = f"Правильных ответов: {right_answers_amount} из {len(cards)}"
+    # form the html for flushing user what should he do
+    if right_answers_amount == len(cards):
+        advice = "<a href=\"{}\">Остальные темы</a>".format(request.cookies.get('url'))
     else:
-        right_answers = 0
-        for number, card in enumerate(cards, 1):
-            if request.form[str(number)].lower().replace(' ', '') == card.answer_side.lower().replace(" ", ''):
-                right_answers += 1
-        result = f"Правильных ответов: {right_answers} из {len(cards)}"
-        if right_answers == len(cards):
-            advice = "<a href=\"{}\">Остальные темы</a>".format(url_for("profileThemes",
-                                                                        username=current_user.username))
-        else:
-            advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_view',
+        advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_form_view',
                                                                            theme_id=theme_id,
                                                                            title=title))
-        response = make_response(
-            render_template(
-                'themes/results.html',
-                result=result,
-                advice=advice,
-                theme=theme,
-
-            )
+    response = make_response(
+        render_template(
+            'themes/results.html',
+            result=result,
+            advice=advice,
+            theme=theme,
         )
+    )
     return response
+
+
+@app.get('/<theme_id>/prepare/')
+def theme_view(theme_id):
+    theme = Themes.query.filter_by(id=theme_id).first()
+    cards = TextCard.query.filter_by(theme_id=theme_id).count()
+    info = {
+        "question_amount": cards,
+        "theme": theme,
+        }
+    response = make_response(
+        render_template(
+            "themes/prepare.html",
+            info=info,
+
+        )
+    )
+    response.set_cookie('theme_id', theme_id, 12)
+    return response
+
+
+
+# ===============================SEARCHING===============================#
+
+@app.route('/search/')
+def search():
+    """Searching themes by names."""
+    if request.values:
+        logger.debug(f"Searching with {request.values}")
+        query = Themes.query.filter(Themes.isPublic.is_(True)).filter(Themes.title.contains(request.values['substring'])).all()
+    else:
+        query = None
+    response = make_response(
+        render_template(
+            "themes/search.html",
+            themes=query,
+        ),
+    )
+    print(request.url)
+    response.set_cookie("url", request.url, 60*60)
+    return response
+
+
+@app.post("/search/key/")
+def search_key():
+    try:
+        theme = Themes.query.filter_by(key=request.form['key']).first()
+        return redirect(url_for("theme_form_view", title=theme.title, theme_id=theme.id))
+    except Exception as e:
+        logger.error(str(e))
+        return redirect(url_for("search"))
 
 
 # ==============================================RUNNING============================================== #

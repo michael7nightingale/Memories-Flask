@@ -868,3 +868,225 @@ type
 2023-04-27 18:20:18,048 DEBUG Loaded user with id: 1
 2023-04-27 18:20:19,346 DEBUG Loaded user with id: 1
 2023-04-27 18:20:21,813 DEBUG Loaded user with id: 1
+2023-04-27 18:21:43,463 DEBUG Loaded user with id: 1
+2023-04-27 18:21:44,982 DEBUG Loaded user with id: 1
+2023-04-27 18:21:46,658 DEBUG Loaded user with id: 1
+2023-04-27 18:22:02,884 DEBUG Loaded user with id: 1
+2023-04-28 17:56:01,248 DEBUG Loaded user with id: 1
+2023-04-28 17:56:09,712 DEBUG User is taken from db query: self.id=1, self.username='isaac_newton'
+2023-04-28 17:56:09,830 DEBUG Password is checked with thw hashed one.
+2023-04-28 17:56:09,831 DEBUG Successfully logged in user.
+2023-04-28 17:56:09,835 DEBUG Loaded user with id: 1
+2023-04-28 17:56:11,362 DEBUG Loaded user with id: 1
+2023-04-28 17:56:12,440 DEBUG Loaded user with id: 1
+2023-04-28 17:56:13,665 DEBUG Loaded user with id: 1
+2023-04-28 18:00:45,763 DEBUG Loaded user with id: 1
+2023-04-28 18:00:47,438 DEBUG Loaded user with id: 1
+2023-04-28 18:22:17,730 DEBUG Loaded user with id: 1
+2023-04-28 18:22:37,560 DEBUG Loaded user with id: 1
+2023-04-28 18:23:05,019 DEBUG Loaded user with id: 1
+2023-04-28 18:23:07,616 DEBUG Loaded user with id: 1
+2023-04-28 18:23:11,701 DEBUG Loaded user with id: 1
+2023-04-28 18:23:23,065 DEBUG Loaded user with id: 1
+2023-04-28 18:24:06,844 DEBUG Loaded user with id: 1
+2023-04-28 18:24:36,289 DEBUG Loaded user with id: 1
+2023-04-28 18:26:19,228 DEBUG Loaded user with id: 1
+2023-04-28 18:26:27,056 DEBUG Loaded user with id: 1
+2023-04-28 18:26:31,390 DEBUG Loaded user with id: 1
+2023-04-28 18:27:49,166 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:27:49,174 DEBUG Loaded user with id: 1
+2023-04-28 18:27:50,515 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', '')])])
+2023-04-28 18:27:50,515 DEBUG Loaded user with id: 1
+2023-04-28 18:27:52,165 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:27:52,165 DEBUG Loaded user with id: 1
+2023-04-28 18:28:20,631 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:28:20,643 DEBUG Loaded user with id: 1
+2023-04-28 18:28:22,038 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', '')])])
+2023-04-28 18:28:22,039 DEBUG Loaded user with id: 1
+2023-04-28 18:28:23,764 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:28:23,765 DEBUG Loaded user with id: 1
+2023-04-28 18:28:41,456 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:28:41,468 DEBUG Loaded user with id: 1
+2023-04-28 18:28:42,523 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', '')])])
+2023-04-28 18:28:42,524 DEBUG Loaded user with id: 1
+2023-04-28 18:28:44,835 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:28:44,836 DEBUG Loaded user with id: 1
+2023-04-28 18:29:11,208 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:29:11,221 DEBUG Loaded user with id: 1
+2023-04-28 18:29:15,861 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:29:15,862 DEBUG Loaded user with id: 1
+2023-04-28 18:29:31,203 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:29:31,215 DEBUG Loaded user with id: 1
+2023-04-28 18:29:39,073 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:29:39,085 DEBUG Loaded user with id: 1
+2023-04-28 18:29:49,076 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:29:49,087 DEBUG Loaded user with id: 1
+2023-04-28 18:30:33,258 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:30:33,269 DEBUG Loaded user with id: 1
+2023-04-28 18:32:00,082 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:32:00,093 DEBUG Loaded user with id: 1
+2023-04-28 18:33:00,447 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:33:00,459 DEBUG Loaded user with id: 1
+2023-04-28 18:33:21,342 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:33:21,354 DEBUG Loaded user with id: 1
+2023-04-28 18:33:23,111 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:33:23,112 DEBUG Loaded user with id: 1
+2023-04-28 18:33:24,511 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', '')])])
+2023-04-28 18:33:24,512 DEBUG Loaded user with id: 1
+2023-04-28 18:33:26,238 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:33:26,239 DEBUG Loaded user with id: 1
+2023-04-28 18:33:30,824 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Методы')])])
+2023-04-28 18:33:30,825 DEBUG Loaded user with id: 1
+2023-04-28 18:33:33,349 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Стр')])])
+2023-04-28 18:33:33,350 DEBUG Loaded user with id: 1
+2023-04-28 18:33:36,350 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'стр')])])
+2023-04-28 18:33:36,351 DEBUG Loaded user with id: 1
+2023-04-28 18:35:14,400 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'стр')])])
+2023-04-28 18:35:14,413 DEBUG Loaded user with id: 1
+2023-04-28 18:35:45,344 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Питон')])])
+2023-04-28 18:35:45,356 DEBUG Loaded user with id: 1
+2023-04-28 18:35:47,680 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 18:35:47,681 DEBUG Loaded user with id: 1
+2023-04-28 18:35:49,191 ERROR 'Query' object has no attribute 'title'
+2023-04-28 18:35:49,195 DEBUG Loaded user with id: 1
+2023-04-28 18:35:51,606 ERROR 'Query' object has no attribute 'title'
+2023-04-28 18:35:51,610 DEBUG Loaded user with id: 1
+2023-04-28 18:35:53,396 ERROR 'Query' object has no attribute 'title'
+2023-04-28 18:35:53,399 DEBUG Loaded user with id: 1
+2023-04-28 18:36:17,834 ERROR 'Query' object has no attribute 'title'
+2023-04-28 18:36:17,837 DEBUG Loaded user with id: 1
+2023-04-28 18:36:54,800 ERROR 'list' object has no attribute 'title'
+2023-04-28 18:36:54,809 DEBUG Loaded user with id: 1
+2023-04-28 18:37:54,453 DEBUG Loaded user with id: 1
+2023-04-28 18:38:04,635 DEBUG Loaded user with id: 1
+2023-04-28 18:38:06,008 DEBUG Loaded user with id: 1
+2023-04-28 18:38:07,732 DEBUG Loaded user with id: 1
+2023-04-28 18:38:09,399 DEBUG Loaded user with id: 1
+2023-04-28 18:38:10,055 DEBUG Loaded user with id: 1
+2023-04-28 18:38:10,446 DEBUG Loaded user with id: 1
+2023-04-28 18:38:10,871 DEBUG Loaded user with id: 1
+2023-04-28 18:38:12,374 DEBUG Loaded user with id: 1
+2023-04-28 18:38:14,453 DEBUG Loaded user with id: 1
+2023-04-28 18:38:16,556 DEBUG Loaded user with id: 1
+2023-04-28 18:38:17,988 DEBUG Loaded user with id: 1
+2023-04-28 18:38:21,896 DEBUG Loaded user with id: 1
+2023-04-28 18:38:23,288 DEBUG Loaded user with id: 1
+2023-04-28 18:39:25,098 DEBUG Loaded user with id: 1
+2023-04-28 18:39:25,780 DEBUG Loaded user with id: 1
+2023-04-28 18:39:26,636 DEBUG Loaded user with id: 1
+2023-04-28 18:39:28,428 DEBUG Loaded user with id: 1
+2023-04-28 18:39:52,010 DEBUG Loaded user with id: 1
+2023-04-28 18:39:52,011 DEBUG {'title': '', 'isPublic': 'on', 'number': 3}
+2023-04-28 18:40:39,612 DEBUG Loaded user with id: 1
+2023-04-28 18:40:40,732 DEBUG Loaded user with id: 1
+2023-04-28 18:40:59,276 DEBUG Loaded user with id: 1
+2023-04-28 18:41:01,339 DEBUG Loaded user with id: 1
+2023-04-28 18:44:44,706 DEBUG Loaded user with id: 1
+2023-04-28 18:44:45,719 DEBUG Loaded user with id: 1
+2023-04-28 18:44:47,127 DEBUG Loaded user with id: 1
+2023-04-28 18:45:02,902 DEBUG Loaded user with id: 1
+2023-04-28 18:45:02,904 DEBUG {'title': 'Создание СУБД', 'isPublic': 'on', 'number': 3}
+2023-04-28 18:45:28,013 DEBUG Loaded user with id: 1
+2023-04-28 18:45:28,016 DEBUG Theme PyDantic model is created: title='Создание СУБД' isPublic=True key=None user_id=1.
+2023-04-28 18:45:28,016 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Создание СУБД'.
+2023-04-28 18:45:28,113 DEBUG Theme data is committed to db.
+2023-04-28 18:45:28,113 INFO ImmutableMultiDict([('number', '3'), ('title', 'Создание СУБД'), ('question1', 'Что это '), ('answer1', 'Oracle'), ('question2', 'Где это'), ('answer2', 'SQLite3'), ('question3', 'замена подстроки'), ('answer3', 'MySQL')])
+2023-04-28 18:45:28,113 DEBUG Card PyDantic model is created: theme_id=5 ask_side='Что это ' answer_side='Oracle'.
+2023-04-28 18:45:28,113 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-28 18:45:28,208 DEBUG Card data is committed to db.
+2023-04-28 18:45:28,209 DEBUG Card PyDantic model is created: theme_id=5 ask_side='Где это' answer_side='SQLite3'.
+2023-04-28 18:45:28,209 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Где это'.
+2023-04-28 18:45:28,282 DEBUG Card data is committed to db.
+2023-04-28 18:45:28,283 DEBUG Card PyDantic model is created: theme_id=5 ask_side='замена подстроки' answer_side='MySQL'.
+2023-04-28 18:45:28,283 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='замена подстроки'.
+2023-04-28 18:45:28,366 DEBUG Card data is committed to db.
+2023-04-28 18:45:28,366 DEBUG All cards of theme are added
+2023-04-28 18:45:28,370 DEBUG Loaded user with id: 1
+2023-04-28 18:45:29,939 DEBUG Loaded user with id: 1
+2023-04-28 18:45:32,882 DEBUG Loaded user with id: 1
+2023-04-28 18:45:35,337 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'С')])])
+2023-04-28 18:45:35,339 DEBUG Loaded user with id: 1
+2023-04-28 18:45:37,910 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'с')])])
+2023-04-28 18:45:37,911 DEBUG Loaded user with id: 1
+2023-04-28 18:45:39,660 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'с')])])
+2023-04-28 18:45:39,661 DEBUG Loaded user with id: 1
+2023-04-28 18:45:43,421 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'о')])])
+2023-04-28 18:45:43,422 DEBUG Loaded user with id: 1
+2023-04-28 18:45:49,780 DEBUG Loaded user with id: 1
+2023-04-28 18:45:50,994 DEBUG Loaded user with id: 1
+2023-04-28 18:45:51,968 DEBUG Loaded user with id: 1
+2023-04-28 18:46:39,983 DEBUG Loaded user with id: 1
+2023-04-28 18:46:41,168 DEBUG Loaded user with id: 1
+2023-04-28 18:46:42,695 DEBUG Loaded user with id: 1
+2023-04-28 18:46:43,458 DEBUG Loaded user with id: 1
+2023-04-28 18:46:45,608 DEBUG Loaded user with id: 1
+2023-04-28 18:46:54,270 DEBUG Loaded user with id: 1
+2023-04-28 18:46:54,271 DEBUG {'title': 'Создание СУБДУС', 'isPublic': 'on', 'number': 3}
+2023-04-28 18:47:02,859 DEBUG Loaded user with id: 1
+2023-04-28 18:47:02,861 DEBUG Theme PyDantic model is created: title='Создание СУБДУС' isPublic=False key=';uKvpLIxOuP:MsDG;h_HxsUV,OLAji' user_id=1.
+2023-04-28 18:47:02,862 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Создание СУБДУС'.
+2023-04-28 18:47:02,958 DEBUG Theme data is committed to db.
+2023-04-28 18:47:02,958 INFO ImmutableMultiDict([('number', '3'), ('title', 'Создание СУБДУС'), ('key', ';uKvpLIxOuP:MsDG;h_HxsUV,OLAji'), ('question1', 'Что это '), ('answer1', 'Oracle'), ('question2', 'Где это'), ('answer2', 'SQLite3'), ('question3', 'замена подстроки'), ('answer3', 'MySQL')])
+2023-04-28 18:47:02,959 DEBUG Card PyDantic model is created: theme_id=6 ask_side='Что это ' answer_side='Oracle'.
+2023-04-28 18:47:02,959 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-04-28 18:47:03,112 DEBUG Card data is committed to db.
+2023-04-28 18:47:03,113 DEBUG Card PyDantic model is created: theme_id=6 ask_side='Где это' answer_side='SQLite3'.
+2023-04-28 18:47:03,113 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Где это'.
+2023-04-28 18:47:03,204 DEBUG Card data is committed to db.
+2023-04-28 18:47:03,204 DEBUG Card PyDantic model is created: theme_id=6 ask_side='замена подстроки' answer_side='MySQL'.
+2023-04-28 18:47:03,204 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='замена подстроки'.
+2023-04-28 18:47:03,296 DEBUG Card data is committed to db.
+2023-04-28 18:47:03,296 DEBUG All cards of theme are added
+2023-04-28 18:47:03,300 DEBUG Loaded user with id: 1
+2023-04-28 18:47:07,359 DEBUG Loaded user with id: 1
+2023-04-28 18:47:08,461 DEBUG Loaded user with id: 1
+2023-04-28 18:47:12,053 DEBUG Loaded user with id: 1
+2023-04-28 21:41:44,204 DEBUG Loaded user with id: 1
+2023-04-28 21:42:19,105 DEBUG Loaded user with id: 1
+2023-04-28 21:42:21,636 DEBUG Loaded user with id: 1
+2023-04-28 21:43:38,716 DEBUG Loaded user with id: 1
+2023-04-28 21:43:39,665 DEBUG Loaded user with id: 1
+2023-04-28 21:43:40,402 DEBUG Loaded user with id: 1
+2023-04-28 21:43:54,300 DEBUG Loaded user with id: 1
+2023-04-28 21:43:55,488 DEBUG Loaded user with id: 1
+2023-04-28 21:43:56,987 DEBUG Loaded user with id: 1
+2023-04-28 21:43:59,408 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Привет')])])
+2023-04-28 21:43:59,410 DEBUG Loaded user with id: 1
+2023-04-28 21:44:01,206 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'с')])])
+2023-04-28 21:44:01,207 DEBUG Loaded user with id: 1
+2023-04-28 21:44:02,631 DEBUG Loaded user with id: 1
+2023-04-28 21:44:14,130 DEBUG Loaded user with id: 1
+2023-04-28 21:44:15,046 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'с')])])
+2023-04-28 21:44:15,046 DEBUG Loaded user with id: 1
+2023-04-28 21:46:02,251 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'с')])])
+2023-04-28 21:46:02,263 DEBUG Loaded user with id: 1
+2023-04-28 21:46:03,499 DEBUG Loaded user with id: 1
+2023-04-28 21:46:04,728 DEBUG Loaded user with id: 1
+2023-04-28 21:53:33,647 DEBUG Loaded user with id: 1
+2023-04-28 21:53:35,234 DEBUG Loaded user with id: 1
+2023-04-28 21:54:38,505 DEBUG Loaded user with id: 1
+2023-04-28 21:54:39,824 DEBUG Loaded user with id: 1
+2023-04-28 21:55:23,678 DEBUG Loaded user with id: 1
+2023-04-28 21:55:32,236 DEBUG Loaded user with id: 1
+2023-04-28 21:56:09,582 DEBUG Loaded user with id: 1
+2023-04-28 21:56:15,600 DEBUG Loaded user with id: 1
+2023-04-28 21:56:29,917 DEBUG Loaded user with id: 1
+2023-04-28 21:56:30,815 DEBUG Loaded user with id: 1
+2023-04-28 21:56:33,494 DEBUG Loaded user with id: 1
+2023-04-28 21:56:38,656 DEBUG Loaded user with id: 1
+2023-04-28 21:57:49,053 DEBUG Loaded user with id: 1
+2023-04-28 21:57:51,191 DEBUG Loaded user with id: 1
+2023-04-28 21:57:52,083 DEBUG Loaded user with id: 1
+2023-04-28 21:57:53,133 DEBUG Loaded user with id: 1
+2023-04-28 21:57:54,454 DEBUG Loaded user with id: 1
+2023-04-28 21:58:05,782 DEBUG Loaded user with id: 1
+2023-04-28 21:58:06,686 DEBUG Loaded user with id: 1
+2023-04-28 21:58:07,854 DEBUG Loaded user with id: 1
+2023-04-28 21:58:08,709 DEBUG Loaded user with id: 1
+2023-04-28 21:58:15,891 DEBUG Loaded user with id: 1
+2023-04-28 21:58:18,824 DEBUG Loaded user with id: 1
+2023-04-28 21:58:19,681 DEBUG Loaded user with id: 1
+2023-04-28 21:58:20,697 DEBUG Loaded user with id: 1
+2023-04-28 21:59:12,271 DEBUG Loaded user with id: 1
+2023-04-28 21:59:14,794 DEBUG Loaded user with id: 1
+2023-04-28 21:59:20,804 DEBUG Loaded user with id: 1

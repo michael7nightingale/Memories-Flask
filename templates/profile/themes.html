@@ -12,7 +12,7 @@
             <h6>{{ theme.title }}</h6>
             <p>{{ theme.isPublic }}</p>
             <p>{{ theme.key }}</p>
-            <a href="{{ url_for('theme_view', theme_id=theme.id, title=theme.title) }}">перейти</a>
+            <a href="{{ url_for('theme_view', theme_id=theme.id) }}">перейти</a>
         </li>
     {% endfor %}
 </div>
