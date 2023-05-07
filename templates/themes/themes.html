@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 <div class="jumbotron">
-    <h1>{{ theme.title }}</h1>
+    <h1>{{ title }}</h1>
 </div>
 <script>function checkAnswer(event, question_id) {
     let answer_input, answer, cookies;
@@ -39,30 +39,47 @@ function openCity(evt, cityName) {
 
   // Show the current tab, and add an "active" class to the link that opened the tab
   document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className += " active"
+
 }
 
 </script>
 
 <div class="tab">
  {% for i in range(cards|length) %}
-  <button class="tablinks" onclick="openCity(event, {{ i + 1 }})">Карточка №{{ i + 1 }}</button>
+     {% if i == 0 %}
+    <button class="tablinks active" id="tab{{ i + 1 }}" onclick="openCity(event, {{ i + 1 }})">Карточка №{{ i + 1 }}</button>
+     {% else %}
+     <button class="tablinks" id="tab{{ i + 1 }}" onclick="openCity(event, {{ i + 1 }})">Карточка №{{ i + 1 }}</button>
+     {% endif %}
 {% endfor %}
 </div>
 
 <div class="container">
-    <form method="post" action="{{ url_for('theme_form_view_post', theme_id=cards[0].theme_id, title=theme.title) }}">
+    <form method="post" action="{{ url_for('theme_form_view_post', theme_id=theme_id, title=title) }}">
     {% for i in range(cards|length) %}
-            <div id="{{ i + 1 }}" class="tabcontent">
-                <p>{{ cards[i].ask_side }}</p>
+        {% if i == 0 %}
+            <div id="{{ i + 1 }}" class="tabcontent" style="display: block">
+         {% else %}
+            <div id="{{ i + 1 }}" class="tabcontent" style="display: none">
+         {% endif %}
+                <h4 style="text-align: center">{{ cards[i].ask_side }}</h4>
             {% if cards[i].image %}
-              <img  width=40% height=40% >
+              <img src="/static/media/images/{{ cards[i].image }}" width=50% style="">
              {% endif %}
-                <input class='input' type="text" name='{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:">
-              <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>
+                <input class='input' type="text" name='{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:" style="align-self: center">
+              {# <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>#}
+            {% if i == cards|length - 1 %}
+            <div class="answer">
+            <button type="submit" class="answer_button">Ответить на тему</button>
             </div>
+            {% endif %}
+        </div>
+
+
         {% endfor %}
-    <input type="submit" placeholder="Ответить на тему">
+
+
     </form>
 
 </div>

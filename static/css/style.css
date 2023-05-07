@@ -44,5 +44,30 @@
   border: 1px solid #ccc;
   width: 70%;
   border-left: none;
-  height: 300px;
 }
+
+.answer_button{
+  border-radius: 10px;
+  background-color: aqua;
+  width: 200px;
+}
+
+
+.answer{
+  padding-left: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  align-content: flex-end;
+}
+
+.text{
+  font-family: "Icons20", sans-serif;
+  color: blueviolet;
+}
+
+
+.heigthy{
+  min-height: 1000px;
+}
+

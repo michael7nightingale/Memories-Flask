@@ -1090,3 +1090,328 @@ type
 2023-04-28 21:59:12,271 DEBUG Loaded user with id: 1
 2023-04-28 21:59:14,794 DEBUG Loaded user with id: 1
 2023-04-28 21:59:20,804 DEBUG Loaded user with id: 1
+2023-05-07 14:00:53,382 DEBUG User is taken from db query: None
+2023-05-07 14:00:53,383 ERROR Exception while logging user: 'NoneType' object has no attribute 'password'
+2023-05-07 14:02:03,238 DEBUG Loaded user with id: 1
+2023-05-07 14:02:05,657 DEBUG Loaded user with id: 1
+2023-05-07 14:02:13,089 DEBUG User is taken from db query: self.id=1, self.username='isaac_newton'
+2023-05-07 14:02:13,206 DEBUG Password is checked with thw hashed one.
+2023-05-07 14:02:13,206 DEBUG Successfully logged in user.
+2023-05-07 14:02:13,212 DEBUG Loaded user with id: 1
+2023-05-07 14:02:14,373 DEBUG Loaded user with id: 1
+2023-05-07 14:02:17,410 DEBUG Loaded user with id: 1
+2023-05-07 14:04:00,770 DEBUG Loaded user with id: 1
+2023-05-07 14:04:02,377 DEBUG Loaded user with id: 1
+2023-05-07 14:04:10,190 DEBUG Loaded user with id: 1
+2023-05-07 14:04:37,986 DEBUG Loaded user with id: 1
+2023-05-07 14:04:38,826 DEBUG Loaded user with id: 1
+2023-05-07 14:04:39,504 DEBUG Loaded user with id: 1
+2023-05-07 14:04:46,439 DEBUG Loaded user with id: 1
+2023-05-07 14:04:57,424 DEBUG Loaded user with id: 1
+2023-05-07 14:05:02,084 DEBUG Loaded user with id: 1
+2023-05-07 14:05:45,533 DEBUG Loaded user with id: 1
+2023-05-07 14:05:46,556 DEBUG Loaded user with id: 1
+2023-05-07 14:05:48,851 DEBUG Loaded user with id: 1
+2023-05-07 14:05:56,294 DEBUG Loaded user with id: 1
+2023-05-07 14:06:22,277 DEBUG Loaded user with id: 1
+2023-05-07 14:06:26,169 DEBUG Loaded user with id: 1
+2023-05-07 14:11:13,671 DEBUG Loaded user with id: 1
+2023-05-07 14:21:20,204 DEBUG Loaded user with id: 1
+2023-05-07 14:21:21,271 DEBUG Loaded user with id: 1
+2023-05-07 14:21:32,861 DEBUG Loaded user with id: 1
+2023-05-07 14:21:32,863 DEBUG {'title': 'Древняя Русь', 'isPublic': 'on', 'number': 4}
+2023-05-07 14:22:10,294 DEBUG Loaded user with id: 1
+2023-05-07 14:22:10,299 DEBUG Theme PyDantic model is created: title='Древняя Русь' isPublic=False key='vsydBHbFVNoZbr.zORwz.JvstYellD' user_id=1.
+2023-05-07 14:22:10,299 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Древняя Русь'.
+2023-05-07 14:22:10,378 DEBUG Theme data is committed to db.
+2023-05-07 14:22:10,378 INFO ImmutableMultiDict([('number', '4'), ('title', 'Древняя Русь'), ('key', 'vsydBHbFVNoZbr.zORwz.JvstYellD'), ('question1', 'Что это '), ('answer1', 'Древняя Русь'), ('question2', 'Где это'), ('answer2', 'Россия'), ('question3', 'сы'), ('answer3', 'сы'), ('question4', 'куйго'), ('answer4', 'upper')])
+2023-05-07 14:22:10,379 DEBUG Card PyDantic model is created: theme_id=7 ask_side='Что это ' answer_side='Древняя Русь'.
+2023-05-07 14:22:10,379 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-05-07 14:22:10,510 DEBUG Card data is committed to db.
+2023-05-07 14:22:10,511 DEBUG Card PyDantic model is created: theme_id=7 ask_side='Где это' answer_side='Россия'.
+2023-05-07 14:22:10,511 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Где это'.
+2023-05-07 14:22:10,594 DEBUG Card data is committed to db.
+2023-05-07 14:22:10,595 DEBUG Card PyDantic model is created: theme_id=7 ask_side='сы' answer_side='сы'.
+2023-05-07 14:22:10,595 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='сы'.
+2023-05-07 14:22:10,661 DEBUG Card data is committed to db.
+2023-05-07 14:22:10,662 DEBUG Card PyDantic model is created: theme_id=7 ask_side='куйго' answer_side='upper'.
+2023-05-07 14:22:10,662 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='куйго'.
+2023-05-07 14:22:10,744 DEBUG Card data is committed to db.
+2023-05-07 14:22:10,744 DEBUG All cards of theme are added
+2023-05-07 14:22:10,748 DEBUG Loaded user with id: 1
+2023-05-07 14:22:12,846 DEBUG Loaded user with id: 1
+2023-05-07 14:22:49,398 DEBUG Loaded user with id: 1
+2023-05-07 14:22:49,405 DEBUG {'title': 'Древняя Русь', 'isPublic': 'on', 'number': 4}
+2023-05-07 14:23:13,750 DEBUG Loaded user with id: 1
+2023-05-07 14:23:13,753 DEBUG Theme PyDantic model is created: title='Древняя Русь2' isPublic=False key='iBf-kJAEMh_.dMfLrYGXhTSMJ-uNp:' user_id=1.
+2023-05-07 14:23:13,761 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Древняя Русь2'.
+2023-05-07 14:23:13,873 DEBUG Theme data is committed to db.
+2023-05-07 14:23:13,873 INFO ImmutableMultiDict([('number', '4'), ('title', 'Древняя Русь2'), ('key', 'iBf-kJAEMh_.dMfLrYGXhTSMJ-uNp:'), ('question1', 'Что это '), ('answer1', 'Древняя Русь'), ('question2', 'Где это'), ('answer2', 'Россия'), ('question3', 'сы'), ('answer3', 'сы'), ('question4', 'куйго'), ('answer4', 'нргнр')])
+2023-05-07 14:23:13,873 DEBUG Card PyDantic model is created: theme_id=8 ask_side='Что это ' answer_side='Древняя Русь'.
+2023-05-07 14:23:13,873 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Что это '.
+2023-05-07 14:23:13,956 DEBUG Card data is committed to db.
+2023-05-07 14:23:13,956 DEBUG Card PyDantic model is created: theme_id=8 ask_side='Где это' answer_side='Россия'.
+2023-05-07 14:23:13,957 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Где это'.
+2023-05-07 14:23:14,014 DEBUG Card data is committed to db.
+2023-05-07 14:23:14,014 DEBUG Card PyDantic model is created: theme_id=8 ask_side='сы' answer_side='сы'.
+2023-05-07 14:23:14,014 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='сы'.
+2023-05-07 14:23:14,089 DEBUG Card data is committed to db.
+2023-05-07 14:23:14,089 DEBUG Card PyDantic model is created: theme_id=8 ask_side='куйго' answer_side='нргнр'.
+2023-05-07 14:23:14,090 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='куйго'.
+2023-05-07 14:23:14,163 DEBUG Card data is committed to db.
+2023-05-07 14:23:14,163 DEBUG All cards of theme are added
+2023-05-07 14:23:14,167 DEBUG Loaded user with id: 1
+2023-05-07 14:26:36,284 DEBUG Loaded user with id: 1
+2023-05-07 14:31:08,749 DEBUG Loaded user with id: 1
+2023-05-07 14:31:51,483 DEBUG Loaded user with id: 1
+2023-05-07 14:32:33,654 DEBUG Loaded user with id: 1
+2023-05-07 14:33:23,569 DEBUG Loaded user with id: 1
+2023-05-07 14:33:25,229 DEBUG Loaded user with id: 1
+2023-05-07 20:29:56,542 DEBUG Loaded user with id: 1
+2023-05-07 20:29:58,044 DEBUG Loaded user with id: 1
+2023-05-07 20:31:59,113 DEBUG Loaded user with id: 1
+2023-05-07 20:32:03,173 DEBUG Loaded user with id: 1
+2023-05-07 20:32:04,127 DEBUG Loaded user with id: 1
+2023-05-07 20:32:37,035 DEBUG Loaded user with id: 1
+2023-05-07 20:32:38,308 DEBUG Loaded user with id: 1
+2023-05-07 20:52:53,047 DEBUG Loaded user with id: 1
+2023-05-07 20:52:55,671 DEBUG Loaded user with id: 1
+2023-05-07 20:52:57,332 DEBUG Loaded user with id: 1
+2023-05-07 20:52:58,563 DEBUG Loaded user with id: 1
+2023-05-07 20:53:00,792 DEBUG Loaded user with id: 1
+2023-05-07 20:53:02,923 DEBUG Loaded user with id: 1
+2023-05-07 20:55:00,528 DEBUG Loaded user with id: 1
+2023-05-07 20:55:06,531 DEBUG Loaded user with id: 1
+2023-05-07 20:56:04,163 DEBUG Loaded user with id: 1
+2023-05-07 20:56:05,247 DEBUG Loaded user with id: 1
+2023-05-07 20:56:27,578 DEBUG Loaded user with id: 1
+2023-05-07 20:56:29,860 DEBUG Loaded user with id: 1
+2023-05-07 20:56:32,733 DEBUG Loaded user with id: 1
+2023-05-07 20:58:45,178 DEBUG Loaded user with id: 1
+2023-05-07 20:58:46,049 DEBUG Loaded user with id: 1
+2023-05-07 20:58:47,919 DEBUG Loaded user with id: 1
+2023-05-07 20:58:48,920 DEBUG Loaded user with id: 1
+2023-05-07 21:00:12,170 DEBUG Loaded user with id: 1
+2023-05-07 21:00:13,102 DEBUG Loaded user with id: 1
+2023-05-07 21:00:14,086 DEBUG Loaded user with id: 1
+2023-05-07 21:01:40,488 DEBUG Loaded user with id: 1
+2023-05-07 21:01:41,621 DEBUG Loaded user with id: 1
+2023-05-07 21:02:11,908 DEBUG Loaded user with id: 1
+2023-05-07 21:02:12,811 DEBUG Loaded user with id: 1
+2023-05-07 21:02:36,191 DEBUG Loaded user with id: 1
+2023-05-07 21:02:37,008 DEBUG Loaded user with id: 1
+2023-05-07 21:03:46,435 DEBUG Loaded user with id: 1
+2023-05-07 21:03:47,160 DEBUG Loaded user with id: 1
+2023-05-07 21:04:41,824 DEBUG Loaded user with id: 1
+2023-05-07 21:04:42,736 DEBUG Loaded user with id: 1
+2023-05-07 21:05:09,068 DEBUG Loaded user with id: 1
+2023-05-07 21:05:09,908 DEBUG Loaded user with id: 1
+2023-05-07 21:05:20,614 DEBUG Loaded user with id: 1
+2023-05-07 21:05:22,405 DEBUG Loaded user with id: 1
+2023-05-07 21:05:47,340 DEBUG Loaded user with id: 1
+2023-05-07 21:05:48,289 DEBUG Loaded user with id: 1
+2023-05-07 21:06:06,259 DEBUG Loaded user with id: 1
+2023-05-07 21:06:07,256 DEBUG Loaded user with id: 1
+2023-05-07 21:06:26,623 DEBUG Loaded user with id: 1
+2023-05-07 21:06:27,673 DEBUG Loaded user with id: 1
+2023-05-07 21:07:29,718 DEBUG Loaded user with id: 1
+2023-05-07 21:07:30,644 DEBUG Loaded user with id: 1
+2023-05-07 21:09:09,906 DEBUG Loaded user with id: 1
+2023-05-07 21:09:10,817 DEBUG Loaded user with id: 1
+2023-05-07 21:11:08,941 DEBUG Loaded user with id: 1
+2023-05-07 21:11:09,860 DEBUG Loaded user with id: 1
+2023-05-07 21:11:21,600 DEBUG Loaded user with id: 1
+2023-05-07 21:11:23,002 DEBUG Loaded user with id: 1
+2023-05-07 21:11:49,795 DEBUG Loaded user with id: 1
+2023-05-07 21:11:50,674 DEBUG Loaded user with id: 1
+2023-05-07 21:12:47,192 DEBUG Loaded user with id: 1
+2023-05-07 21:12:47,977 DEBUG Loaded user with id: 1
+2023-05-07 21:13:02,274 DEBUG Loaded user with id: 1
+2023-05-07 21:13:03,062 DEBUG Loaded user with id: 1
+2023-05-07 21:13:05,494 DEBUG Loaded user with id: 1
+2023-05-07 21:13:07,754 DEBUG Loaded user with id: 1
+2023-05-07 21:13:08,428 DEBUG Loaded user with id: 1
+2023-05-07 21:13:26,170 DEBUG Loaded user with id: 1
+2023-05-07 21:13:26,823 DEBUG Loaded user with id: 1
+2023-05-07 21:13:30,196 DEBUG Loaded user with id: 1
+2023-05-07 21:13:40,074 DEBUG Loaded user with id: 1
+2023-05-07 21:13:41,404 DEBUG Loaded user with id: 1
+2023-05-07 21:14:44,517 DEBUG Loaded user with id: 1
+2023-05-07 21:14:45,325 DEBUG Loaded user with id: 1
+2023-05-07 21:15:07,203 DEBUG Loaded user with id: 1
+2023-05-07 21:15:08,258 DEBUG Loaded user with id: 1
+2023-05-07 21:15:39,286 DEBUG Loaded user with id: 1
+2023-05-07 21:15:40,261 DEBUG Loaded user with id: 1
+2023-05-07 21:16:34,583 DEBUG Loaded user with id: 1
+2023-05-07 21:16:35,356 DEBUG Loaded user with id: 1
+2023-05-07 21:17:04,012 DEBUG Loaded user with id: 1
+2023-05-07 21:19:41,594 DEBUG Loaded user with id: 1
+2023-05-07 21:19:43,366 DEBUG Loaded user with id: 1
+2023-05-07 21:19:43,814 DEBUG Loaded user with id: 1
+2023-05-07 21:19:44,015 DEBUG Loaded user with id: 1
+2023-05-07 21:19:44,174 DEBUG Loaded user with id: 1
+2023-05-07 21:20:01,697 DEBUG Loaded user with id: 1
+2023-05-07 21:20:08,952 DEBUG Loaded user with id: 1
+2023-05-07 21:21:20,446 DEBUG Loaded user with id: 1
+2023-05-07 21:21:41,671 DEBUG Loaded user with id: 1
+2023-05-07 21:21:50,482 DEBUG Loaded user with id: 1
+2023-05-07 21:21:53,184 DEBUG Loaded user with id: 1
+2023-05-07 21:21:53,777 DEBUG Loaded user with id: 1
+2023-05-07 21:21:55,265 DEBUG Loaded user with id: 1
+2023-05-07 21:22:17,636 DEBUG Loaded user with id: 1
+2023-05-07 21:22:18,296 DEBUG Loaded user with id: 1
+2023-05-07 21:22:18,488 DEBUG Loaded user with id: 1
+2023-05-07 21:22:18,640 DEBUG Loaded user with id: 1
+2023-05-07 21:22:35,850 DEBUG Loaded user with id: 1
+2023-05-07 21:22:37,178 DEBUG Loaded user with id: 1
+2023-05-07 21:22:56,844 DEBUG Loaded user with id: 1
+2023-05-07 21:22:57,464 DEBUG Loaded user with id: 1
+2023-05-07 21:23:08,342 DEBUG Loaded user with id: 1
+2023-05-07 21:23:21,329 DEBUG Loaded user with id: 1
+2023-05-07 21:23:21,885 DEBUG Loaded user with id: 1
+2023-05-07 21:23:22,236 DEBUG Loaded user with id: 1
+2023-05-07 21:23:22,396 DEBUG Loaded user with id: 1
+2023-05-07 21:24:17,840 DEBUG Loaded user with id: 1
+2023-05-07 21:24:34,545 DEBUG Loaded user with id: 1
+2023-05-07 21:24:35,245 DEBUG Loaded user with id: 1
+2023-05-07 21:25:36,197 DEBUG Loaded user with id: 1
+2023-05-07 21:26:04,488 DEBUG Loaded user with id: 1
+2023-05-07 21:26:05,117 DEBUG Loaded user with id: 1
+2023-05-07 21:26:05,357 DEBUG Loaded user with id: 1
+2023-05-07 21:26:05,524 DEBUG Loaded user with id: 1
+2023-05-07 21:26:05,700 DEBUG Loaded user with id: 1
+2023-05-07 21:26:05,853 DEBUG Loaded user with id: 1
+2023-05-07 21:26:07,036 DEBUG Loaded user with id: 1
+2023-05-07 21:26:17,602 DEBUG Loaded user with id: 1
+2023-05-07 21:26:18,102 DEBUG Loaded user with id: 1
+2023-05-07 21:26:19,307 DEBUG Loaded user with id: 1
+2023-05-07 21:26:19,750 DEBUG Loaded user with id: 1
+2023-05-07 21:26:20,131 DEBUG Loaded user with id: 1
+2023-05-07 21:26:48,801 DEBUG Loaded user with id: 1
+2023-05-07 21:26:49,304 DEBUG Loaded user with id: 1
+2023-05-07 21:26:49,504 DEBUG Loaded user with id: 1
+2023-05-07 21:26:50,507 DEBUG Loaded user with id: 1
+2023-05-07 21:27:48,547 DEBUG Loaded user with id: 1
+2023-05-07 21:27:49,096 DEBUG Loaded user with id: 1
+2023-05-07 21:27:55,807 DEBUG Loaded user with id: 1
+2023-05-07 21:27:56,850 DEBUG Loaded user with id: 1
+2023-05-07 21:28:09,505 DEBUG Loaded user with id: 1
+2023-05-07 21:28:10,507 DEBUG Loaded user with id: 1
+2023-05-07 21:28:11,722 DEBUG Loaded user with id: 1
+2023-05-07 21:28:12,149 DEBUG Loaded user with id: 1
+2023-05-07 21:28:21,825 DEBUG Loaded user with id: 1
+2023-05-07 21:28:26,636 DEBUG Loaded user with id: 1
+2023-05-07 21:28:29,179 DEBUG Loaded user with id: 1
+2023-05-07 21:28:30,834 DEBUG Loaded user with id: 1
+2023-05-07 21:28:32,303 DEBUG Loaded user with id: 1
+2023-05-07 21:28:33,231 DEBUG Loaded user with id: 1
+2023-05-07 21:28:34,176 DEBUG Loaded user with id: 1
+2023-05-07 21:28:34,728 DEBUG Loaded user with id: 1
+2023-05-07 21:28:35,685 DEBUG Loaded user with id: 1
+2023-05-07 21:28:37,269 DEBUG Loaded user with id: 1
+2023-05-07 21:28:38,229 DEBUG Loaded user with id: 1
+2023-05-07 21:28:40,125 DEBUG Loaded user with id: 1
+2023-05-07 21:28:50,212 DEBUG Loaded user with id: 1
+2023-05-07 21:28:52,792 DEBUG Loaded user with id: 1
+2023-05-07 21:29:02,171 DEBUG Loaded user with id: 1
+2023-05-07 21:29:03,970 DEBUG Loaded user with id: 1
+2023-05-07 21:32:43,035 DEBUG Loaded user with id: 1
+2023-05-07 21:33:51,476 DEBUG Loaded user with id: 1
+2023-05-07 21:35:22,198 DEBUG Loaded user with id: 1
+2023-05-07 21:35:53,721 DEBUG Loaded user with id: 1
+2023-05-07 21:36:31,311 DEBUG Loaded user with id: 1
+2023-05-07 21:36:55,356 DEBUG Loaded user with id: 1
+2023-05-07 21:37:17,136 DEBUG Loaded user with id: 1
+2023-05-07 21:37:35,282 DEBUG Loaded user with id: 1
+2023-05-07 21:37:36,267 DEBUG Loaded user with id: 1
+2023-05-07 21:37:59,358 DEBUG Loaded user with id: 1
+2023-05-07 21:37:59,363 DEBUG Loaded user with id: 1
+2023-05-07 21:38:30,378 DEBUG Loaded user with id: 1
+2023-05-07 21:38:30,383 DEBUG Loaded user with id: 1
+2023-05-07 21:39:03,572 DEBUG Loaded user with id: 1
+2023-05-07 21:39:03,579 DEBUG Loaded user with id: 1
+2023-05-07 21:39:04,394 DEBUG Loaded user with id: 1
+2023-05-07 21:39:04,399 DEBUG Loaded user with id: 1
+2023-05-07 21:39:22,076 DEBUG Loaded user with id: 1
+2023-05-07 21:39:32,556 DEBUG Loaded user with id: 1
+2023-05-07 21:39:32,564 DEBUG Loaded user with id: 1
+2023-05-07 21:39:34,444 DEBUG Loaded user with id: 1
+2023-05-07 21:39:34,450 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,243 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,249 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,419 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,424 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,562 DEBUG Loaded user with id: 1
+2023-05-07 21:39:36,567 DEBUG Loaded user with id: 1
+2023-05-07 21:39:37,540 DEBUG Loaded user with id: 1
+2023-05-07 21:39:38,820 DEBUG Loaded user with id: 1
+2023-05-07 21:39:39,128 DEBUG Loaded user with id: 1
+2023-05-07 21:39:40,072 DEBUG Loaded user with id: 1
+2023-05-07 21:40:19,421 DEBUG Loaded user with id: 1
+2023-05-07 21:40:19,528 DEBUG Loaded user with id: 1
+2023-05-07 21:40:22,240 DEBUG Loaded user with id: 1
+2023-05-07 21:40:23,349 DEBUG Loaded user with id: 1
+2023-05-07 21:40:24,253 DEBUG Loaded user with id: 1
+2023-05-07 21:41:22,190 DEBUG Loaded user with id: 1
+2023-05-07 21:41:23,779 DEBUG Loaded user with id: 1
+2023-05-07 21:41:30,711 DEBUG Loaded user with id: 1
+2023-05-07 21:41:30,712 DEBUG {'title': '1234', 'number': 3}
+2023-05-07 21:41:36,053 DEBUG Loaded user with id: 1
+2023-05-07 21:41:36,109 DEBUG Theme PyDantic model is created: title='1234' isPublic=False key='vNwtAyWpCre:Gs_JNbzB,VScLtI;Os' user_id=1.
+2023-05-07 21:41:36,109 DEBUG Theme data is created by Model Theme: self.id=None, self.title='1234'.
+2023-05-07 21:41:36,190 DEBUG Theme data is committed to db.
+2023-05-07 21:41:36,190 INFO ImmutableMultiDict([('number', '3'), ('title', '1234'), ('key', 'vNwtAyWpCre:Gs_JNbzB,VScLtI;Os'), ('question1', '12312431'), ('answer1', '125125'), ('question2', '141254'), ('answer2', '125125'), ('question3', '1251251'), ('answer3', '125125')])
+2023-05-07 21:41:36,190 DEBUG Card PyDantic model is created: theme_id=1 ask_side='12312431' answer_side='125125'.
+2023-05-07 21:41:36,191 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='12312431'.
+2023-05-07 21:41:36,316 DEBUG Card data is committed to db.
+2023-05-07 21:41:36,316 DEBUG Card PyDantic model is created: theme_id=1 ask_side='141254' answer_side='125125'.
+2023-05-07 21:41:36,316 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='141254'.
+2023-05-07 21:41:36,398 DEBUG Card data is committed to db.
+2023-05-07 21:41:36,399 DEBUG Card PyDantic model is created: theme_id=1 ask_side='1251251' answer_side='125125'.
+2023-05-07 21:41:36,399 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='1251251'.
+2023-05-07 21:41:36,482 DEBUG Card data is committed to db.
+2023-05-07 21:41:36,482 DEBUG All cards of theme are added
+2023-05-07 21:41:36,486 DEBUG Loaded user with id: 1
+2023-05-07 21:41:39,194 DEBUG Loaded user with id: 1
+2023-05-07 21:41:41,612 DEBUG Loaded user with id: 1
+2023-05-07 21:41:43,672 DEBUG Loaded user with id: 1
+2023-05-07 21:41:45,728 DEBUG Loaded user with id: 1
+2023-05-07 21:41:52,493 DEBUG Loaded user with id: 1
+2023-05-07 21:41:52,494 DEBUG {'title': '124125411', 'number': 4}
+2023-05-07 21:42:00,106 DEBUG Loaded user with id: 1
+2023-05-07 21:42:00,108 DEBUG Theme PyDantic model is created: title='124125411125125' isPublic=False key='ZTjGrcMK;bWT-japWLgthPepZhT.O_' user_id=1.
+2023-05-07 21:42:00,109 DEBUG Theme data is created by Model Theme: self.id=None, self.title='124125411125125'.
+2023-05-07 21:42:00,180 DEBUG Theme data is committed to db.
+2023-05-07 21:42:00,180 INFO ImmutableMultiDict([('number', '4'), ('title', '124125411125125'), ('key', 'ZTjGrcMK;bWT-japWLgthPepZhT.O_'), ('question1', '1234125'), ('answer1', '1251254365'), ('question2', '125125'), ('answer2', '745'), ('question3', '12512512512'), ('answer3', '23465'), ('question4', '5125'), ('answer4', '458548')])
+2023-05-07 21:42:00,180 DEBUG Card PyDantic model is created: theme_id=2 ask_side='1234125' answer_side='1251254365'.
+2023-05-07 21:42:00,180 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='1234125'.
+2023-05-07 21:42:00,296 DEBUG Card data is committed to db.
+2023-05-07 21:42:00,297 DEBUG Card PyDantic model is created: theme_id=2 ask_side='125125' answer_side='745'.
+2023-05-07 21:42:00,297 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='125125'.
+2023-05-07 21:42:00,371 DEBUG Card data is committed to db.
+2023-05-07 21:42:00,372 DEBUG Card PyDantic model is created: theme_id=2 ask_side='12512512512' answer_side='23465'.
+2023-05-07 21:42:00,372 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='12512512512'.
+2023-05-07 21:42:00,472 DEBUG Card data is committed to db.
+2023-05-07 21:42:00,472 DEBUG Card PyDantic model is created: theme_id=2 ask_side='5125' answer_side='458548'.
+2023-05-07 21:42:00,472 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='5125'.
+2023-05-07 21:42:00,559 DEBUG Card data is committed to db.
+2023-05-07 21:42:00,559 DEBUG All cards of theme are added
+2023-05-07 21:42:00,562 DEBUG Loaded user with id: 1
+2023-05-07 21:42:02,066 DEBUG Loaded user with id: 1
+2023-05-07 21:42:02,134 DEBUG Loaded user with id: 1
+2023-05-07 21:42:03,714 DEBUG Loaded user with id: 1
+2023-05-07 21:42:03,834 DEBUG Loaded user with id: 1
+2023-05-07 21:44:50,633 DEBUG Loaded user with id: 1
+2023-05-07 21:44:51,742 DEBUG Loaded user with id: 1
+2023-05-07 21:44:52,375 DEBUG Loaded user with id: 1
+2023-05-07 21:44:56,332 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', '1')])])
+2023-05-07 21:44:56,334 DEBUG Loaded user with id: 1
+2023-05-07 21:44:59,956 DEBUG Loaded user with id: 1
+2023-05-07 21:45:00,992 DEBUG Loaded user with id: 1
+2023-05-07 21:45:02,488 DEBUG Loaded user with id: 1
+2023-05-07 21:45:03,457 DEBUG Loaded user with id: 1
+2023-05-07 21:45:04,641 DEBUG Loaded user with id: 1
+2023-05-07 22:04:14,047 DEBUG Loaded user with id: 1
+2023-05-07 22:04:16,079 DEBUG Loaded user with id: 1
+2023-05-07 22:04:16,920 DEBUG Loaded user with id: 1
+2023-05-07 22:04:18,104 DEBUG Loaded user with id: 1

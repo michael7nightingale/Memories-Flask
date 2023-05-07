@@ -1,3 +1,4 @@
+from random import shuffle
 from flask import Flask, url_for, render_template, request, flash, redirect, make_response
 from flask_login import current_user, login_manager, LoginManager, UserMixin, login_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
@@ -73,7 +74,7 @@ class Themes(db.Model):
 class TextCard(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     ask_side = db.Column(db.Text)
-    image = db.Column(db.LargeBinary, nullable=True)
+    image = db.Column(db.String, nullable=True)
     answer_side = db.Column(db.String(255))
     theme_id = db.Column(db.Integer, db.ForeignKey('themes.id'))
 
@@ -167,16 +168,15 @@ def register():
 
 @app.route('/profile/<username>/')
 @login_required
-def profile(username):
+def profile(username: str):
     """User profile view"""
-    user = current_user
     return render_template("profile/profile.html",
-                           user=user)
+                           user=current_user)
 
 
 @app.route('/profile/<username>/themes/')
 @login_required
-def profileThemes(username):
+def profileThemes(username: str):
     """User profile view"""
     user = current_user
     themes = Themes.query.filter_by(user_id=user.id).all()
@@ -211,6 +211,7 @@ def createTheme():
     isPublic = request.form.get('isPublic', False)
     key = utils.generate_key()
     form_data['key'] = key
+
     return render_template("profile/create_theme.html", **form_data)
 
 
@@ -237,9 +238,14 @@ def validateTheme():
                                         ask_side=request.form[f'question{i}'],
                                         answer_side=request.form[f'answer{i}'])
             logger.debug(f"Card PyDantic model is created: {cardModel}.")
+            image = request.files.get(f"image{i}", None)
+            image_path = None
+            if image:
+                image_ext = image.filename.split('.')[-1]
+                image_path = f'/{current_user.id}/{theme.id}_{i}.{image_ext}'
+                image.save(app.root_path + f'/static/media/images/{image_path}')
             card = TextCard(**cardModel.dict(),
-                            image=request.files.get(f"image{i}", None).stream.read() if request.files.get(f"image{i}",
-                                                                                                   None) else None,
+                            image=image_path
                             )
             logger.debug(f"Card data is created by Model Card: {card}.")
             add_instance(card)
@@ -252,7 +258,7 @@ def validateTheme():
 
 
 @app.get('/<theme_id>/<title>/',)
-def theme_form_view_get(theme_id, title):
+def theme_form_view_get(theme_id: int, title: str):
     """Separate theme view and testing logic."""
     # if there were no recent prepare for the theme
     cooked_theme_id = request.cookies.get("theme_id", None)
@@ -260,12 +266,13 @@ def theme_form_view_get(theme_id, title):
         return redirect(url_for("theme_view", theme_id=theme_id))
     # common logic of theme-view
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
-    theme = Themes.query.filter_by(id=theme_id).first()
+    cards = [cards[int(i)] for i in request.cookies.get("order")]
     response = make_response(
         render_template(
             'themes/themes.html',
             cards=cards,
-            theme=theme
+            title=title,
+            theme_id=theme_id
             )
     )
     return response
@@ -274,8 +281,9 @@ def theme_form_view_get(theme_id, title):
 @app.post('/<theme_id>/<title>/')
 def theme_form_view_post(theme_id, title):
     """Separate theme view and testing logic."""
+    print(request.cookies.get("order"))
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
-    theme = Themes.query.filter_by(id=theme_id).first()
+    cards = [cards[int(i)] for i in request.cookies.get("order")]
     # right answers amount
     right_answers_amount = sum(map(lambda x: int(x), (cards[i].answer_side == request.form[f"{i + 1}"] for i in range(len(cards)))))
     result = f"Правильных ответов: {right_answers_amount} из {len(cards)}"
@@ -283,36 +291,37 @@ def theme_form_view_post(theme_id, title):
     if right_answers_amount == len(cards):
         advice = "<a href=\"{}\">Остальные темы</a>".format(request.cookies.get('url'))
     else:
-        advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_form_view',
+        advice = "<a href=\"{}\">Попробовать снова</a>".format(url_for('theme_view',
                                                                            theme_id=theme_id,
-                                                                           title=title))
+                                                                           ))
     response = make_response(
         render_template(
             'themes/results.html',
             result=result,
             advice=advice,
-            theme=theme,
+            title=title,
+            theme_id=theme_id
         )
     )
     return response
 
 
 @app.get('/<theme_id>/prepare/')
-def theme_view(theme_id):
+def theme_view(theme_id: int):
     theme = Themes.query.filter_by(id=theme_id).first()
-    cards = TextCard.query.filter_by(theme_id=theme_id).count()
-    info = {
-        "question_amount": cards,
-        "theme": theme,
-        }
+    cards_amount = TextCard.query.filter_by(theme_id=theme_id).count()
+    order = list(range(cards_amount))
+    shuffle(order)
     response = make_response(
         render_template(
             "themes/prepare.html",
-            info=info,
-
+            question_amount=cards_amount,
+            title=theme.title,
+            theme_id=theme_id
         )
     )
-    response.set_cookie('theme_id', theme_id, 12)
+    response.set_cookie("theme_id", theme_id, 10)
+    response.set_cookie("order", "".join((str(i) for i in order)), 3600)
     return response
 
 
@@ -348,9 +357,27 @@ def search_key():
         return redirect(url_for("search"))
 
 
+@app.post("/delete/<theme_id>/")
+def delete_theme(theme_id: int):
+    theme = Themes.query.get(theme_id)
+    if theme.user_id == current_user.id:
+        db.session.delete(theme)
+        delete_images(current_user.id, theme_id)
+        db.session.commit()
+        return redirect(url_for("profileThemes", username=current_user.username))
+
 # ==============================================RUNNING============================================== #
 
-if __name__ == '__main__':
+def delete_images(user_id: int, theme_id: int):
+    theme_id = str(theme_id)
+    path = app.root_path + f'/static/media/images/{user_id}/'
+    files = [i for i in os.walk(path)][0][-1]
+    for filename in files:
+        if filename.split('_')[0] == theme_id:
+            os.remove(path + filename)
 
+
+
+if __name__ == '__main__':
     # db.create_all()
     app.run(debug=True)
