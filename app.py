@@ -377,6 +377,8 @@ def delete_theme(theme_id: int):
     if theme.user_id == current_user.id:
         db.session.delete(theme)
         delete_images(current_user.id, theme_id)
+        cards = TextCard.query.filter_by(theme_id=theme_id)
+        db.session.delete(cards)
         db.session.commit()
         return redirect(url_for("profileThemes", username=current_user.username))
 
