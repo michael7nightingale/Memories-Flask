@@ -1,14 +1,13 @@
 from random import shuffle
 from flask import Flask, url_for, render_template, request, flash, redirect, make_response
-from flask_login import current_user, login_manager, LoginManager, UserMixin, login_user, logout_user, login_required
+from flask_login import current_user, LoginManager, UserMixin, login_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
 import logging
 import pydantic
-import enum
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
-import validators
+import schemas
 import utils
 
 # ===============================CONFIGURATION================================= #
@@ -130,7 +129,7 @@ def logout():
 def createUserModel(data: dict) -> pydantic.BaseModel:
     """Validating user data with pydantic"""
     try:
-        userModel = validators.User(**data)
+        userModel = schemas.User(**data)
         return userModel
     except Exception as e:
         logger.error(f"Exception while creating user-model: {str(e)}")
@@ -222,7 +221,7 @@ def validateTheme():
     try:
         isPublic = False if 'key' in request.form else True
         key = request.form['key']
-        themeModel = validators.Theme(user_id=current_user.id,
+        themeModel = schemas.Theme(user_id=current_user.id,
                                       title=request.form['title'],
                                       isPublic=isPublic,
                                       key=key)
@@ -234,7 +233,7 @@ def validateTheme():
         logger.info(request.form)
 
         for i in range(1, int(request.form['number']) + 1):
-            cardModel = validators.Card(theme_id=theme.id,
+            cardModel = schemas.Card(theme_id=theme.id,
                                         ask_side=request.form[f'question{i}'],
                                         answer_side=request.form[f'answer{i}'])
             logger.debug(f"Card PyDantic model is created: {cardModel}.")
@@ -281,13 +280,24 @@ def theme_form_view_get(theme_id: int, title: str):
 @app.post('/<theme_id>/<title>/')
 def theme_form_view_post(theme_id, title):
     """Separate theme view and testing logic."""
-    print(request.cookies.get("order"))
     cards = TextCard.query.filter_by(theme_id=theme_id).all()
     cards = [cards[int(i)] for i in request.cookies.get("order")]
     # right answers amount
-    right_answers_amount = sum(map(lambda x: int(x), (cards[i].answer_side == request.form[f"{i + 1}"] for i in range(len(cards)))))
-    result = f"Правильных ответов: {right_answers_amount} из {len(cards)}"
+    right_answers_amount = 0
+    message = "<div>"
+    for i in range(len(cards)):
+        answer = request.form[f"{i + 1}"]
+        if answer.lower().strip() == cards[i].answer_side.lower().strip():
+            right_answers_amount += 1
+        else:
+            message += f"<h4 class='red_text'>{cards[i].ask_side}: {answer} ({cards[i].answer_side})</h4>"
+
+    if right_answers_amount == len(cards):
+        message += "<h4 class='green_text'>Все верно!</h4></div>"
+    else:
+        message += "</div>"
     # form the html for flushing user what should he do
+    result = f"Правильных ответов: {right_answers_amount} из {len(cards)}"
     if right_answers_amount == len(cards):
         advice = "<a href=\"{}\">Остальные темы</a>".format(request.cookies.get('url'))
     else:
@@ -300,7 +310,8 @@ def theme_form_view_post(theme_id, title):
             result=result,
             advice=advice,
             title=title,
-            theme_id=theme_id
+            theme_id=theme_id,
+            message=message
         )
     )
     return response
@@ -349,9 +360,12 @@ def search():
 
 @app.post("/search/key/")
 def search_key():
+    print(request.form['key'])
+    theme = Themes.query.filter_by(key=request.form['key']).first()
+    print(theme)
     try:
         theme = Themes.query.filter_by(key=request.form['key']).first()
-        return redirect(url_for("theme_form_view", title=theme.title, theme_id=theme.id))
+        return redirect(url_for("theme_form_view_get", title=theme.title, theme_id=theme.id))
     except Exception as e:
         logger.error(str(e))
         return redirect(url_for("search"))

@@ -7,8 +7,10 @@
 </div>
 
 <div class="container">
-   <p>{{ result }}</p>
+   <h3>{{ result }}</h3>
+    {{ message|safe }}
     {{ advice|safe}}
+
 </div>
 
 {% endblock %}

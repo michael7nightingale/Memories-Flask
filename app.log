@@ -1415,3 +1415,85 @@ type
 2023-05-07 22:04:16,079 DEBUG Loaded user with id: 1
 2023-05-07 22:04:16,920 DEBUG Loaded user with id: 1
 2023-05-07 22:04:18,104 DEBUG Loaded user with id: 1
+2023-05-08 11:37:30,714 DEBUG Loaded user with id: 1
+2023-05-08 11:37:32,334 DEBUG Loaded user with id: 1
+2023-05-08 11:37:33,274 DEBUG Loaded user with id: 1
+2023-05-08 11:37:34,891 DEBUG Loaded user with id: 1
+2023-05-08 11:37:35,794 DEBUG Loaded user with id: 1
+2023-05-08 11:37:57,610 DEBUG Loaded user with id: 1
+2023-05-08 11:37:57,611 DEBUG {'title': 'Тест что варя любит больше всего', 'number': 6}
+2023-05-08 11:39:43,066 DEBUG Loaded user with id: 1
+2023-05-08 11:39:43,069 DEBUG Theme PyDantic model is created: title='Тест что варя любит больше всего' isPublic=False key='xCPXtlmapYk.YQCuv:PO;cveeodUlE' user_id=1.
+2023-05-08 11:39:43,069 DEBUG Theme data is created by Model Theme: self.id=None, self.title='Тест что варя любит больше всего'.
+2023-05-08 11:39:43,172 DEBUG Theme data is committed to db.
+2023-05-08 11:39:43,172 INFO ImmutableMultiDict([('number', '6'), ('title', 'Тест что варя любит больше всего'), ('key', 'xCPXtlmapYk.YQCuv:PO;cveeodUlE'), ('question1', 'Какой напиток'), ('answer1', 'Ильменские лимонадики'), ('question2', 'Какой предмет в школе'), ('answer2', 'Математика'), ('question3', 'Какое животное'), ('answer3', 'Свинюшка'), ('question4', 'Какую дочку'), ('answer4', 'Мухтар'), ('question5', 'Какое время года'), ('answer5', 'Весна'), ('question6', 'Какого мужчину'), ('answer6', 'Миша')])
+2023-05-08 11:39:43,173 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какой напиток' answer_side='Ильменские лимонадики'.
+2023-05-08 11:39:43,173 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какой напиток'.
+2023-05-08 11:39:43,239 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,240 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какой предмет в школе' answer_side='Математика'.
+2023-05-08 11:39:43,240 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какой предмет в школе'.
+2023-05-08 11:39:43,339 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,339 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какое животное' answer_side='Свинюшка'.
+2023-05-08 11:39:43,339 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какое животное'.
+2023-05-08 11:39:43,432 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,433 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какую дочку' answer_side='Мухтар'.
+2023-05-08 11:39:43,433 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какую дочку'.
+2023-05-08 11:39:43,505 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,506 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какое время года' answer_side='Весна'.
+2023-05-08 11:39:43,506 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какое время года'.
+2023-05-08 11:39:43,588 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,588 DEBUG Card PyDantic model is created: theme_id=1 ask_side='Какого мужчину' answer_side='Миша'.
+2023-05-08 11:39:43,589 DEBUG Card data is created by Model Card: self.id=None, self.ask_side='Какого мужчину'.
+2023-05-08 11:39:43,655 DEBUG Card data is committed to db.
+2023-05-08 11:39:43,655 DEBUG All cards of theme are added
+2023-05-08 11:39:43,659 DEBUG Loaded user with id: 1
+2023-05-08 11:39:45,777 DEBUG Loaded user with id: 1
+2023-05-08 11:39:46,976 DEBUG Loaded user with id: 1
+2023-05-08 11:40:04,835 DEBUG Loaded user with id: 1
+2023-05-08 11:40:10,260 DEBUG Loaded user with id: 1
+2023-05-08 11:40:11,886 DEBUG Loaded user with id: 1
+2023-05-08 11:41:14,997 DEBUG Loaded user with id: 1
+2023-05-08 11:41:16,318 DEBUG Loaded user with id: 1
+2023-05-08 11:41:30,742 DEBUG Loaded user with id: 1
+2023-05-08 11:41:52,081 DEBUG Loaded user with id: 1
+2023-05-08 11:41:52,889 DEBUG Loaded user with id: 1
+2023-05-08 11:42:27,959 DEBUG Loaded user with id: 1
+2023-05-08 11:42:29,309 DEBUG Loaded user with id: 1
+2023-05-08 11:43:15,271 DEBUG Loaded user with id: 1
+2023-05-08 11:43:37,364 DEBUG Loaded user with id: 1
+2023-05-08 11:43:38,355 DEBUG Loaded user with id: 1
+2023-05-08 11:44:28,959 DEBUG Loaded user with id: 1
+2023-05-08 11:45:15,423 DEBUG Loaded user with id: 1
+2023-05-08 11:45:17,215 DEBUG Loaded user with id: 1
+2023-05-08 11:45:40,791 DEBUG Loaded user with id: 1
+2023-05-08 11:46:19,096 DEBUG Loaded user with id: 1
+2023-05-08 11:46:20,658 DEBUG Loaded user with id: 1
+2023-05-08 11:46:22,064 DEBUG Loaded user with id: 1
+2023-05-08 11:47:09,174 DEBUG Loaded user with id: 1
+2023-05-08 11:47:12,767 DEBUG Loaded user with id: 1
+2023-05-08 11:47:19,003 DEBUG Loaded user with id: 1
+2023-05-08 11:47:20,544 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:47:20,547 DEBUG Loaded user with id: 1
+2023-05-08 11:47:22,207 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:47:22,211 DEBUG Loaded user with id: 1
+2023-05-08 11:47:26,100 DEBUG Searching with CombinedMultiDict([ImmutableMultiDict([('substring', 'Варь')])])
+2023-05-08 11:47:26,101 DEBUG Loaded user with id: 1
+2023-05-08 11:47:29,405 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:47:29,408 DEBUG Loaded user with id: 1
+2023-05-08 11:47:33,451 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:47:33,455 DEBUG Loaded user with id: 1
+2023-05-08 11:47:34,992 DEBUG Loaded user with id: 1
+2023-05-08 11:47:36,135 DEBUG Loaded user with id: 1
+2023-05-08 11:47:41,607 DEBUG Loaded user with id: 1
+2023-05-08 11:47:43,340 DEBUG Loaded user with id: 1
+2023-05-08 11:47:44,718 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:47:44,721 DEBUG Loaded user with id: 1
+2023-05-08 11:48:23,414 ERROR 'NoneType' object has no attribute 'title'
+2023-05-08 11:48:23,423 DEBUG Loaded user with id: 1
+2023-05-08 11:48:42,681 ERROR 'NoneType' object has no attribute 'title'
+2023-05-08 11:48:42,689 DEBUG Loaded user with id: 1
+2023-05-08 11:48:48,423 DEBUG Loaded user with id: 1
+2023-05-08 11:48:49,256 DEBUG Loaded user with id: 1
+2023-05-08 11:48:53,133 DEBUG Loaded user with id: 1
+2023-05-08 11:48:54,561 ERROR Could not build url for endpoint 'theme_form_view' with values ['theme_id', 'title']. Did you mean 'theme_form_view_get' instead?
+2023-05-08 11:48:54,564 DEBUG Loaded user with id: 1
