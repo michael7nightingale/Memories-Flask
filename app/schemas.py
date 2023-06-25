@@ -1,8 +1,4 @@
-from typing import IO
-
-from pydantic import BaseModel, constr, ValidationError, validator
-from pydantic.dataclasses import dataclass
-import re
+from pydantic import BaseModel
 
 
 class User(BaseModel):
@@ -51,9 +47,3 @@ class Card(BaseModel):
 
 class Request:
     form: dict
-
-
-
-
-
-
