@@ -34,4 +34,11 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+    - name: mypy
+      uses: konciergeMD/github-action-mypy@main
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MYPY_OPTS: "--config=./mypy.ini"  # additional mypy options
+          #MYPY_CODE_DIR: "."  # what directory to check, defaults to "."
+          #PRECOMMAND_MESSAGE: You have style errors. See them below.
 
