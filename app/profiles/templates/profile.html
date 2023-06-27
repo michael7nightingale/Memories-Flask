@@ -4,6 +4,7 @@
 
 <div class="jumbotron">
     <h1>{{ user.username }}</h1>
+    <p align="center" style="font-style: italic">Привет, Maximum Education</p>
 </div>
 
 <div class="row">
@@ -13,10 +14,13 @@
     </div>
      <div class="col-md-4">
         <h2>Мои темы</h2>
-        <p>Созданные мной темы</p>
+        <p class="custom-p">Созданные мной темы</p>
         <p><a class="btn btn-default" href="{{ url_for('profiles.profileThemes', username=current_user.username) }}">перейти &raquo;</a></p>
     </div>
 </div>
 
 {% endblock %}
 
+{% block sripts %}
+<link rel="stylesheet" href="{{ url_for('profiles.static', filename='css/style.css') }}">
+{% endblock %}

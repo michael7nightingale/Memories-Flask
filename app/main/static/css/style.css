@@ -1,3 +1,8 @@
 .content-body{
     background-color: aquamarine;
 }
+
+ .custom-p{
+        background-color: #aaaaaa;
+        font-style: italic;
+}

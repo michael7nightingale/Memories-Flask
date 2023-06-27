@@ -4,7 +4,14 @@ from flask_login import login_required, current_user
 from ..themes.repository import ThemeRepository
 from ..utils import generate_key
 
-blueprint = Blueprint('profiles', __name__, url_prefix="/profiles", template_folder="templates", static_folder='static')
+blueprint = Blueprint(
+    'profiles',
+    __name__,
+    url_prefix="/profiles",
+    template_folder="templates",
+    static_folder='../static',
+    static_url_path="/profiles"
+)
 
 
 @blueprint.route('/profile/<username>/')
