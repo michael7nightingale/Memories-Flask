@@ -26,7 +26,7 @@ def createThemeMiddleware():
 def createTheme():
     """Creating a new theme card"""
     form_data = request.form.to_dict()
-    # form_data['number'] = form_data['number'])
+    form_data['number'] = int(form_data['number'])  # type: ignore
     # isPublic = request.form.get('isPublic', False)
     key = generate_key()
     form_data['key'] = key
@@ -39,6 +39,7 @@ def profileThemes(username: str):
     """User profile view"""
     user = current_user
     themes = ThemeRepository().all_by_user(user.id)
+    print(themes)
     response = make_response(
         render_template(
             "themes.html",

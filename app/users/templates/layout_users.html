@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
+{% block head %}
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memories</title>
+    <link rel="stylesheet" href="{{ url_for('users.static', filename='css/style.css') }}">
+    <link rel="script" href="{{ url_for('users.static', filename='js/login.js') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -24,17 +26,13 @@
         <a class="btn btn-outline-primary text" href="{{ url_for('users.login') }}">Войти</a>
         {% endif %}
     </div>
+{% endblock %}
 
+{% block content %}
+{% endblock %}
 
-    <div class="container body-content">
-{% block content %}{% endblock %}
-        <hr/>
-        <footer>
-            <p>&copy;2023 - Memories. Создан michael7nightingale с помощью Flask. Все права защищены.</p>
-        </footer>
-    </div>
-
-{% block scripts %}{% endblock %}
+{% block scripts %}
+{% endblock %}
 
 </body>
 </html>

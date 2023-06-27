@@ -1,29 +1,27 @@
-{% extends "layout.html" %}
+{% extends "layout_users.html" %}
 
 {% block content %}
 
-<h2>{{ title }}</h2>
-<div class="text-center">
-    <form method="post" class="form-signin">
+<div id="formWrapper">
+<div id="form">
+<div class="logo">
 
-        <input type="text" class="form-control" placeholder="Email" name="email">
-        <input type="text" class="form-control" placeholder="Password" name="password">
-
-
-            <div class="col-md-offset-2 col-md-10">
-       
-            <button class="btn btn-primary" type="submit">Log in</button>
+</div>
+    <h3 align="center">Log in</h3>
+    <form method="post">
+    <div class="form-item">
+      <input type="email" name="email" placeholder="Email" id="email" class="form-style" autocomplete="off"/>
+    </div>
+    <div class="form-item">
+      <input type="password" placeholder="Password" name="password" id="password" class="form-style" />
+    </div>
+    <div class="form-item">
+        <p class="pull-left"><a href="{{ url_for("users.register") }}"><small>Register</small></a></p>
+        <input type="submit" class="login pull-right" value="Log In" >
+        <div class="clear-fix"></div>
     </div>
     </form>
-    <a href="{{ url_for('users.register') }}" class="link-primary">Not registered? Let's register</a>
 </div>
-
-
-
-{% endblock %}
-
-
-{% block scripts %}
-
+</div>
 
 {% endblock %}

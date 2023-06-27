@@ -1,6 +1,7 @@
 import os
 
 from flask import Blueprint, request, flash, render_template, redirect, url_for
+from app.themes.views import blueprint as themes_blueprint
 from flask_login import logout_user, login_user
 
 from app import schemas
@@ -54,7 +55,7 @@ def register():
             user = UserRepository().register(**user_schema.dict())
             add_instance(user)
             flash("Вы успешно зарегистрированы", category='status')
-            os.makedirs(blueprint.root_path + f'/static/media/images/{user.id}')
+            os.makedirs(themes_blueprint.root_path + f'/static/images/{user.id}')
             return redirect(url_for('users.login'))
         except Exception as e:
             print(e)

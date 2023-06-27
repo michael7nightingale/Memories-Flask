@@ -7,7 +7,7 @@
 </div>
 
 <div class="container">
-    <form action="{{ url_for('validateTheme') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ url_for('themes.validateTheme') }}" method="post" enctype="multipart/form-data">
     <div class="theme">
         <input type='text' hidden="hidden" name="number" placeholder="Тема карточки" value="{{ number }}">
      <input type='text' name="title" placeholder="Тема карточки" value="{{ title }}">

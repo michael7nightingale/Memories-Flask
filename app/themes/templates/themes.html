@@ -56,7 +56,7 @@ function openCity(evt, cityName) {
 </div>
 
 <div class="container">
-    <form method="post" action="{{ url_for('theme_form_view_post', theme_id=theme_id, title=title) }}">
+    <form method="post" action="{{ url_for('themes.theme_form_view_post', theme_id=theme_id, title=title) }}">
     {% for i in range(cards|length) %}
         {% if i == 0 %}
             <div id="{{ i + 1 }}" class="tabcontent" style="display: block">

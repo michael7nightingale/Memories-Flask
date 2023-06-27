@@ -1,52 +1,48 @@
-{% extends "layout.html" %}
+{% extends "layout_users.html" %}
 
 {% block content %}
 
-<h2>{{ title }}</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-
-            <form method="post" class="form-signin">
-
-                <input type="text" class="form-control" placeholder="Login" name="username">
-            {% if get_flashed_messages(True, ['login']) %}
-                <p>{{ get_flashed_messages(True, ['login'])[0][1] }}</p>
-            {% endif %}
-                <input type="text" class="form-control" placeholder="Email" name="email">
-             {% if get_flashed_messages(True, ['email']) %}
-                                <p>{{ get_flashed_messages(True, ['email'])[0][1]  }}</p>
-            {% endif %}
-                <input type="text" class="form-control" placeholder="Password" name="password">
-                {% if get_flashed_messages(True, ['password']) %}
-                <p>{{ get_flashed_messages(True, ['password'])[0][1]  }}</p>
-                {% endif %}
-                <input type="text" class="form-control" placeholder="Confirm password" name="password_confirm">
-                {% if get_flashed_messages(True, ['password_confirm']) %}
-                <p>{{ get_flashed_messages(True, ['password_confirm'])[0][1]  }}</p>
-                {% endif %}
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-
-                        <button class="btn btn-primary" type="submit">Register</button>
-
-                        <input type="hidden" name="next" value="/" />
-                        <input type="submit" value="Log in" class="btn btn-default" />
-
-                    </div>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm"></section>
-    </div>
+<div id="formWrapper">
+<div id="form">
+<div class="logo">
 </div>
+
+    <h3 align="center">Registration</h3>
+    <form method="post" >
+        <div class="form-item">
+            <input type="email" minlength="5" name="email" placeholder="Email" id="email" class="form-style" autocomplete="off"/>
+        </div>
+
+        <div class="form-item">
+            <input type="text" minlength="5" placeholder="Username" name="username" id="username" class="form-style" />
+        </div>
+
+        <div class="form-item">
+            <input minlength="5" type="password" placeholder="Password" name="password" id="password" class="form-style" />
+        </div>
+
+        <div class="form-item">
+            <input type="password" minlength="5" placeholder="Confirm password" name="confirm-password" id="confirm-password" class="form-style" />
+        </div>
+
+
+        <div class="form-item">
+            <p class="pull-left"><a href="{{ url_for("users.login") }}"><small>Log in</small></a></p>
+            <input type="submit" onclick="return validateForm()" class="login pull-right" value="Register" >
+            <div class="clear-fix"></div>
+        </div>
+    </form>
+
+
+    </div>
+
+</div>
+
 
 {% endblock %}
 
 
 {% block scripts %}
-
-
+<link rel="script" href="{{ url_for('users.static', filename='js/register.js') }}">
 {% endblock %}
+

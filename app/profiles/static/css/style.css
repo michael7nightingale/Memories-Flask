@@ -1,0 +1,25 @@
+.inp{
+    margin-left: 20px;
+}
+
+.add-button{
+    width:70px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.theme{
+    font-size: 20px;
+}
+
+.questions{
+    font-size: 17px;
+    padding: 10px;
+}
+
+
+.question{
+    margin-bottom: 30px;
+    margin-left: 10px;
+}

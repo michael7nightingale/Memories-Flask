@@ -40,7 +40,7 @@ class Application:
 
     @property
     def app(self) -> Flask:
-        return self._app
+        return self._app    # type: ignore
 
 
 def create_app(settings: BaseSettings) -> Flask:

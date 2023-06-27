@@ -15,9 +15,9 @@
             {% else %}
             <p>Тема приватная. Ключ: {{ theme.key }}</p>
             {% endif %}
-            <a class="btn-link" style="color: white; background-color: slateblue; width: 200px" href="{{ url_for('theme_view', theme_id=theme.id) }}">перейти</a>
+            <a class="btn-link" style="color: white; background-color: slateblue; width: 200px" href="{{ url_for('themes.theme_view', theme_id=theme.id) }}">перейти</a>
 
-            <form style="margin-top: 30px" method="post" action="{{ url_for('delete_theme', theme_id=theme.id) }}">
+            <form style="margin-top: 30px" method="post" action="{{ url_for('themes.delete_theme', theme_id=theme.id) }}">
                 <button type="submit" style="color: red" class="btn-link">Удалить</button>
             </form>
 

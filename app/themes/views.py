@@ -41,11 +41,11 @@ def validateTheme():
     except Exception as e:
         print(e)
     # redirecting to all user themes
-    return redirect(url_for('profileThemes', username=current_user.username))
+    return redirect(url_for('profiles.profileThemes', username=current_user.username))
 
 
 @blueprint.get('/<theme_id>/<title>/',)
-def theme_form_view_get(theme_id: int, title: str):
+def theme_form_view_get(theme_id: str, title: str):
     """Separate theme view and testing logic."""
     # if there were no recent prepare for the theme
     cooked_theme_id = request.cookies.get("theme_id"),
@@ -55,6 +55,7 @@ def theme_form_view_get(theme_id: int, title: str):
     # common logic of theme-view
     cards = CardRepository().all_by_theme(theme_id)
     cards = [cards[int(i)] for i in order]
+    print(cards)
     response = make_response(
         render_template(
             'themes.html',
@@ -105,7 +106,7 @@ def theme_form_view_post(theme_id, title):
 
 
 @blueprint.get('/<theme_id>/prepare/')
-def theme_view(theme_id: int):
+def theme_view(theme_id: str):
     theme = ThemeRepository().get(theme_id)
     cards_amount = CardRepository().count_by_theme(theme_id)
     order = list(range(cards_amount))
@@ -151,7 +152,7 @@ def search_key():
 
 
 @blueprint.post("/delete/<theme_id>/")
-def delete_theme(theme_id: int):
+def delete_theme(theme_id: str):
     theme = ThemeRepository().get(theme_id)
     if theme.user_id == current_user.id:
         ThemeRepository().delete(theme_id)

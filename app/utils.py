@@ -11,7 +11,7 @@ def generate_key() -> str:
     return key
 
 
-def delete_images(app, user_id: int, theme_id: int):
+def delete_images(app, user_id: str, theme_id: str):
     theme_id = str(theme_id)
     path = app.root_path + f'/static/media/images/{user_id}/'
     files = [i for i in os.walk(path)][0][-1]

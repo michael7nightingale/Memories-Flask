@@ -10,4 +10,4 @@ class Settings(BaseSettings):
 
 
 def get_settings() -> BaseSettings:
-    return Settings()   # mypy: ignore
+    return Settings()   # type: ignore
