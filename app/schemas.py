@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class User(BaseModel):
@@ -35,7 +36,7 @@ class User(BaseModel):
 class Theme(BaseModel):
     title: str
     isPublic: bool
-    key: None | str = None
+    key: Optional[str] = None
     user_id: int
 
 
