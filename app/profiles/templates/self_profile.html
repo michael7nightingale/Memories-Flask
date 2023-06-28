@@ -10,12 +10,12 @@
 <div class="row">
     <div class="col-md-4">
         <h2>Создать тему</h2>
-        <p><a class="btn btn-default" href="{{ url_for('profiles.createThemeMiddleware') }}">перейти &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ url_for('themes.get_create_theme') }}">перейти &raquo;</a></p>
     </div>
      <div class="col-md-4">
         <h2>Мои темы</h2>
         <p class="custom-p">Созданные мной темы</p>
-        <p><a class="btn btn-default" href="{{ url_for('profiles.profileThemes', username=current_user.username) }}">перейти &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ url_for('profiles.get_profile_themes', username=current_user.username) }}">перейти &raquo;</a></p>
     </div>
 </div>
 

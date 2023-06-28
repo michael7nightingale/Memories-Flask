@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Создание темы</h1>
+</div>
+
+<div class="container">
+    <h3 class="memory-title" align="center">Настройки</h3>
+    <form action="{{ url_for('themes.post_create_theme') }}" method="post">
+    <div class="theme row">
+        <div class="col">
+            <label for="title" class="theme-form-label">Тема карточки</label>
+            <input class="form-control" minlength="5" type='text' name="title" id="title" placeholder="Тема карточки">
+        </div>
+        <div class="col">
+            <label for="isPublic" class="form-check-label">Публичная тема</label>
+            <input class="form-control"  value="true" type="checkbox" id='isPublic' name="isPublic" placeholder="Публичная тема">
+        </div>
+    </div>
+
+
+    <h3 class="memory-title" align="center">Вопросы</h3>
+        <button type="button" class='add-button' name="add_question" onclick="addQuestion(event)">Добавить карточку</button>
+    <div class="questions row">
+
+        <div class="col-lg-1">
+         <div class="col" id="tablinks" role="tablist" aria-orientation="vertical">
+        <button type="button" class="tablink" id="1-tab" onclick="switchTab(event)">1</button>
+        <button type="button" class="tablink" id="2-tab" onclick="switchTab(event)">2</button>
+        <button type="button" class="tablink" id="3-tab" onclick="switchTab(event)">3</button>
+       </div>
+        </div>
+
+        <div class="col">
+
+        <div class="tab-content" id="tab-content">
+          <div class="tab-pane fade show active" id="1">
+               <div class="question row" id="question1">
+                <div class="col">
+                    <label for="question1-textarea">Вопрос</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question1" placeholder="Вопрос:" id="question1-textarea">
+                    </textarea>
+                </div>
+                 <div class="col">
+                     <label for="answer1-textarea">Ответ</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer1-textarea" name="answer1" placeholder="Вопрос:">
+                    </textarea>
+                </div>
+            </div>
+              <div class="question row">
+                  <label for="photo1">Картинка</label>
+                  <input class="form-control" type="file" id="photo1">
+              </div>
+          </div>
+          <div class="tab-pane fade" id="2">
+              <div class="question row" id="question2">
+                <div class="col">
+                    <label for="question2-textarea">Вопрос</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question2" placeholder="Вопрос:">
+                    </textarea>
+                </div>
+                 <div class="col">
+                     <label for="answer2-textarea">Ответ</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer-textarea" name="answer2" placeholder="Вопрос:">
+                    </textarea>
+                </div>
+            </div>
+              <div class="question row">
+                  <label for="photo2">Картинка</label>
+                  <input class="form-control" type="file" id="photo2">
+              </div>
+          </div>
+          <div class="tab-pane fade" id="3">
+
+            <div class="question row" id="question3">
+                <div class="col">
+                    <label for="question3-textarea">Вопрос</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question3" placeholder="Вопрос:">
+                    </textarea>
+                </div>
+                 <div class="col">
+                     <label for="answer3-textarea">Ответ</label>
+                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer-textarea" name="answer3" placeholder="Вопрос:">
+                    </textarea>
+                </div>
+            </div>
+              <div class="question row">
+                  <label for="photo3">Картинка</label>
+                  <input class="form-control" type="file" id="photo3">
+              </div>
+          </div>
+
+        </div>
+        </div>
+
+    </div>
+     <button type="submit" class="btn btn-outline-primary">Создать</button>
+    </form>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}">
+    <script src="{{ url_for(".static", filename="js/themes.js") }}"></script>
+{% endblock %}

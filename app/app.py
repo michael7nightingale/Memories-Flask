@@ -23,7 +23,7 @@ class Application:
         self._app.register_blueprint(main_blueprint)
         self._app.register_blueprint(users_blueprint)
         self._app.register_blueprint(themes_blueprint)
-        self._app.register_blueprint(profiles_blueprint)
+        self._app.register_blueprint(profiles_blueprint, url_prefix='/profiles')
 
     def _set_app_extensions(self) -> None:
         db.init_app(self._app)

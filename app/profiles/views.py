@@ -2,51 +2,37 @@ from flask import Blueprint, render_template, make_response, request
 from flask_login import login_required, current_user
 
 from ..themes.repository import ThemeRepository
-from ..utils import generate_key
+from app.users.repository import UserRepository
 
+
+# initializing blueprint
 blueprint = Blueprint(
     'profiles',
     __name__,
-    url_prefix="/profiles",
+    # url_prefix="/profiles",
     template_folder="templates",
-    static_folder='../static',
-    static_url_path="/profiles"
+    static_folder='static',
 )
 
 
-@blueprint.route('/profile/<username>/')
+@blueprint.get('/profile/<username>/')
 @login_required
 def profile(username: str):
     """User profile view"""
-    return render_template("profile.html",
-                           user=current_user)
+    user = UserRepository().get_by(username=username)
+    if user == current_user:
+        return render_template("self_profile.html",
+                               user=current_user)
+    else:
+        ...
 
 
-@blueprint.route("/create_theme/middleware/")
+@blueprint.get('/profile/<username>/themes/')
 @login_required
-def createThemeMiddleware():
-    return render_template("create_theme_middleware.html")
-
-
-@blueprint.route("/create_theme/", methods=['get', 'post'])
-@login_required
-def createTheme():
-    """Creating a new theme card"""
-    form_data = request.form.to_dict()
-    form_data['number'] = int(form_data['number'])  # type: ignore
-    # isPublic = request.form.get('isPublic', False)
-    key = generate_key()
-    form_data['key'] = key
-    return render_template("create_theme.html", **form_data)
-
-
-@blueprint.route('/profile/<username>/themes/')
-@login_required
-def profileThemes(username: str):
-    """User profile view"""
+def get_profile_themes(username: str):
+    """User themes view"""
     user = current_user
     themes = ThemeRepository().all_by_user(user.id)
-    print(themes)
     response = make_response(
         render_template(
             "themes.html",

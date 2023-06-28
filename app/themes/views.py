@@ -6,12 +6,12 @@ from random import shuffle
 from .repository import ThemeRepository, CardRepository
 from app.extensions import add_instance
 from app import schemas
-from app.utils import delete_images
+from app.utils import delete_images, generate_key
 
 blueprint = Blueprint("themes", __name__, url_prefix='/themes', template_folder="templates", static_folder='static')
 
 
-@blueprint.post('/validate_theme/')
+@blueprint.post('/validate-theme/')
 @login_required
 def validateTheme():
     """Creating a new theme card"""
@@ -55,7 +55,7 @@ def theme_form_view_get(theme_id: str, title: str):
     # common logic of theme-view
     cards = CardRepository().all_by_theme(theme_id)
     cards = [cards[int(i)] for i in order]
-    print(cards)
+
     response = make_response(
         render_template(
             'themes.html',
@@ -159,3 +159,26 @@ def delete_theme(theme_id: str):
         delete_images(blueprint, current_user.id, theme_id)
         CardRepository().delete_by_theme(theme_id)
         return redirect(url_for("profileThemes", username=current_user.username))
+
+
+@blueprint.get("/create-theme/")
+@login_required
+def get_create_theme():
+    """Template view for create theme."""
+    return render_template("create_theme.html")
+
+
+@blueprint.post("/create-theme/")
+@login_required
+def post_create_theme():
+    """Creating a new theme card"""
+    form_data = request.form.to_dict()
+
+
+
+    form_data['number'] = int(form_data['number'])  # type: ignore
+    isPublic = request.form.get('isPublic', False)
+
+    key = generate_key()
+    form_data['key'] = key
+    return render_template("create_theme.html", **form_data)
