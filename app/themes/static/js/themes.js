@@ -1,6 +1,6 @@
 function addQuestion(event){
-    let amount = document.getElementById("tab-content").childElementCount
-    let newNumber = amount + 1;
+    let amount = document.getElementById("cards-count").value
+    let newNumber = parseInt(amount) + 1;
     newNumber = newNumber.toString();
     console.log(amount)
 
@@ -30,6 +30,7 @@ function addQuestion(event){
     questionTextArea.style.height = "160px"
     questionTextArea.setAttribute("name", "questions" + newNumber)
     questionTextArea.setAttribute("id", "question" +  newNumber +"-textarea")
+    questionTextArea.setAttribute('placeholder', "Вопрос:")
     questionColumn.appendChild(questionTextArea);
     newRow.appendChild(questionColumn);
 
@@ -46,6 +47,8 @@ function addQuestion(event){
     answerTextArea.style.height = "160px"
     answerTextArea.setAttribute("name", "answer" + newNumber)
     answerTextArea.setAttribute("id", "answer" +  newNumber +"-textarea")
+    answerTextArea.setAttribute('placeholder', "Ответ:")
+    answerTextArea.setAttribute("minlength", "1")
     answerColumn.appendChild(answerTextArea);
     newRow.appendChild(answerColumn);
     newQuestion.appendChild(newRow);
@@ -66,7 +69,8 @@ function addQuestion(event){
     newQuestion.appendChild(fileRow)
 
     document.getElementById("tab-content").appendChild(newQuestion)
-    console.log(document.getElementById("tab-content"))
+
+    document.getElementById("cards-count").value = newNumber;
 }
 
 
@@ -81,8 +85,10 @@ function switchTab(event) {
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].style.backgroundColor = "#cccccc";
   }
   number = event.currentTarget.innerText
+  event.currentTarget.style.backgroundColor = "#55b1df"
   document.getElementById(number).className += "show active";
   event.currentTarget.className += " active"
 

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 align="center">{{ theme.title }}</h1>
+</div>
+
+<div class="tab">
+    <button class="tablinks active" onclick="openTab(event)">1</button>
+    <button class="tablinks" onclick="openTab(event)">2</button>
+    <button class="tablinks" onclick="openTab(event)">3</button>
+</div>
+
+<div class="container" style="background:black">
+    <form method="post" action="{{ url_for('themes.theme_form_view_post', theme_id=theme.id) }}">
+        {% for i in range(cards|length) %}
+        {% if i == 0 %}
+        <div id="{{ i + 1 }}" class="tabcontent active">
+        {% else %}
+        <div id="{{ i + 1 }}" class="tabcontent" style="display: none">
+        {% endif %}
+        <h4>{{ cards[i].question }}</h4>
+            {% if cards[i].image %}
+              <img src="/static/media/images/{{ cards[i].image }}" width=50% style="">
+             {% endif %}
+             <input class='form-control' type="text" name='answer{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:" style="align-self: center">
+{#               <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>#}
+            {% if i == cards|length - 1 %}
+            <div class="answer">
+                <button type="submit" class="btn btn-primary btn-large btn-corner">Ответить на тему</button>
+            </div>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </form>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}">
+<script src="{{ url_for('.static', filename='js/tab.js') }}"></script>
+{% endblock %}
