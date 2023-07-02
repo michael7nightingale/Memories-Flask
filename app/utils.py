@@ -1,5 +1,6 @@
 import os
 import random
+from typing import Iterable
 
 abc = [chr(__i) for __i in range(ord('a'), ord('z') + 1)] +\
       [chr(__i) for __i in range(ord('A'), ord('Z') + 1)] +\
@@ -18,3 +19,10 @@ def delete_images(app, user_id: str, theme_id: str):
     for filename in files:
         if filename.split('_')[0] == theme_id:
             os.remove(path + filename)
+
+
+def match_order(lst: list, order: Iterable[int]) -> list:
+    lst_ordered = []
+    for idx in order:
+        lst_ordered.append(lst[idx])
+    return lst_ordered
