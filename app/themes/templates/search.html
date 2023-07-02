@@ -5,37 +5,52 @@
 <div class="jumbotron">
     <h1>Поиск</h1>
 </div>
-
+<script style="{{ url_for('.static', filename='js/buttons.js') }}"></script>
 <div class="container">
-    <h4>Поиск по названию</h4>
-    <form action="{{ url_for('search') }}" method="get">
-
-        <input type='text' name="substring" placeholder="Текст: ">
-        <input type="submit">
+    <div class="row">
+        <div class="col">
+            <button class="btn" value="text-search" autofocus="autofocus" style="width: 100%; font-size: 25px">Поиск по названию</button>
+        </div>
+        <div class="col">
+            <button class="btn" value="key-search" style="width: 100%; font-size: 25px">Войти по ключу</button>
+        </div>
+    </div>
+    <div class="row" style="padding: 20px" >
+        <div class="col search" id="text-search" style="display: block">
+            <form action="{{ url_for('themes.search') }}" method="get">
+            <input type='text' class="form-control" name="substring" placeholder="Текст: ">
+            <button type="submit" class="btn-primary">Найти</button>
     </form>
-    <h4>Войти по ключу</h4>
-    <form action="{{ url_for('search_key') }}" method="post">
-        <input type='text' name="key" placeholder="Ключ: ">
-        <input type="submit">
-    </form>
-</div>
+        </div>
+        <div class="col search" id="key-search" style="display: none">
+            <form action="{{ url_for('themes.search_key') }}" method="post">
+            <input type='text' class="form-control" name="key" placeholder="Ключ: ">
+            <button type="submit" class="btn-primary">Найти</button>
+            </form>
+        </div>
+    </div>
 
-<div class="bp3-tree-node-content-1">
+
+<div class="row">
     {% if themes %}
         <h5>Результаты поиска</h5>
         <ul>
         {% for theme in themes %}
             <li>
                 <h6>{{ theme.title }}</h6>
-                <a href="{{ url_for('theme_view', theme_id=theme.id) }}">перейти</a>
+                <a href="{{ url_for('theme_form_view_get', theme_id=theme.id) }}">перейти</a>
             </li>
         {% endfor %}
         </ul>
     {% else %}
-        <h5>Здесь появятся результаты поиска</h5>
+        <h3 align="center" style="margin: 40px">Здесь появятся результаты поиска</h3>
     {% endif %}
+</div>
+
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script style="{{ url_for('.static', filename='js/buttons.js') }}"></script>
+
 {% endblock %}
