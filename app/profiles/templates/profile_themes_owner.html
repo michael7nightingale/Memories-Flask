@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>{{ current_user.username }} - Темы</h1>
+</div>
+
+<div class="container">
+    <h1>Все мои темы:</h1>
+
+    {% if themes|length %}
+        <ul>
+       {% for theme in themes %}
+            <li>
+                <h4>{{ theme.title }}</h4>
+                <a class="btn-link" style="color: white; background-color: slateblue; width: 200px" href="{{ url_for('themes.theme_form_view_get', theme_id=theme.id) }}">перейти</a>
+
+                <form style="margin-top: 30px" method="post" action="{{ url_for('themes.delete_theme', theme_id=theme.id) }}">
+                    <button type="submit" style="color: red" class="btn-link">Удалить</button>
+                </form>
+
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h5 align="center" style="font-style: italic">У вас нет тем.</h5>
+    {% endif %}
+</div>
+
+{% endblock %}
