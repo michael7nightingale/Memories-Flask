@@ -19,26 +19,35 @@ blueprint = Blueprint(
 @login_required
 def profile(username: str):
     """User profile view"""
-    user = UserRepository().get_by(username=username)
-    if user == current_user:
-        return render_template("self_profile.html",
-                               user=current_user)
+    if username == current_user.username:
+        return render_template("self_profile.html")
     else:
-        ...
+        user = UserRepository().get_by(username=username)
+        return render_template("profile.html", user=user)
 
 
 @blueprint.get('/profile/<username>/themes/')
 @login_required
 def get_profile_themes(username: str):
     """User themes view"""
-    user = current_user
-    themes = ThemeRepository().all_by_user(user.id)
-    response = make_response(
-        render_template(
-            "themes.html",
-            user=user,
-            themes=themes
+    if username == current_user.username:
+        themes = ThemeRepository().all_by_user(current_user.id)
+        response = make_response(
+            render_template(
+                "profile_themes_owner.html",
+                themes=themes
+            )
         )
-    )
-    response.set_cookie("url", request.url, 60 * 60)
+        response.set_cookie("url", request.url, 60 * 60)
+    else:
+        user = UserRepository().get_by(username=username)
+        themes = ThemeRepository().filter_by(user_id=user.id, isPublic=True)
+        response = make_response(
+            render_template(
+                "profile_themes.html",
+                user=user,
+                themes=themes
+            )
+        )
+
     return response
