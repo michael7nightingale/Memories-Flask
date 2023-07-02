@@ -5,9 +5,9 @@ from app.extensions import db
 
 class Card(db.Model):   # type: ignore
     id = db.Column(db.String(50), primary_key=True, default=lambda: str(uuid4()))
-    ask_side = db.Column(db.Text)
+    question = db.Column(db.Text)
+    answer = db.Column(db.String(255))
     image = db.Column(db.LargeBinary, nullable=True)
-    answer_side = db.Column(db.String(255))
     theme_id = db.Column(db.String(50), db.ForeignKey('theme.id'))
 
     def __repr__(self):
