@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 align="center">{{ user.username }}</h1>
+    <p align="center" style="font-style: italic; font-size: 24px">Вы гость этого профиля.</p>
+</div>
+
+<div class="row">
+     <div class="col-md-4">
+        <h2>Темы пользователя</h2>
+        <p><a class="btn btn-default" href="{{ url_for('profiles.get_profile_themes', username=user.username) }}">перейти &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block sripts %}
+<link rel="stylesheet" href="{{ url_for('profiles.static', filename='css/style.css') }}">
+{% endblock %}

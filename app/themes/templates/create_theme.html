@@ -9,6 +9,8 @@
 <div class="container">
     <h3 class="memory-title" align="center">Настройки</h3>
     <form action="{{ url_for('themes.post_create_theme') }}" method="post">
+    <input type="hidden" id="cards-count" name="count" value="3">
+
     <div class="theme row">
         <div class="col">
             <label for="title" class="theme-form-label">Тема карточки</label>
@@ -27,7 +29,7 @@
 
         <div class="col-lg-1">
          <div class="col" id="tablinks" role="tablist" aria-orientation="vertical">
-        <button type="button" class="tablink" id="1-tab" onclick="switchTab(event)">1</button>
+        <button type="button" class="tablink" id="1-tab" style="background-color: #55b1df" onclick="switchTab(event)">1</button>
         <button type="button" class="tablink" id="2-tab" onclick="switchTab(event)">2</button>
         <button type="button" class="tablink" id="3-tab" onclick="switchTab(event)">3</button>
        </div>
@@ -40,13 +42,11 @@
                <div class="question row" id="question1">
                 <div class="col">
                     <label for="question1-textarea">Вопрос</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" name="question1" placeholder="Вопрос:" id="question1-textarea">
-                    </textarea>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question1" placeholder="Вопрос:" id="question1-textarea"></textarea>
                 </div>
                  <div class="col">
                      <label for="answer1-textarea">Ответ</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer1-textarea" name="answer1" placeholder="Вопрос:">
-                    </textarea>
+                    <textarea class="form-control" minlength="1" style="height: 160px" id="answer1-textarea" name="answer1" placeholder="Ответ:"></textarea>
                 </div>
             </div>
               <div class="question row">
@@ -58,13 +58,11 @@
               <div class="question row" id="question2">
                 <div class="col">
                     <label for="question2-textarea">Вопрос</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" name="question2" placeholder="Вопрос:">
-                    </textarea>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question2" placeholder="Вопрос:"></textarea>
                 </div>
                  <div class="col">
                      <label for="answer2-textarea">Ответ</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer-textarea" name="answer2" placeholder="Вопрос:">
-                    </textarea>
+                    <textarea class="form-control" minlength="1" style="height: 160px" id="answer-textarea" name="answer2" placeholder="Ответ:"></textarea>
                 </div>
             </div>
               <div class="question row">
@@ -77,13 +75,11 @@
             <div class="question row" id="question3">
                 <div class="col">
                     <label for="question3-textarea">Вопрос</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" name="question3" placeholder="Вопрос:">
-                    </textarea>
+                    <textarea class="form-control" minlength="10" style="height: 160px" name="question3" placeholder="Вопрос:"></textarea>
                 </div>
                  <div class="col">
                      <label for="answer3-textarea">Ответ</label>
-                    <textarea class="form-control" minlength="10" style="height: 160px" id="answer-textarea" name="answer3" placeholder="Вопрос:">
-                    </textarea>
+                    <textarea class="form-control" minlength="1" style="height: 160px" id="answer-textarea" name="answer3" placeholder="Ответ:"></textarea>
                 </div>
             </div>
               <div class="question row">
