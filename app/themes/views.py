@@ -1,3 +1,5 @@
+import os
+
 from flask import Blueprint, render_template, request, redirect, url_for, make_response
 from flask_login import login_required, current_user
 
@@ -124,17 +126,28 @@ def post_create_theme():
         key=generate_key(),
         user_id=current_user.id
     )
-
+    theme_dir = blueprint.root_path + f"\\static\\images\\{current_user.id}\\{new_theme.id}"
+    os.makedirs(theme_dir)
     count = form_data['count']
     for number in range(1, int(count) + 1):
         question = form_data[f'question{number}'].strip()
         answer = form_data[f'answer{number}'].strip().lower()
-        image = form_data.get(f'photo{number}')
+        image = request.files.get(f'photo{number}')
+        static_path = None
+
+        if image is not None:
+            file_extension = image.filename.split('.')[-1]
+            static_path = (
+                    f'{current_user.id}\\{new_theme.id}\\{number}.{file_extension}'
+            )
+            image.filename = f"{number}.{file_extension}"
+            full_path = blueprint.root_path + f"\\static\\images\\{static_path}"
+            image.save(full_path)
 
         new_card = CardRepository().create(
             question=question,
             answer=answer,
-            image=image,
+            image=static_path,
             theme_id=new_theme.id
         )
 
