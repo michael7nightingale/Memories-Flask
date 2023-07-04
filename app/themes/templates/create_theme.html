@@ -8,7 +8,7 @@
 
 <div class="container">
     <h3 class="memory-title" align="center">Настройки</h3>
-    <form action="{{ url_for('themes.post_create_theme') }}" method="post">
+    <form action="{{ url_for('themes.post_create_theme') }}" method="post" enctype="multipart/form-data">
     <input type="hidden" id="cards-count" name="count" value="3">
 
     <div class="theme row">
@@ -51,7 +51,7 @@
             </div>
               <div class="question row">
                   <label for="photo1">Картинка</label>
-                  <input class="form-control" type="file" id="photo1">
+                  <input class="form-control" type="file" id="photo1" name="photo1">
               </div>
           </div>
           <div class="tab-pane fade" id="2">
@@ -67,7 +67,7 @@
             </div>
               <div class="question row">
                   <label for="photo2">Картинка</label>
-                  <input class="form-control" type="file" id="photo2">
+                  <input class="form-control" type="file" id="photo2" name="photo2">
               </div>
           </div>
           <div class="tab-pane fade" id="3">
@@ -84,7 +84,7 @@
             </div>
               <div class="question row">
                   <label for="photo3">Картинка</label>
-                  <input class="form-control" type="file" id="photo3">
+                  <input class="form-control" type="file" id="photo3"  name="photo3">
               </div>
           </div>
 

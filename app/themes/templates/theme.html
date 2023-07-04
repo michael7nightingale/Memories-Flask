@@ -21,7 +21,7 @@
         {% endif %}
         <h4>{{ cards[i].question }}</h4>
             {% if cards[i].image %}
-              <img src="/static/media/images/{{ cards[i].image }}" width=50% style="">
+              <img src="/themes/static/images/{{ cards[i].image }}" width=50% style="">
              {% endif %}
              <input class='form-control' type="text" name='answer{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:" style="align-self: center">
 {#               <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>#}
