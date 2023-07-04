@@ -7,7 +7,7 @@ class Card(db.Model):   # type: ignore
     id = db.Column(db.String(50), primary_key=True, default=lambda: str(uuid4()))
     question = db.Column(db.Text)
     answer = db.Column(db.String(255))
-    image = db.Column(db.LargeBinary, nullable=True)
+    image = db.Column(db.String, nullable=True)
     theme_id = db.Column(db.String(50), db.ForeignKey('theme.id'))
 
     def __repr__(self):
