@@ -135,7 +135,7 @@ def post_create_theme():
         image = request.files.get(f'photo{number}')
         static_path = None
 
-        if image is not None:
+        if image.filename:
             file_extension = image.filename.split('.')[-1]
             static_path = (
                     f'{current_user.id}\\{new_theme.id}\\{number}.{file_extension}'

@@ -5,13 +5,13 @@
     <h1 align="center">{{ theme.title }}</h1>
 </div>
 
-<div class="tab">
+<div class="tab" style="min-height: 350px">
     <button class="tablinks active" onclick="openTab(event)">1</button>
     <button class="tablinks" onclick="openTab(event)">2</button>
     <button class="tablinks" onclick="openTab(event)">3</button>
 </div>
 
-<div class="container" style="background:black">
+<div class="container" style="background:#dcc0c0; min-height: 350px">
     <form method="post" action="{{ url_for('themes.theme_form_view_post', theme_id=theme.id) }}">
         {% for i in range(cards|length) %}
         {% if i == 0 %}
@@ -21,12 +21,11 @@
         {% endif %}
         <h4>{{ cards[i].question }}</h4>
             {% if cards[i].image %}
-              <img src="/themes/static/images/{{ cards[i].image }}" width=50% style="">
+              <img src="/themes/static/images/{{ cards[i].image }}" height="250px" style="">
              {% endif %}
              <input class='form-control' type="text" name='answer{{ i + 1 }}' id="answer{{ i + 1 }}" placeholder="Ответ:" style="align-self: center">
-{#               <button id="button{{ i + 1 }}" onclick="checkAnswer(event, {{ i + 1 }})">Ответить</button>#}
             {% if i == cards|length - 1 %}
-            <div class="answer">
+            <div class="answer">da
                 <button type="submit" class="btn btn-primary btn-large btn-corner">Ответить на тему</button>
             </div>
             {% endif %}
