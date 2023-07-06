@@ -1,6 +1,7 @@
 import os
 import random
 from typing import Iterable
+from shutil import rmtree
 
 abc = [chr(__i) for __i in range(ord('a'), ord('z') + 1)] +\
       [chr(__i) for __i in range(ord('A'), ord('Z') + 1)] +\
@@ -12,14 +13,9 @@ def generate_key() -> str:
     return key
 
 
-def delete_images(app, user_id: str, theme_id: str):
-    theme_id = str(theme_id)
-    path = app.root_path + f'/static/media/images/{user_id}/'
-    print(os.walk(path))
-    files = [i for i in os.walk(path)][0][-1]
-    for filename in files:
-        if filename.split('_')[0] == theme_id:
-            os.remove(path + filename)
+def delete_theme(app, user_id: str, theme_id: str) -> None:
+    path = app.root_path + f'/static/images/{user_id}/{theme_id}/'
+    rmtree(path)
 
 
 def match_order(lst: list, order: Iterable[int]) -> list:
