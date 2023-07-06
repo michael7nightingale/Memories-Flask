@@ -30,5 +30,7 @@ class CardRepository(BaseRepository):
 
     def delete_by_theme(self, theme_id: str) -> None:
         cards = super().filter_by(theme_id=theme_id)
-        db.session.delete(cards)
-        db.session.commit()
+        # for card in cards:
+        #     db.session.delete(card)
+        #     db.session.commit()
+        map(db.session.delete, cards)
