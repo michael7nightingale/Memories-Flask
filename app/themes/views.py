@@ -6,7 +6,8 @@ from flask_login import login_required, current_user
 from random import shuffle
 
 from .repository import ThemeRepository, CardRepository
-from app.utils import delete_images, generate_key, match_order
+from app.utils import delete_theme, generate_key, match_order
+
 
 blueprint = Blueprint("themes", __name__, url_prefix='/themes', template_folder="templates", static_folder='static')
 
@@ -88,20 +89,28 @@ def search():
 def search_key():
     try:
         theme = ThemeRepository().get_by(key=request.form['key'])
-        return redirect(url_for("theme_form_view_get", title=theme.title, theme_id=theme.id))
+        return redirect(
+            url_for("theme_form_view_get", title=theme.title, theme_id=theme.id)
+        )
     except Exception as e:
         print(e)
         return redirect(url_for("search"))
 
 
 @blueprint.post("/delete/<theme_id>/")
-def delete_theme(theme_id: str):
+def delete_theme_view(theme_id: str):
     theme = ThemeRepository().get(theme_id)
     if theme.user_id == current_user.id:
         ThemeRepository().delete(theme_id)
-        delete_images(blueprint, current_user.id, theme_id)
+        delete_theme(blueprint, current_user.id, theme_id)
         CardRepository().delete_by_theme(theme_id)
-        return redirect(url_for("profileThemes", username=current_user.username))
+        return redirect(
+            url_for("profiles.get_profile_themes", username=current_user.username)
+        )
+    else:
+        return redirect(
+            url_for("profiles.profile", username=current_user.username)
+        )
 
 
 @blueprint.get("/create-theme/")
@@ -144,7 +153,7 @@ def post_create_theme():
             full_path = blueprint.root_path + f"\\static\\images\\{static_path}"
             image.save(full_path)
 
-        new_card = CardRepository().create(
+        CardRepository().create(
             question=question,
             answer=answer,
             image=static_path,
