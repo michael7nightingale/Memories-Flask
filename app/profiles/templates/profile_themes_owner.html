@@ -14,12 +14,18 @@
        {% for theme in themes %}
             <li>
                 <h4>{{ theme.title }}</h4>
-                <a class="btn-link" style="color: white; background-color: slateblue; width: 200px" href="{{ url_for('themes.theme_form_view_get', theme_id=theme.id) }}">перейти</a>
-
-                <form style="margin-top: 30px" method="post" action="{{ url_for('themes.delete_theme', theme_id=theme.id) }}">
-                    <button type="submit" style="color: red" class="btn-link">Удалить</button>
-                </form>
-
+                <div class="row">
+                    <div class="col-lg-2">
+                          <a href="{{ url_for('themes.theme_form_view_get', theme_id=theme.id) }}">
+                               <button class="btn btn-outline-primary text">перейти</button>
+                          </a>
+                    </div>
+                    <div class="col-lg-2">
+                        <form method="post" action="{{ url_for('themes.delete_theme_view', theme_id=theme.id) }}">
+                            <button type="submit" style="color: red" class="btn btn-outline-primary text">Удалить</button>
+                        </form>
+                    </div>
+                </div>
             </li>
         {% endfor %}
         </ul>

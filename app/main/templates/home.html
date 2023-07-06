@@ -3,6 +3,9 @@
 {% block content %}
 <div class="jumbotron">
     <h1>Тренировка памяти</h1>
+{% if get_flashed_messages() %}
+    <h3 style="background-color: #58bff6">{{ get_flashed_messages()[0] }}</h3>
+  {% endif %}
 </div>
 
 <div class="row">
