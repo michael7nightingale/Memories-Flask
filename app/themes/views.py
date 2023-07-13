@@ -72,7 +72,7 @@ def theme_form_view_post(theme_id):
 def search():
     """Searching themes by names."""
     if request.values:
-        themes = ThemeRepository().find(request.form['substring'])
+        themes = ThemeRepository().find(request.args.get("substring"))
     else:
         themes = None
     response = make_response(
@@ -90,11 +90,10 @@ def search_key():
     try:
         theme = ThemeRepository().get_by(key=request.form['key'])
         return redirect(
-            url_for("theme_form_view_get", title=theme.title, theme_id=theme.id)
+            url_for("themes.theme_form_view_get", theme_id=theme.id)
         )
-    except Exception as e:
-        print(e)
-        return redirect(url_for("search"))
+    except Exception:
+        return redirect(url_for("themes.search"))
 
 
 @blueprint.post("/delete/<theme_id>/")
