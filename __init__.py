@@ -1,5 +1,5 @@
-from flask import Flask
 from flask_migrate import Migrate
+from flask import Flask
 
 from app.app import create_app, db
 from config import get_settings
