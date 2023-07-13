@@ -14,6 +14,7 @@ MarkupSafe==2.1.2
 mccabe==0.7.0
 mypy==1.4.0
 mypy-extensions==1.0.0
+Pillow==10.0.0
 pycodestyle==2.10.0
 pydantic==1.10.7
 pyflakes==3.0.1
