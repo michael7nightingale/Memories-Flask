@@ -1,44 +1,70 @@
-{% extends "layout.html" %}
-
+{% extends "themes_layout.html" %}
 {% block content %}
 
 <div class="jumbotron">
     <h1>Поиск</h1>
 </div>
-<script style="{{ url_for('.static', filename='js/buttons.js') }}"></script>
+<script>
+function switchButton(event, divId){
+    let columnSearch = document.getElementById("col-search");
+    columnSearch.style.display = "none";
+
+    let columnKey = document.getElementById("col-key");
+    columnKey.style.display = "none";
+
+    let targetColumn = document.getElementById(divId);
+    targetColumn.style.display = "block"
+
+}
+
+</script>
 <div class="container">
     <div class="row">
         <div class="col">
-            <button class="btn" value="text-search" autofocus="autofocus" style="width: 100%; font-size: 25px">Поиск по названию</button>
+            <button class="btn" onclick="switchButton(event, 'col-search')" id="text-search-button" value="text-search" autofocus="autofocus" style="width: 100%; font-size: 25px">Поиск по названию</button>
         </div>
         <div class="col">
-            <button class="btn" value="key-search" style="width: 100%; font-size: 25px">Войти по ключу</button>
+            <button class="btn" onclick="switchButton(event, 'col-key')" value="key-search" style="width: 100%; font-size: 25px">Войти по ключу</button>
         </div>
     </div>
     <div class="row" style="padding: 20px" >
-        <div class="col search" id="text-search" style="display: block">
+        <div class="col search" id="col-search" style="display: block">
             <form action="{{ url_for('themes.search') }}" method="get">
             <input type='text' class="form-control" name="substring" placeholder="Текст: ">
-            <button type="submit" class="btn-primary">Найти</button>
+                <div class="row">
+                    <button type="submit" class="btn btn-outline-primary">Найти</button>
+                </div>
+
     </form>
         </div>
-        <div class="col search" id="key-search" style="display: none">
+        <div class="col search" id="col-key" style="display: none">
             <form action="{{ url_for('themes.search_key') }}" method="post">
             <input type='text' class="form-control" name="key" placeholder="Ключ: ">
-            <button type="submit" class="btn-primary">Найти</button>
+                <div class="row">
+                    <button type="submit" class="btn btn-outline-primary ">Войти</button>
+                </div>
+
             </form>
         </div>
     </div>
 
+<div class="row" style="margin-top: 50px">
+    <h5>Результаты поиска</h5>
+</div>
 
 <div class="row">
     {% if themes %}
-        <h5>Результаты поиска</h5>
         <ul>
         {% for theme in themes %}
             <li>
-                <h6>{{ theme.title }}</h6>
-                <a href="{{ url_for('theme_form_view_get', theme_id=theme.id) }}">перейти</a>
+               <h4>{{ theme.title }}</h4>
+                <div class="row">
+                    <div class="col-lg-2">
+                          <a href="{{ url_for('themes.theme_form_view_get', theme_id=theme.id) }}">
+                            <button class="btn btn-outline-primary text">перейти</button>
+                          </a>
+                    </div>
+                </div>
             </li>
         {% endfor %}
         </ul>
@@ -48,9 +74,4 @@
 </div>
 
 </div>
-{% endblock %}
-
-{% block scripts %}
-<script style="{{ url_for('.static', filename='js/buttons.js') }}"></script>
-
 {% endblock %}

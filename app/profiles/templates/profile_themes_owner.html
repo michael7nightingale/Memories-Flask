@@ -12,8 +12,11 @@
     {% if themes|length %}
         <ul>
        {% for theme in themes %}
-            <li>
+            <li style="margin-top: 33px">
                 <h4>{{ theme.title }}</h4>
+                {% if not theme.isPublic %}
+                <h5>Ключ: {{ theme.key }}</h5>
+                {% endif %}
                 <div class="row">
                     <div class="col-lg-2">
                           <a href="{{ url_for('themes.theme_form_view_get', theme_id=theme.id) }}">
