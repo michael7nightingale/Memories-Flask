@@ -90,4 +90,3 @@ def activate_user(uid, token):
         return redirect(url_for('users.login'))
 
     return redirect(url_for("main.homepage"))
-
